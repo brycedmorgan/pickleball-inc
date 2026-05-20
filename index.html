@@ -153,7 +153,7 @@
     <section class="col-shell p-5">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-lg font-extrabold">Current</h2>
-        <span class="pill text-slate-500">9 in flight · 4 pillars</span>
+        <span class="pill text-slate-500">11 in flight · 4 pillars</span>
       </div>
 
       <!-- ========== PILLAR: PPA TOUR ========== -->
@@ -223,6 +223,28 @@
             <div class="mt-4 flex flex-wrap gap-2">
               <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
               <span class="pill px-2 py-1 rounded-md" style="background:#FFEDD5;color:#9A3412;">From 5/20 1:1</span>
+            </div>
+          </article>
+
+          <!-- PPA Vacation Trip Landing -->
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="vacation-landing">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:var(--blue);">Events · Revenue</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">PPA Vacation Trip — Landing &amp; Registration</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEE2E2;color:#991B1B;">URGENT</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Self-hosted landing + registration page for the inaugural PPA vacation trip. Bypasses Tixr's high fees + rev share. Must be live to promote at MLP Columbus + St. Louis before the June 9 first payment.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 8%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Lainey delivers final info EOD 5/21 · ship by early next week</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Owner: Lainey</span>
             </div>
           </article>
 
@@ -411,6 +433,7 @@
     <div class="pill mb-2" style="color: var(--blue);">For tomorrow's Bryce X Connor Daily</div>
     <h2 class="text-xl font-extrabold">Top of the agenda</h2>
     <ol class="mt-4 space-y-2 text-sm text-slate-700 list-decimal pl-5">
+      <li><span class="font-semibold">PPA Vacation Trip — landing page.</span> Lainey's Tixr call today; if they won't waive fees, we self-host and ship by early next week (June 9 first-payment deadline). Pick subdomain vs ppatour-website route.</li>
       <li><span class="font-semibold">Pillar approval.</span> Walk Connor through the restructured board (PPA Tour / PBC / PT.com / Org &amp; Tools). Confirm the split before any new card goes in.</li>
       <li><span class="font-semibold">First AI direct.</span> Decide between <em>Taylor Lumis</em> (PBC ops) and <em>Samin</em> (finance) for the first dedicated implementation pass next week.</li>
       <li><span class="font-semibold">VP of Marketing hire.</span> Sourcing channel + who owns the JD draft (Bryce or external recruiter). Utah-based, ~$150k, oversees Tyler + Caitlin.</li>
@@ -609,6 +632,34 @@ const PROJECTS = {
     ],
     blockers: ["Wait until Flight Finance + Deck Builder leave Current"],
     links: []
+  },
+  "vacation-landing": {
+    category: "PPA Tour · Events · Revenue",
+    title: "PPA Vacation Trip — Landing & Registration",
+    summary: "Self-hosted landing + registration page for the inaugural PPA vacation trip. Built ourselves to bypass Tixr's high fees + rev share. Must be live to promote at MLP Columbus + St. Louis ahead of the June 9 first payment.",
+    stage: "NEW · URGENT",
+    stageNote: "8% — Lainey delivers final info EOD 5/21; ship by early next week",
+    progress: 8,
+    owner: "Lainey O'Connor (program) · Bryce (build) · Dillon (schedule) · Bryan (design)",
+    lever: "$ Saved · Tixr fees + rev share avoided · plus Revenue from direct trip sign-ups",
+    steps: [
+      { done: false, text: "Lainey delivers final info package by EOD 2026-05-21 (schedule, copy, pricing, T&Cs)" },
+      { done: false, text: "Lainey's Tixr call tomorrow — confirm fees + rev share they'd charge" },
+      { done: false, text: "Decision: self-host vs Tixr (only build if Tixr won't waive)" },
+      { done: false, text: "Pull design assets from Bryan" },
+      { done: false, text: "Build landing page — likely lives under ppatour-website (/trips/[slug] or new subdomain)" },
+      { done: false, text: "Wire payment processor for June 9 first installment" },
+      { done: false, text: "QA — registration → confirmation → calendar invite flow" },
+      { done: false, text: "Ship by early next week so MLP Columbus + St. Louis activations can drive traffic" }
+    ],
+    blockers: [
+      "Tixr's response on waiving fees + rev share (Lainey calling 5/21)",
+      "Payment processor choice if self-hosting (Stripe? existing PPA merchant account?)",
+      "Where it lives: subdomain (trips.ppatour.com / vacation.ppatour.com) vs route on the rebuilt ppatour-website?"
+    ],
+    links: [
+      { label: "Slack thread with Lainey (Today)", href: "https://slack.com/" }
+    ]
   },
   "pro-player-app": {
     category: "PPA Tour · Pro Players",
