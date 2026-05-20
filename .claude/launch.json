@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pickleball-ink",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "http-server", "/Users/bryce/Documents/pickleball-ink", "-p", "4410", "-c-1"],
+      "port": 4410
+    }
+  ]
+}

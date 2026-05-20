@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pickleball Inc — PPA AI Project Tracker</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0C2B44;
+    --blue: #228BE6;
+    --yellow: #E7E700;
+    --sky: #4DC1EF;
+  }
+  html, body { font-family: 'Inter', system-ui, sans-serif; background: #F4F6FA; color: var(--navy); }
+  .brand-title {
+    font-family: 'Bungee Shade', system-ui, sans-serif;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+  .stage-dot { width: 12px; height: 12px; border-radius: 999px; }
+  .stage-bar { height: 6px; border-radius: 999px; background: #E2E8F0; overflow: hidden; }
+  .stage-bar > span { display: block; height: 100%; background: linear-gradient(90deg, #228BE6, #4DC1EF); }
+  .pill { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+  .card { transition: transform .15s ease, box-shadow .15s ease; cursor: pointer; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(12,43,68,0.25); }
+  .col-shell { background: #EEF2F7; border-radius: 18px; }
+  .grid-courts {
+    background-image:
+      linear-gradient(#0C2B44 1px, transparent 1px),
+      linear-gradient(90deg, #0C2B44 1px, transparent 1px);
+    background-size: 36px 36px;
+    opacity: .06;
+  }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed; inset: 0; background: rgba(12,43,68,0.55);
+    display: none; align-items: flex-start; justify-content: center;
+    z-index: 50; padding: 5vh 1.5rem;
+    overflow-y: auto;
+    backdrop-filter: blur(4px);
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal-card {
+    width: 100%; max-width: 760px; background: white;
+    border-radius: 22px; overflow: hidden;
+    box-shadow: 0 30px 80px -20px rgba(12,43,68,0.5);
+  }
+  .modal-head { background: var(--navy); color: white; padding: 1.75rem 2rem 1.5rem; position: relative; }
+  .modal-close {
+    position: absolute; top: 1rem; right: 1rem;
+    width: 36px; height: 36px; border-radius: 999px;
+    background: rgba(255,255,255,0.1); color: white;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; border: none; font-size: 20px;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.2); }
+  .modal-body { padding: 1.75rem 2rem 2rem; }
+  .step-row { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid #F1F5F9; }
+  .step-row:last-child { border-bottom: 0; }
+  .step-box {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px;
+    border: 2px solid #CBD5E1; margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; line-height: 1;
+  }
+  .step-box.done { background: var(--sky); border-color: var(--sky); color: white; }
+  .link-row a { color: var(--blue); text-decoration: none; font-weight: 600; }
+  .link-row a:hover { text-decoration: underline; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- HEADER -->
+<header class="relative overflow-hidden" style="background: var(--navy); color: white;">
+  <div class="absolute inset-0 grid-courts"></div>
+  <div class="relative max-w-[1600px] mx-auto px-8 pt-10 pb-8">
+    <div class="flex items-end justify-between gap-8 flex-wrap">
+      <div>
+        <div class="pill mb-3" style="color: var(--yellow);">PPA Tour · AI Initiatives</div>
+        <h1 class="brand-title text-6xl md:text-7xl">
+          <span style="color: var(--yellow);">Pickleball</span> <span style="color: var(--sky);">Inc</span>
+        </h1>
+        <p class="mt-3 text-white/70 max-w-xl">Where AI projects across the PPA Tour get drawn up, shipped, and scored.</p>
+      </div>
+
+      <!-- KPI strip -->
+      <div class="grid grid-cols-2 gap-4 min-w-[420px]">
+        <div class="rounded-2xl p-5" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);">
+          <div class="pill text-white/60">Cost Saved · Target</div>
+          <div class="mt-2 text-3xl font-extrabold" style="color: var(--yellow);">$1,000,000</div>
+          <div class="mt-2 stage-bar"><span style="width: 18%;"></span></div>
+          <div class="mt-1 text-xs text-white/60">$180k tracking · 18%</div>
+        </div>
+        <div class="rounded-2xl p-5" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);">
+          <div class="pill text-white/60">Revenue Added · Target</div>
+          <div class="mt-2 text-3xl font-extrabold" style="color: var(--sky);">$1,000,000</div>
+          <div class="mt-2 stage-bar"><span style="width: 8%;"></span></div>
+          <div class="mt-1 text-xs text-white/60">$80k pipeline · 8%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage Legend -->
+    <div class="mt-8 flex flex-wrap gap-6 text-sm">
+      <div class="flex items-center gap-2"><span class="stage-dot" style="background:#94A3B8"></span><span class="text-white/80">New</span></div>
+      <div class="flex items-center gap-2"><span class="stage-dot" style="background:var(--blue)"></span><span class="text-white/80">Nearly Complete</span></div>
+      <div class="flex items-center gap-2"><span class="stage-dot" style="background:var(--sky)"></span><span class="text-white/80">In Review</span></div>
+      <div class="flex items-center gap-2"><span class="stage-dot" style="background:var(--yellow)"></span><span class="text-white/80">Implemented</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- BOARD -->
+<main class="max-w-[1600px] mx-auto px-8 py-10">
+  <div class="grid gap-6" style="grid-template-columns: 320px 1fr;">
+
+    <!-- BACKLOG -->
+    <section class="col-shell p-5">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-extrabold">Backlog</h2>
+        <span class="pill text-slate-500">2 ideas</span>
+      </div>
+
+      <div class="space-y-4">
+
+        <div class="card bg-white rounded-2xl p-4 border border-slate-200" data-project="order-of-play">
+          <div class="pill text-slate-500">Marketing</div>
+          <h3 class="mt-1 font-bold text-[15px] leading-snug">Marketing Order-of-Play Dashboard</h3>
+          <p class="mt-2 text-sm text-slate-600">Single pane of glass for the marketing team: who is covering which match, content drops, social cadence, partner activations — by event day.</p>
+          <div class="mt-3 flex items-center gap-2 text-xs text-slate-500">
+            <span class="pill px-2 py-1 rounded-md" style="background:#FEF3C7;color:#92400E;">Owner: Tyler</span>
+          </div>
+        </div>
+
+        <div class="card bg-white rounded-2xl p-4 border border-slate-200" data-project="divi-cleanup">
+          <div class="pill text-slate-500">Web Ops</div>
+          <h3 class="mt-1 font-bold text-[15px] leading-snug">Divi Cleanup</h3>
+          <p class="mt-2 text-sm text-slate-600">Audit and prune the existing Divi build — kill dead pages, consolidate templates, prep for the content-first rebuild handoff.</p>
+          <div class="mt-3 flex items-center gap-2 text-xs text-slate-500">
+            <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Pre-cutover</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CURRENT (wide) -->
+    <section class="col-shell p-5">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-extrabold">Current</h2>
+        <span class="pill text-slate-500">4 in flight</span>
+      </div>
+
+      <div class="grid gap-5" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+
+        <!-- Sales Conversation → Deck Builder -->
+        <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="deck-builder">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="pill" style="color:var(--blue);">Sales · Revenue</div>
+              <h3 class="mt-1 text-lg font-extrabold leading-tight">Sales Conversation → Auto Deck Builder</h3>
+            </div>
+            <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Listens to sales calls, extracts buyer signal (industry, KPIs, asks, hot buttons), and auto-assembles a tailored partnership deck. Goal: shrink prep time from days to minutes and lift close rate.</p>
+
+          <div class="mt-4">
+            <div class="flex justify-between text-xs text-slate-500 mb-1">
+              <span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span>
+            </div>
+            <div class="stage-bar"><span style="width: 10%;"></span></div>
+            <div class="mt-2 text-xs text-slate-500">Discovery — scoping intake + transcript source (Gong? Fireflies?)</div>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+            <span class="pill px-2 py-1 rounded-md" style="background:#FEE2E2;color:#991B1B;">Top of Meeting Today</span>
+          </div>
+        </article>
+
+        <!-- Flight Finance AI -->
+        <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="flight-finance">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="pill" style="color:var(--blue);">Finance · Travel</div>
+              <h3 class="mt-1 text-lg font-extrabold leading-tight">Flight Finance AI</h3>
+            </div>
+            <span class="pill px-2 py-1 rounded-md" style="background:#DBEAFE;color:#1E40AF;">NEARLY</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">AI that ingests our flight spend, flags anomalies, and recommends cheaper itineraries before the booking gets locked. Connects directly to the travel approval workflow.</p>
+
+          <div class="mt-4">
+            <div class="flex justify-between text-xs text-slate-500 mb-1">
+              <span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span>
+            </div>
+            <div class="stage-bar"><span style="width: 55%;"></span></div>
+            <div class="mt-2 text-xs text-slate-500">Model + dataset wired; need approval-loop UX</div>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+          </div>
+        </article>
+
+        <!-- Travel Slack Bot -->
+        <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="travel-slack-bot">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="pill" style="color:var(--blue);">Travel · Ops</div>
+              <h3 class="mt-1 text-lg font-extrabold leading-tight">Travel Slack Bot</h3>
+            </div>
+            <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Slack-native assistant that helps staff book travel, surfaces correct policy info, alerts their manager for approvals, and records the full booking trail in a companion app for audit.</p>
+
+          <div class="mt-4">
+            <div class="flex justify-between text-xs text-slate-500 mb-1">
+              <span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span>
+            </div>
+            <div class="stage-bar"><span style="width: 18%;"></span></div>
+            <div class="mt-2 text-xs text-slate-500">Conversation flow drafted; auth + Slack manifest pending</div>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+            <span class="pill px-2 py-1 rounded-md" style="background:#E0F2FE;color:#075985;">Travel Team</span>
+          </div>
+        </article>
+
+        <!-- PPA Tour Website -->
+        <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="ppa-website">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="pill" style="color:var(--blue);">Web · Content</div>
+              <h3 class="mt-1 text-lg font-extrabold leading-tight">New PPA Tour Website</h3>
+            </div>
+            <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">IN REVIEW</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Content-first Next.js 16 rebuild of ppatour.com. 4.18M sessions/qtr today with 0% funnel ownership — this rebuild leans into the content/streaming layer and pushes commerce out to partners (tixr, PT.com).</p>
+
+          <div class="mt-4">
+            <div class="flex justify-between text-xs text-slate-500 mb-1">
+              <span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span>
+            </div>
+            <div class="stage-bar"><span style="width: 78%;"></span></div>
+            <div class="mt-2 text-xs text-slate-500">Staging on Vercel · awaiting Jason for AWS prod cutover</div>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+            <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Tyler · Will · Jason</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Meeting talking points -->
+  <section class="mt-10 rounded-2xl p-6 border" style="background: white; border-color:#E2E8F0;">
+    <div class="pill mb-2" style="color: var(--blue);">For this morning's meeting</div>
+    <h2 class="text-xl font-extrabold">Top of the agenda</h2>
+    <ol class="mt-4 space-y-2 text-sm text-slate-700 list-decimal pl-5">
+      <li><span class="font-semibold">Sales Conversation → Auto Deck Builder.</span> Decide the transcript source (Gong vs Fireflies vs raw upload), and who owns the deck template library.</li>
+      <li><span class="font-semibold">KPI accountability.</span> Each card needs a $-saved or $-added attribution so the two $1M targets at the top of the board are defensible by quarter-end.</li>
+      <li><span class="font-semibold">Sequencing.</span> Flight Finance AI is closest to shipping — push it across the line before adding new work in the Travel lane.</li>
+    </ol>
+  </section>
+</main>
+
+<footer class="max-w-[1600px] mx-auto px-8 py-8 text-xs text-slate-400">
+  Pickleball Inc · v0.1 · Built for Bryce · click any card for detail
+</footer>
+
+<!-- DETAIL MODAL -->
+<div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true">
+  <div class="modal-card" id="modal-card">
+    <div class="modal-head">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+      <div class="pill" id="m-category" style="color: var(--yellow);"></div>
+      <h2 class="mt-2 text-3xl font-extrabold leading-tight" id="m-title"></h2>
+      <p class="mt-2 text-white/70 text-sm max-w-2xl" id="m-summary"></p>
+
+      <div class="mt-5 flex items-center gap-3 flex-wrap">
+        <span class="pill px-2 py-1 rounded-md" id="m-stage" style="background: rgba(255,255,255,0.12); color: white;"></span>
+        <span class="text-xs text-white/60" id="m-stage-note"></span>
+      </div>
+      <div class="mt-3" style="max-width: 420px;">
+        <div class="stage-bar" style="background: rgba(255,255,255,0.15);">
+          <span id="m-progress" style="width: 0%;"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="grid gap-6" style="grid-template-columns: 1fr 1fr;">
+        <div>
+          <div class="pill text-slate-500 mb-2">Owner</div>
+          <div class="text-sm font-semibold" id="m-owner">—</div>
+        </div>
+        <div>
+          <div class="pill text-slate-500 mb-2">KPI Lever</div>
+          <div class="text-sm font-semibold" id="m-lever">—</div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <div class="pill text-slate-500 mb-3">Next Steps</div>
+        <div id="m-steps"></div>
+      </div>
+
+      <div class="mt-6" id="m-blockers-wrap">
+        <div class="pill text-slate-500 mb-2">Open Questions / Blockers</div>
+        <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1" id="m-blockers"></ul>
+      </div>
+
+      <div class="mt-6 link-row" id="m-links-wrap">
+        <div class="pill text-slate-500 mb-2">Links</div>
+        <ul class="text-sm space-y-1" id="m-links"></ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const PROJECTS = {
+  "deck-builder": {
+    category: "Sales · Revenue",
+    title: "Sales Conversation → Auto Deck Builder",
+    summary: "Listens to sales calls, extracts buyer signal, and auto-assembles a tailored partnership deck. Shrinks deck prep from days to minutes.",
+    stage: "NEW · Discovery",
+    stageNote: "10% — scoping intake + transcript source",
+    progress: 10,
+    owner: "TBD — Sales lead",
+    lever: "Revenue · $1M target",
+    steps: [
+      { done: true, text: "Pitch internally — concept approved" },
+      { done: false, text: "Decide transcript source: Gong vs Fireflies vs raw upload" },
+      { done: false, text: "Define buyer-signal extraction schema (industry, KPIs, asks, hot buttons)" },
+      { done: false, text: "Build deck template library with slot tokens" },
+      { done: false, text: "Pick 3 lookalike deals to dry-run against" },
+      { done: false, text: "Ship pilot to 1–2 reps; measure prep-time delta + close rate" }
+    ],
+    blockers: [
+      "Source of truth for sales transcripts (which platform are we standardizing on?)",
+      "Who owns the deck template library going forward?",
+      "Carvana-style brand-locked slots vs flexible templates?"
+    ],
+    links: []
+  },
+  "flight-finance": {
+    category: "Finance · Travel",
+    title: "Flight Finance AI",
+    summary: "AI ingests flight spend, flags anomalies, and recommends cheaper itineraries before booking is locked.",
+    stage: "NEARLY COMPLETE",
+    stageNote: "55% — model + dataset wired; approval UX pending",
+    progress: 55,
+    owner: "TBD — Finance / Travel partner",
+    lever: "$ Saved · $1M target",
+    steps: [
+      { done: true, text: "Connect historical flight-spend dataset" },
+      { done: true, text: "Train baseline anomaly + alternative-itinerary model" },
+      { done: false, text: "Build approval-loop UX (manager review + override)" },
+      { done: false, text: "Wire into booking workflow (which tool?)" },
+      { done: false, text: "Calibrate anomaly thresholds with finance team" },
+      { done: false, text: "30-day pilot; measure savings vs baseline" },
+      { done: false, text: "Tour-wide rollout" }
+    ],
+    blockers: [
+      "Which booking tool is the integration point?",
+      "Who has final approval authority — manager or finance ops?"
+    ],
+    links: []
+  },
+  "travel-slack-bot": {
+    category: "Travel · Ops",
+    title: "Travel Slack Bot",
+    summary: "Slack-native assistant for staff travel — surfaces policy, books, routes approval to managers, and records the full trail in a companion app.",
+    stage: "NEW",
+    stageNote: "18% — flow drafted; auth + Slack manifest pending",
+    progress: 18,
+    owner: "TBD — Travel team lead",
+    lever: "$ Saved · $1M target",
+    steps: [
+      { done: true, text: "Draft happy-path conversation flow" },
+      { done: false, text: "Slack app manifest + scopes" },
+      { done: false, text: "Auth / SSO to staff identity" },
+      { done: false, text: "Single-source-of-truth on travel policy doc" },
+      { done: false, text: "Manager-approval routing logic" },
+      { done: false, text: "Companion app for audit trail (where bookings live)" },
+      { done: false, text: "Internal alpha with travel team" }
+    ],
+    blockers: [
+      "Where does the audit trail live — the new companion app, or push into an existing system?",
+      "Approval routing: by cost threshold? by department?"
+    ],
+    links: []
+  },
+  "ppa-website": {
+    category: "Web · Content",
+    title: "New PPA Tour Website",
+    summary: "Content-first Next.js 16 rebuild of ppatour.com. The site owns content + discovery + streaming; commerce redirects out to partners (tixr, pickleballtournaments.com).",
+    stage: "IN REVIEW",
+    stageNote: "78% — Phase 2 shipped, staging is live on Vercel",
+    progress: 78,
+    owner: "Bryce (President + CMO) · Tyler (marketing) · Will (content) · Jason (AWS infra)",
+    lever: "Revenue · $1M target — site owns 0% of funnel today on 4.18M sessions/qtr",
+    steps: [
+      { done: true, text: "Phase 0 — scaffold Next.js 16 / Tailwind v4 / shadcn project" },
+      { done: true, text: "Phase 1 — Carvana PPA brand applied (navy / blue / yellow / sky)" },
+      { done: true, text: "Phase 2 — cinematic homepage with global components" },
+      { done: true, text: "Real internal pages: news, watch, athletes, play, about (+ subpages)" },
+      { done: true, text: "/tour/* programs (Junior / Senior / State / Camps / Travel / Hospitality)" },
+      { done: true, text: "/events/[slug] expanded into real event hub (UPCOMING surface)" },
+      { done: true, text: "Real partner logos wired into spotlight + marquee" },
+      { done: false, text: "Sanity CMS confirm + integration (currently pending)" },
+      { done: false, text: "§7 LIVE / RECAP state machine for /events/[slug]" },
+      { done: false, text: "Real /search page (currently ComingSoon catch-all)" },
+      { done: false, text: "Content pass with Will — replace placeholder copy site-wide" },
+      { done: false, text: "Streaming hub deep links (FOX/FS1 / YouTube / MATCHDAY)" },
+      { done: false, text: "SEO + metadata + OG image pass" },
+      { done: false, text: "Phase 3 — AWS prod cutover (owned by Jason)" }
+    ],
+    blockers: [
+      "Sanity vs alternative CMS — needs final call",
+      "Jason's timeline on AWS prod migration",
+      "Will's content review pass — placeholders still throughout"
+    ],
+    links: [
+      { label: "Live staging", href: "https://ppatour-website.vercel.app" },
+      { label: "GitHub repo", href: "https://github.com/brycedmorgan/ppatour-website" },
+      { label: "Engineering brief: CLAUDE_CODE_PASSOFF_v2.md", href: "https://github.com/brycedmorgan/ppatour-website/blob/main/CLAUDE_CODE_PASSOFF_v2.md" },
+      { label: "Local path", href: "file:///Users/bryce/Documents/ppatour-website" }
+    ]
+  },
+  "order-of-play": {
+    category: "Marketing",
+    title: "Marketing Order-of-Play Dashboard",
+    summary: "Single pane of glass for marketing: who's covering which match, content drops, social cadence, partner activations — by event day.",
+    stage: "BACKLOG",
+    stageNote: "Idea — not started",
+    progress: 0,
+    owner: "Tyler",
+    lever: "Revenue assist · marketing efficiency",
+    steps: [
+      { done: false, text: "Inventory data sources (tournament schedule, content calendar, social cadence, partner activations)" },
+      { done: false, text: "Decide read-only vs editable" },
+      { done: false, text: "Page layout: who / what / when by event day" },
+      { done: false, text: "Pilot with one tournament weekend" }
+    ],
+    blockers: ["Wait until Flight Finance + Deck Builder leave Current"],
+    links: []
+  },
+  "divi-cleanup": {
+    category: "Web Ops",
+    title: "Divi Cleanup",
+    summary: "Audit and prune the existing Divi build — kill dead pages, consolidate templates, prep redirects for the content-first rebuild cutover.",
+    stage: "BACKLOG",
+    stageNote: "Pre-cutover — not started",
+    progress: 0,
+    owner: "TBD",
+    lever: "Cost saved · reduces maintenance overhead post-cutover",
+    steps: [
+      { done: false, text: "Inventory all Divi pages" },
+      { done: false, text: "Identify dead routes / 404 candidates" },
+      { done: false, text: "Document redirects needed for new site" },
+      { done: false, text: "Sunset plan after AWS cutover" }
+    ],
+    blockers: ["Tied to PPA Tour Website cutover timing"],
+    links: []
+  }
+};
+
+function openModal(id) {
+  const p = PROJECTS[id];
+  if (!p) return;
+  document.getElementById('m-category').textContent = p.category;
+  document.getElementById('m-title').textContent = p.title;
+  document.getElementById('m-summary').textContent = p.summary;
+  document.getElementById('m-stage').textContent = p.stage;
+  document.getElementById('m-stage-note').textContent = p.stageNote;
+  document.getElementById('m-progress').style.width = p.progress + '%';
+  document.getElementById('m-owner').textContent = p.owner;
+  document.getElementById('m-lever').textContent = p.lever;
+
+  const stepsEl = document.getElementById('m-steps');
+  stepsEl.innerHTML = '';
+  p.steps.forEach(s => {
+    const row = document.createElement('div');
+    row.className = 'step-row';
+    row.innerHTML = `<div class="step-box ${s.done ? 'done' : ''}">${s.done ? '✓' : ''}</div>
+      <div class="text-sm ${s.done ? 'text-slate-400 line-through' : 'text-slate-800'}">${s.text}</div>`;
+    stepsEl.appendChild(row);
+  });
+
+  const blockersEl = document.getElementById('m-blockers');
+  blockersEl.innerHTML = '';
+  if (p.blockers && p.blockers.length) {
+    document.getElementById('m-blockers-wrap').style.display = '';
+    p.blockers.forEach(b => {
+      const li = document.createElement('li');
+      li.textContent = b;
+      blockersEl.appendChild(li);
+    });
+  } else {
+    document.getElementById('m-blockers-wrap').style.display = 'none';
+  }
+
+  const linksEl = document.getElementById('m-links');
+  linksEl.innerHTML = '';
+  if (p.links && p.links.length) {
+    document.getElementById('m-links-wrap').style.display = '';
+    p.links.forEach(l => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = l.href; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = l.label;
+      li.appendChild(a);
+      linksEl.appendChild(li);
+    });
+  } else {
+    document.getElementById('m-links-wrap').style.display = 'none';
+  }
+
+  document.getElementById('modal-backdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-backdrop').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('click', e => {
+  const card = e.target.closest('[data-project]');
+  if (card) {
+    openModal(card.dataset.project);
+    return;
+  }
+  if (e.target.id === 'modal-backdrop' || e.target.id === 'modal-close') {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+
+</body>
+</html>
