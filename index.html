@@ -153,110 +153,254 @@
     <section class="col-shell p-5">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-lg font-extrabold">Current</h2>
-        <span class="pill text-slate-500">4 in flight</span>
+        <span class="pill text-slate-500">9 in flight · 4 pillars</span>
       </div>
 
-      <div class="grid gap-5" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+      <!-- ========== PILLAR: PPA TOUR ========== -->
+      <div class="mb-6">
+        <div class="pill mb-3 flex items-center gap-2" style="color: var(--navy);">
+          <span class="inline-block w-2.5 h-2.5 rounded-full" style="background: var(--navy);"></span>
+          <span>PPA Tour</span>
+          <span class="text-slate-400 font-normal normal-case tracking-normal">— marketing · finance · pro players · events</span>
+        </div>
+        <div class="grid gap-5" style="grid-template-columns: repeat(2, minmax(0,1fr));">
 
-        <!-- Sales Conversation → Deck Builder -->
-        <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="deck-builder">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <div class="pill" style="color:var(--blue);">Sales · Revenue</div>
-              <h3 class="mt-1 text-lg font-extrabold leading-tight">Sales Conversation → Auto Deck Builder</h3>
+          <!-- Sales Conversation → Deck Builder -->
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="deck-builder">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:var(--blue);">Sales · Revenue</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Sales Conversation → Auto Deck Builder</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
             </div>
-            <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
-          </div>
-          <p class="mt-3 text-sm text-slate-600">Listens to sales calls, extracts buyer signal (industry, KPIs, asks, hot buttons), and auto-assembles a tailored partnership deck. Goal: shrink prep time from days to minutes and lift close rate.</p>
-
-          <div class="mt-4">
-            <div class="flex justify-between text-xs text-slate-500 mb-1">
-              <span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span>
+            <p class="mt-3 text-sm text-slate-600">Listens to sales calls, extracts buyer signal, and auto-assembles a tailored partnership deck. Days to minutes.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 10%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Discovery — transcript source + template library</div>
             </div>
-            <div class="stage-bar"><span style="width: 10%;"></span></div>
-            <div class="mt-2 text-xs text-slate-500">Discovery — scoping intake + transcript source (Gong? Fireflies?)</div>
-          </div>
-
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
-            <span class="pill px-2 py-1 rounded-md" style="background:#FEE2E2;color:#991B1B;">Top of Meeting Today</span>
-          </div>
-        </article>
-
-        <!-- Flight Finance AI -->
-        <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="flight-finance">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <div class="pill" style="color:var(--blue);">Finance · Travel</div>
-              <h3 class="mt-1 text-lg font-extrabold leading-tight">Flight Finance AI</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
             </div>
-            <span class="pill px-2 py-1 rounded-md" style="background:#DBEAFE;color:#1E40AF;">NEARLY</span>
-          </div>
-          <p class="mt-3 text-sm text-slate-600">AI that ingests our flight spend, flags anomalies, and recommends cheaper itineraries before the booking gets locked. Connects directly to the travel approval workflow.</p>
+          </article>
 
-          <div class="mt-4">
-            <div class="flex justify-between text-xs text-slate-500 mb-1">
-              <span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span>
+          <!-- Flight Finance AI -->
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="flight-finance">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:var(--blue);">Finance · Travel</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Flight Finance AI</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#DBEAFE;color:#1E40AF;">NEARLY</span>
             </div>
-            <div class="stage-bar"><span style="width: 55%;"></span></div>
-            <div class="mt-2 text-xs text-slate-500">Model + dataset wired; need approval-loop UX</div>
-          </div>
-
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
-          </div>
-        </article>
-
-        <!-- Travel Slack Bot -->
-        <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="travel-slack-bot">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <div class="pill" style="color:var(--blue);">Travel · Ops</div>
-              <h3 class="mt-1 text-lg font-extrabold leading-tight">Travel Slack Bot</h3>
+            <p class="mt-3 text-sm text-slate-600">Ingests flight spend, flags anomalies, recommends cheaper itineraries before booking locks. Wires into the travel approval flow.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 55%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Model + dataset wired; approval UX pending</div>
             </div>
-            <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
-          </div>
-          <p class="mt-3 text-sm text-slate-600">Slack-native assistant that helps staff book travel, surfaces correct policy info, alerts their manager for approvals, and records the full booking trail in a companion app for audit.</p>
-
-          <div class="mt-4">
-            <div class="flex justify-between text-xs text-slate-500 mb-1">
-              <span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
             </div>
-            <div class="stage-bar"><span style="width: 18%;"></span></div>
-            <div class="mt-2 text-xs text-slate-500">Conversation flow drafted; auth + Slack manifest pending</div>
-          </div>
+          </article>
 
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
-            <span class="pill px-2 py-1 rounded-md" style="background:#E0F2FE;color:#075985;">Travel Team</span>
-          </div>
-        </article>
-
-        <!-- PPA Tour Website -->
-        <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="ppa-website">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <div class="pill" style="color:var(--blue);">Web · Content</div>
-              <h3 class="mt-1 text-lg font-extrabold leading-tight">New PPA Tour Website</h3>
+          <!-- Travel Slack Bot -->
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="travel-slack-bot">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:var(--blue);">Travel · Ops</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Travel Slack Bot</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
             </div>
-            <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">IN REVIEW</span>
-          </div>
-          <p class="mt-3 text-sm text-slate-600">Content-first Next.js 16 rebuild of ppatour.com. 4.18M sessions/qtr today with 0% funnel ownership — this rebuild leans into the content/streaming layer and pushes commerce out to partners (tixr, PT.com).</p>
-
-          <div class="mt-4">
-            <div class="flex justify-between text-xs text-slate-500 mb-1">
-              <span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span>
+            <p class="mt-3 text-sm text-slate-600">Slack assistant for staff travel — books, surfaces policy, routes manager approval, records the trail.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 18%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Flow drafted; auth + Slack manifest pending</div>
             </div>
-            <div class="stage-bar"><span style="width: 78%;"></span></div>
-            <div class="mt-2 text-xs text-slate-500">Staging on Vercel · awaiting Jason for AWS prod cutover</div>
-          </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+            </div>
+          </article>
 
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
-            <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Tyler · Will · Jason</span>
-          </div>
-        </article>
+          <!-- Pro Player Contract App -->
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="pro-player-app">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:var(--blue);">Pro Players</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Pro Player Contract App</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Drop in any pro contract — payments, obligations, deliverables tracked automatically. Replaces Emily's team's manual tracking.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 5%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Committed in 2026-05-20 Connor 1:1</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FFEDD5;color:#9A3412;">From 5/20 1:1</span>
+            </div>
+          </article>
 
+          <!-- PPA Tour Website -->
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="ppa-website">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:var(--blue);">Web · Content</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">New PPA Tour Website</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">IN REVIEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Content-first rebuild of ppatour.com. 4.18M sessions/qtr today, 0% funnel ownership — rebuild leans into content + streaming.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 78%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Connor's 5/20 asks: Toys R Us / ads / schedule filter</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FFEDD5;color:#9A3412;">From 5/20 1:1</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ========== PILLAR: PICKLEBALL CENTRAL ========== -->
+      <div class="mb-6">
+        <div class="pill mb-3 flex items-center gap-2" style="color: #15803D;">
+          <span class="inline-block w-2.5 h-2.5 rounded-full" style="background: #15803D;"></span>
+          <span>Pickleball Central</span>
+          <span class="text-slate-400 font-normal normal-case tracking-normal">— commerce · support</span>
+        </div>
+        <div class="grid gap-5" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="pbc-shopify">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#15803D;">Commerce · Migration</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">PBC → Shopify Migration</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Move Pickleball Central to Shopify ourselves (saves the $200k agency quote). Shopify MCP exists — layer automated SEO + conversion optimization on top.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 5%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Owner: Taylor Lumis · committed 5/20 1:1</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FFEDD5;color:#9A3412;">From 5/20 1:1</span>
+            </div>
+          </article>
+
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="pbc-support">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#15803D;">Customer Support</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">PBC AI Customer Support</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Email + ticket agent that reads every past resolution and answers the common stuff without humans. "They should never respond to emails again."</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 0%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Owner: Taylor Lumis · committed 5/20 1:1</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FFEDD5;color:#9A3412;">From 5/20 1:1</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ========== PILLAR: PICKLEBALL.COM ========== -->
+      <div class="mb-6">
+        <div class="pill mb-3 flex items-center gap-2" style="color: #C2410C;">
+          <span class="inline-block w-2.5 h-2.5 rounded-full" style="background: #C2410C;"></span>
+          <span>Pickleball.com</span>
+          <span class="text-slate-400 font-normal normal-case tracking-normal">— dev · Jason's trial</span>
+        </div>
+        <div class="grid gap-5" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="ptcom-ai">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#C2410C;">Dev · Adoption</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Pickleball.com AI Adoption (Jason)</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Jason fully adopts AI for the development workflow. Connor's framing: "the trial for Jason — adopt or get out." Highest leverage of any pillar.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 0%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Owner: Jason · accountability with Connor</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FFEDD5;color:#9A3412;">From 5/20 1:1</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ========== PILLAR: ORG & TOOLS ========== -->
+      <div>
+        <div class="pill mb-3 flex items-center gap-2" style="color: #6D28D9;">
+          <span class="inline-block w-2.5 h-2.5 rounded-full" style="background: #6D28D9;"></span>
+          <span>Org &amp; Tools</span>
+          <span class="text-slate-400 font-normal normal-case tracking-normal">— hiring · tool sunset</span>
+        </div>
+        <div class="grid gap-5" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="vp-marketing">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#6D28D9;">Hiring · Org</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">VP of Marketing Hire (Utah)</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Utah-based VP/SVP of Marketing. Oversees Tyler + Caitlin, absorbs Jeff for PR/brand. Bryce transitions out of marketing management — toward AI transformation.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 5%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Connor + Bryce aligned 5/20 · need JD + sourcing channel</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#EDE9FE;color:#5B21B6;">Org Unlock</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FFEDD5;color:#9A3412;">From 5/20 1:1</span>
+            </div>
+          </article>
+
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="tool-sunset">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#6D28D9;">Tools · $ Saved</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Sunset Asana + HubSpot</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Kill both subscriptions. Replace with this dashboard + custom AI tooling tied to email / Slack / messages. Connor: "they all need to go away 100%."</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 0%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Need: annual spend audit on both</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FFEDD5;color:#9A3412;">From 5/20 1:1</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -264,18 +408,19 @@
 
   <!-- Meeting talking points -->
   <section class="mt-10 rounded-2xl p-6 border" style="background: white; border-color:#E2E8F0;">
-    <div class="pill mb-2" style="color: var(--blue);">For this morning's meeting</div>
+    <div class="pill mb-2" style="color: var(--blue);">For tomorrow's Bryce X Connor Daily</div>
     <h2 class="text-xl font-extrabold">Top of the agenda</h2>
     <ol class="mt-4 space-y-2 text-sm text-slate-700 list-decimal pl-5">
-      <li><span class="font-semibold">Sales Conversation → Auto Deck Builder.</span> Decide the transcript source (Gong vs Fireflies vs raw upload), and who owns the deck template library.</li>
-      <li><span class="font-semibold">KPI accountability.</span> Each card needs a $-saved or $-added attribution so the two $1M targets at the top of the board are defensible by quarter-end.</li>
-      <li><span class="font-semibold">Sequencing.</span> Flight Finance AI is closest to shipping — push it across the line before adding new work in the Travel lane.</li>
+      <li><span class="font-semibold">Pillar approval.</span> Walk Connor through the restructured board (PPA Tour / PBC / PT.com / Org &amp; Tools). Confirm the split before any new card goes in.</li>
+      <li><span class="font-semibold">First AI direct.</span> Decide between <em>Taylor Lumis</em> (PBC ops) and <em>Samin</em> (finance) for the first dedicated implementation pass next week.</li>
+      <li><span class="font-semibold">VP of Marketing hire.</span> Sourcing channel + who owns the JD draft (Bryce or external recruiter). Utah-based, ~$150k, oversees Tyler + Caitlin.</li>
     </ol>
+    <p class="mt-4 text-xs text-slate-500">Yesterday: 5 new projects committed from the 5/20 1:1 (Pro Player Contract App, PBC→Shopify, PBC Support, PT.com AI, VP hire, Asana/HubSpot sunset). PPA Website got 6 new sub-steps from Connor's product walkthrough.</p>
   </section>
 </main>
 
 <footer class="max-w-[1600px] mx-auto px-8 py-8 text-xs text-slate-400">
-  Pickleball Inc · v0.1 · Built for Bryce · click any card for detail
+  Pickleball Inc · v0.2 · Updated 2026-05-20 after Connor 1:1 · click any card for detail
 </footer>
 
 <!-- DETAIL MODAL -->
@@ -421,6 +566,12 @@ const PROJECTS = {
       { done: true, text: "/tour/* programs (Junior / Senior / State / Camps / Travel / Hospitality)" },
       { done: true, text: "/events/[slug] expanded into real event hub (UPCOMING surface)" },
       { done: true, text: "Real partner logos wired into spotlight + marquee" },
+      { done: false, text: "🔴 Connor 5/20: kill the Toys R Us ad block at top" },
+      { done: false, text: "🔴 Connor 5/20: pull all 3rd-party retargeting ads — partners only" },
+      { done: false, text: "🔴 Connor 5/20: /schedule defaults to 1000+ pt events with See-All toggle" },
+      { done: false, text: "🔴 Connor 5/20: homepage Upcoming Tournaments band — same 1000+ filter" },
+      { done: false, text: "🔴 Connor 5/20: individual event pages — top priority (still backend-only)" },
+      { done: false, text: "🔴 Connor 5/20: give Wesley full access; remove placeholder girl image" },
       { done: false, text: "Sanity CMS confirm + integration (currently pending)" },
       { done: false, text: "§7 LIVE / RECAP state machine for /events/[slug]" },
       { done: false, text: "Real /search page (currently ComingSoon catch-all)" },
@@ -457,6 +608,140 @@ const PROJECTS = {
       { done: false, text: "Pilot with one tournament weekend" }
     ],
     blockers: ["Wait until Flight Finance + Deck Builder leave Current"],
+    links: []
+  },
+  "pro-player-app": {
+    category: "PPA Tour · Pro Players",
+    title: "Pro Player Contract App",
+    summary: "Drop in any pro player contract — payments, obligations, deliverables, marketing asks tracked automatically. Replaces Emily's team's manual contract admin.",
+    stage: "NEW",
+    stageNote: "5% — committed in 2026-05-20 Connor 1:1",
+    progress: 5,
+    owner: "Bryce + Emily's team (PPA Pro Player ops)",
+    lever: "Revenue · $1M target — players get more out of their contracts",
+    steps: [
+      { done: false, text: "Inventory current contract admin process with Emily" },
+      { done: false, text: "Schema: payments, obligations, marketing deliverables, exclusivity windows" },
+      { done: false, text: "Contract upload + LLM extraction pipeline" },
+      { done: false, text: "Per-player dashboard with deadline reminders" },
+      { done: false, text: "Pilot with 5 pros, then tour-wide rollout" }
+    ],
+    blockers: [
+      "Where does the data live — net-new app or extend an existing system?",
+      "Who owns the data quality pass on extracted fields?"
+    ],
+    links: []
+  },
+  "pbc-shopify": {
+    category: "Pickleball Central · Commerce",
+    title: "PBC → Shopify Migration",
+    summary: "Migrate Pickleball Central off its current cart to Shopify ourselves — skips the $200k agency quote. Then layer automated SEO + conversion optimization on top via the Shopify MCP.",
+    stage: "NEW",
+    stageNote: "5% — committed in 2026-05-20 Connor 1:1",
+    progress: 5,
+    owner: "Taylor Lumis (PBC) + Bryce",
+    lever: "$ Saved · $200k agency avoided, plus ongoing conversion lift",
+    steps: [
+      { done: false, text: "Catalog + customer + order data export from current platform" },
+      { done: false, text: "Shopify theme + checkout setup matching current PBC UX" },
+      { done: false, text: "Redirect map for SEO continuity" },
+      { done: false, text: "Wire Shopify MCP for automated SEO + conversion optimization" },
+      { done: false, text: "Cutover plan + rollback" },
+      { done: false, text: "Post-launch CRO loop" }
+    ],
+    blockers: [
+      "Confirm Taylor's bandwidth — is this on top of his existing scope or a refocus?",
+      "Inventory sync with any wholesale partners?"
+    ],
+    links: []
+  },
+  "pbc-support": {
+    category: "Pickleball Central · Support",
+    title: "PBC AI Customer Support",
+    summary: "Email + ticket agent that reads every past resolution and answers common asks without humans. Connor: 'they should never respond to emails again.'",
+    stage: "NEW",
+    stageNote: "0% — committed in 2026-05-20 Connor 1:1",
+    progress: 0,
+    owner: "Taylor Lumis (PBC)",
+    lever: "$ Saved · headcount avoided + faster response time",
+    steps: [
+      { done: false, text: "Pull historical support archive (full email + ticket history)" },
+      { done: false, text: "Categorize top 20 resolution patterns" },
+      { done: false, text: "Build response agent with citation back to past resolutions" },
+      { done: false, text: "Human-in-the-loop on first 200 sends" },
+      { done: false, text: "Graduate to auto-send for top categories" }
+    ],
+    blockers: [
+      "Email/ticket platform — what does PBC use today?",
+      "Brand voice guardrails — who approves?"
+    ],
+    links: []
+  },
+  "ptcom-ai": {
+    category: "Pickleball.com · Dev",
+    title: "Pickleball.com AI Adoption (Jason)",
+    summary: "Jason fully adopts AI for the development workflow at Pickleball.com. Connor's framing: 'the trial for Jason — adopt or get out.' Biggest single-person leverage point in the org.",
+    stage: "NEW",
+    stageNote: "0% — committed in 2026-05-20 Connor 1:1",
+    progress: 0,
+    owner: "Jason (dev lead) · accountable to Connor",
+    lever: "$ Saved + Revenue — replaces Hungary contractor spend; accelerates ship rate",
+    steps: [
+      { done: false, text: "Connor sets explicit expectation + timeline with Jason" },
+      { done: false, text: "Bryce + Jacob: tooling kit (Claude Code, MCPs, agentic workflows)" },
+      { done: false, text: "First measurable: one feature shipped end-to-end with AI co-build" },
+      { done: false, text: "30-day check-in on velocity + cost vs baseline" },
+      { done: false, text: "Decision point — continue or exit" }
+    ],
+    blockers: [
+      "Connor's explicit conversation with Jason — has it happened yet?",
+      "What metric defines 'fully adopted' — features shipped, contractor spend cut, both?"
+    ],
+    links: []
+  },
+  "vp-marketing": {
+    category: "Org · Hiring",
+    title: "VP of Marketing Hire (Utah)",
+    summary: "Hire a Utah-based VP/SVP of Marketing to oversee Tyler + Caitlin (and absorb Jeff for PR/brand). Frees Bryce to fully transition into the AI transformation role.",
+    stage: "NEW",
+    stageNote: "5% — Connor + Bryce aligned 5/20",
+    progress: 5,
+    owner: "Bryce + Connor",
+    lever: "Org Unlock — frees Bryce; tightens marketing accountability",
+    steps: [
+      { done: true, text: "Connor + Bryce aligned on the role (5/20 1:1)" },
+      { done: false, text: "JD draft — who owns it (Bryce vs external recruiter)" },
+      { done: false, text: "Sourcing channel — Utah network + recruiter" },
+      { done: false, text: "Comp band confirmed (~$150k)" },
+      { done: false, text: "Interview loop with Tyler, Caitlin, Jeff" },
+      { done: false, text: "Offer + Caitlin moves under new hire" }
+    ],
+    blockers: [
+      "Does Jeff need to be told this is coming, or is that the new VP's first act?",
+      "Recruiter retainer budget?"
+    ],
+    links: []
+  },
+  "tool-sunset": {
+    category: "Tools · $ Saved",
+    title: "Sunset Asana + HubSpot",
+    summary: "Kill both subscriptions. Replace with the Pickleball Inc dashboard + custom AI tooling tied into email, Slack, and messages. Connor: 'they all need to go away 100%.'",
+    stage: "NEW",
+    stageNote: "0% — committed in 2026-05-20 Connor 1:1",
+    progress: 0,
+    owner: "Bryce + Finance (Samin)",
+    lever: "$ Saved · direct subscription cuts + reclaimed admin hours",
+    steps: [
+      { done: false, text: "Audit Asana + HubSpot annual spend" },
+      { done: false, text: "List every team currently dependent on either" },
+      { done: false, text: "Map each workflow to the dashboard / AI replacement" },
+      { done: false, text: "Migration window per team" },
+      { done: false, text: "Cancel both subscriptions" }
+    ],
+    blockers: [
+      "Are any HubSpot fields driving live customer comms today?",
+      "Asana — anyone outside marketing using it that we don't know about?"
+    ],
     links: []
   },
   "divi-cleanup": {
