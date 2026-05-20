@@ -205,26 +205,6 @@
             </div>
           </article>
 
-          <!-- Travel Slack Bot -->
-          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="travel-slack-bot">
-            <div class="flex items-start justify-between gap-3">
-              <div>
-                <div class="pill" style="color:var(--blue);">Travel · Ops</div>
-                <h3 class="mt-1 text-lg font-extrabold leading-tight">Travel Slack Bot</h3>
-              </div>
-              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
-            </div>
-            <p class="mt-3 text-sm text-slate-600">Slack assistant for staff travel — books, surfaces policy, routes manager approval, records the trail.</p>
-            <div class="mt-4">
-              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
-              <div class="stage-bar"><span style="width: 18%;"></span></div>
-              <div class="mt-2 text-xs text-slate-500">Flow drafted; auth + Slack manifest pending</div>
-            </div>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
-            </div>
-          </article>
-
           <!-- Pro Player Contract App -->
           <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="pro-player-app">
             <div class="flex items-start justify-between gap-3">
@@ -360,6 +340,26 @@
           <span class="text-slate-400 font-normal normal-case tracking-normal">— hiring · tool sunset</span>
         </div>
         <div class="grid gap-5" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="travel-slack-bot">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#6D28D9;">Company-Wide · Travel</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Travel Slack Bot</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Org-wide Slack assistant for staff travel across PPA / PBC / PT.com — books, surfaces policy, routes manager approval, records the audit trail.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 18%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Flow drafted; auth + Slack manifest pending</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#EDE9FE;color:#5B21B6;">All Companies</span>
+            </div>
+          </article>
 
           <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="vp-marketing">
             <div class="flex items-start justify-between gap-3">
@@ -526,9 +526,9 @@ const PROJECTS = {
     links: []
   },
   "travel-slack-bot": {
-    category: "Travel · Ops",
+    category: "Org-Wide · Travel",
     title: "Travel Slack Bot",
-    summary: "Slack-native assistant for staff travel — surfaces policy, books, routes approval to managers, and records the full trail in a companion app.",
+    summary: "Org-wide Slack assistant for staff travel across every company (PPA / PBC / Pickleball.com) — surfaces policy, books, routes approval to managers, records the full trail in a companion app.",
     stage: "NEW",
     stageNote: "18% — flow drafted; auth + Slack manifest pending",
     progress: 18,
