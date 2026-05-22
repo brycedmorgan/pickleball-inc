@@ -283,17 +283,17 @@
                 <div class="pill" style="color:var(--blue);">Marketing · Community</div>
                 <h3 class="mt-1 text-lg font-extrabold leading-tight">Ambassador Program</h3>
               </div>
-              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#DBEAFE;color:#1E40AF;">LIVE in Ziff</span>
             </div>
-            <p class="mt-3 text-sm text-slate-600">Ambassador module in the app: recruit, onboard, track activations + reach, and report performance — HubSpot-style brand-performance board, but ours and tied to PPA data.</p>
+            <p class="mt-3 text-sm text-slate-600">Built from the Ambassador Program workbook: pipeline (New → Email → Met → Approved + tier), roster with attribution codes, the 80/60/14-day tournament workflow, and per-event payouts. Dresden works it inside Ziff.</p>
             <div class="mt-4">
               <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
-              <div class="stage-bar"><span style="width: 5%;"></span></div>
-              <div class="mt-2 text-xs text-slate-500">Define ambassador tiers + what we track per person</div>
+              <div class="stage-bar"><span style="width: 45%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">v1 live in Ziff (seeded data) · awaiting Google Doc to finalize workflow</div>
             </div>
             <div class="mt-4 flex flex-wrap gap-2">
               <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
-              <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">App Module</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">App Module · Ziff</span>
             </div>
           </article>
 
@@ -848,26 +848,30 @@ const PROJECTS = {
   "ambassador": {
     category: "PPA Tour · Marketing · Community",
     title: "Ambassador Program",
-    summary: "Ambassador module in the app: recruit, onboard, track activations + reach, and report performance. A HubSpot-style brand-performance board, but ours and wired to PPA data.",
-    stage: "NEW",
-    stageNote: "5% — module of the unified web app",
-    progress: 5,
-    owner: "Marketing · Bryce (build)",
-    lever: "Revenue · organic reach + community-driven growth",
+    summary: "LIVE in Ziff. Built from the Ambassador Program workbook: recruiting pipeline, active-ambassador roster with attribution codes, the 80/60/14-day tournament workflow, and per-event payouts. Dresden runs the whole program inside Ziff.",
+    stage: "LIVE in Ziff",
+    stageNote: "45% — v1 live with seeded data; awaiting the workflow doc",
+    progress: 45,
+    owner: "Dresden (runs it) · Tyler · Bryce (build)",
+    lever: "Revenue · organic reach + commission-driven registrations",
     build: [
-      { label: "Stack", detail: "Ambassador module in Mission Control — CRUD + tracking views (Next.js on Vercel)." },
-      { label: "Access", detail: "Role: marketing manages; ambassadors could get a light self-serve login later." },
-      { label: "Data", detail: "Ambassadors, activations, reach metrics in shared Postgres; optional social-API pulls for reach. Feeds the Marketing Report." },
-      { label: "AI", detail: "Claude scores activations + drafts ambassador outreach/recaps." }
+      { label: "Stack", detail: "Ambassador module in Ziff (4 sub-tabs: Pipeline / Roster / Schedule / Payouts)." },
+      { label: "Access", detail: "Role: marketing (Dresden + Tyler) + exec. Demo login for now; SSO later." },
+      { label: "Data", detail: "Seeded from the Ambassador Program .xlsx. Real version: shared Postgres + code-level registration/ticket attribution." },
+      { label: "AI", detail: "Claude scores applicants by fit + drafts outreach/recaps (next)." }
     ],
     steps: [
-      { done: false, text: "Define ambassador tiers + what we track per person (reach, posts, referrals)" },
-      { done: false, text: "Recruitment + onboarding flow" },
-      { done: false, text: "Activation tracking + performance reporting" },
-      { done: false, text: "Tie into the Marketing Report module" }
+      { done: true, text: "Pipeline Kanban: New → Email sent → Met with → Approved, with tiers" },
+      { done: true, text: "Roster of active ambassadors + their attribution codes" },
+      { done: true, text: "Tournament schedule with the 80/60/14-day workflow" },
+      { done: true, text: "Payouts table — registrations + revenue + commission, top performers" },
+      { done: false, text: "Align pipeline to the Google Doc workflow (pending access)" },
+      { done: false, text: "Wire live data + real auth; tie reach into the Marketing Report" }
     ],
-    blockers: ["Do we have an existing ambassador list to import?", "Reward/payout model?"],
-    links: []
+    blockers: ["Need the Ambassador workflow Google Doc (Drive account can't see it yet)", "Reward/payout model confirmation"],
+    links: [
+      { label: "Open in Ziff", href: "https://ziff-two.vercel.app" }
+    ]
   },
   "pro-player-app": {
     category: "PPA Tour · Pro Players",
