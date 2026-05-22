@@ -131,7 +131,8 @@
         <div class="rounded-xl p-3" style="background: rgba(255,255,255,0.06);"><div class="font-bold text-white">Travel</div><div class="text-white/65 text-xs mt-1">What's to book vs not — Kim's queue + approvals, fed by the Slack bot.</div></div>
         <div class="rounded-xl p-3" style="background: rgba(255,255,255,0.06);"><div class="font-bold text-white">Exec · Connor</div><div class="text-white/65 text-xs mt-1">Sees everything — every module, every company, top to bottom.</div></div>
       </div>
-      <p class="mt-3 text-white/55 text-xs">Also rolling in: marketing report, ambassador program, pro-player contract tracker. Cards tagged <span style="color: var(--sky); font-weight:700;">App Module</span> feed this portal.</p>
+      <p class="mt-3 text-white/55 text-xs">Also rolling in: marketing report, ambassador program, pro-player contract tracker. Cards tagged <span style="color: var(--sky); font-weight:700;">App Module</span> feed this portal — click any for the build plan.</p>
+      <p class="mt-3 text-white/70 text-xs"><span style="color: var(--yellow); font-weight:700;">Platform:</span> Next.js 16 on Vercel · Jason's SSO + role-based access · one shared Postgres + Blob · Claude via Vercel AI Gateway.</p>
     </div>
   </section>
 
@@ -314,6 +315,7 @@
             <div class="mt-4 flex flex-wrap gap-2">
               <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
               <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved · Teamworks</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">App Module</span>
             </div>
           </article>
 
@@ -533,7 +535,7 @@
 </main>
 
 <footer class="max-w-[1600px] mx-auto px-8 py-8 text-xs text-slate-400">
-  Pickleball Inc · v0.4 · Updated 2026-05-22 — unified web app vision + marketing report + ambassador · click any card for detail
+  Pickleball Inc · v0.5 · Updated 2026-05-22 — per-module build plans (stack / auth / data) · click any card for detail
 </footer>
 
 <!-- DETAIL MODAL -->
@@ -569,6 +571,11 @@
         </div>
       </div>
 
+      <div class="mt-6 rounded-xl p-4" id="m-build-wrap" style="background:#F1F5F9;border:1px solid #E2E8F0;">
+        <div class="pill mb-2" style="color:#155E75;">How we build it</div>
+        <div class="text-sm text-slate-700 space-y-1" id="m-build"></div>
+      </div>
+
       <div class="mt-6">
         <div class="pill text-slate-500 mb-3">Next Steps</div>
         <div id="m-steps"></div>
@@ -599,6 +606,12 @@ const PROJECTS = {
     progress: 12,
     owner: "Jacob (first user) · Bryce (build)",
     lever: "Revenue · $1M target",
+    build: [
+      { label: "Stack", detail: "Module inside Mission Control (Next.js 16 on Vercel). Deck render via Google Slides API or pptx export." },
+      { label: "Access", detail: "Role: sales. Jacob + Braden log in through Jason's SSO; see only their own deals + decks." },
+      { label: "Data", detail: "Call audio/transcript → Vercel Blob; deals + reusable deck templates in shared Postgres." },
+      { label: "AI", detail: "Transcribe call, then Claude (via Vercel AI Gateway) extracts buyer signal and fills the brand-locked template." }
+    ],
     steps: [
       { done: true, text: "Pitch internally — concept approved" },
       { done: false, text: "Bryce calls Jacob today — have him start recording his sales calls" },
@@ -648,6 +661,12 @@ const PROJECTS = {
     progress: 5,
     owner: "Bryce · plan to Jennifer + Samin (finance)",
     lever: "$ Saved · find spend waste across the org",
+    build: [
+      { label: "Stack", detail: "Finance module in Mission Control. Nightly Vercel Cron job pulls transactions." },
+      { label: "Access", detail: "Role: finance (Samin, Jennifer) + exec (Connor). SSO-gated; finance sees the full ledger, others see summaries." },
+      { label: "Data", detail: "Amex feed (API or Plaid; CSV fallback) → shared Postgres, auto-categorized. Becomes the spend system of record." },
+      { label: "AI", detail: "Claude categorizes each charge + flags anomalies/waste; nightly digest to the finance view." }
+    ],
     steps: [
       { done: false, text: "Draft the finance-AI plan; send to Jennifer + Samin for problems/feedback" },
       { done: false, text: "Get read access to Amex transactions" },
@@ -671,6 +690,12 @@ const PROJECTS = {
     progress: 25,
     owner: "Bryce (build) · Kim (booker) · per-employee boss from org chart (approver)",
     lever: "$ Saved · faster approvals + a clean finance spend trail",
+    build: [
+      { label: "Stack", detail: "Slack app (Bolt) + Next.js API routes on Vercel (Node runtime, Fluid Compute). Booking queue is a view in Mission Control." },
+      { label: "Access", detail: "Roles: requester (any staff), approver (their boss, resolved from the org chart), booker (Kim), finance (read), exec (all)." },
+      { label: "Data", detail: "Requests + approvals + bookings in shared Postgres — one record flows from request → approval → Kim's booking → finance spend list." },
+      { label: "AI", detail: "Claude runs the intake conversation and normalizes free-text trip details into structured fields." }
+    ],
     steps: [
       { done: true, text: "Draft full conversation flow (rental car / boss / dates / reason / est. cost)" },
       { done: false, text: "Slack app manifest + scopes" },
@@ -785,6 +810,12 @@ const PROJECTS = {
     progress: 5,
     owner: "Bryce (build) → VP of Marketing (future owner)",
     lever: "Revenue · marketing accountability + replaces HubSpot reporting",
+    build: [
+      { label: "Stack", detail: "Marketing module in Mission Control. Scheduled Vercel Cron pulls from each source into one report view." },
+      { label: "Access", detail: "Role: marketing (future VP + team) + exec. SSO-gated." },
+      { label: "Data", detail: "Connectors: Meta/Google Ads, GA4, Semrush → shared Postgres. Becomes the reporting system that lets us cut HubSpot." },
+      { label: "AI", detail: "Claude writes the plain-English weekly summary + flags what moved." }
+    ],
     steps: [
       { done: false, text: "List the metrics that matter (spend, CAC, conversion, channel mix, Semrush rank)" },
       { done: false, text: "Connect sources: ad platforms, Google Analytics, Semrush" },
@@ -803,6 +834,12 @@ const PROJECTS = {
     progress: 5,
     owner: "Marketing · Bryce (build)",
     lever: "Revenue · organic reach + community-driven growth",
+    build: [
+      { label: "Stack", detail: "Ambassador module in Mission Control — CRUD + tracking views (Next.js on Vercel)." },
+      { label: "Access", detail: "Role: marketing manages; ambassadors could get a light self-serve login later." },
+      { label: "Data", detail: "Ambassadors, activations, reach metrics in shared Postgres; optional social-API pulls for reach. Feeds the Marketing Report." },
+      { label: "AI", detail: "Claude scores activations + drafts ambassador outreach/recaps." }
+    ],
     steps: [
       { done: false, text: "Define ambassador tiers + what we track per person (reach, posts, referrals)" },
       { done: false, text: "Recruitment + onboarding flow" },
@@ -821,6 +858,12 @@ const PROJECTS = {
     progress: 10,
     owner: "Bryce (build) + Emily (PPA Pro Player ops)",
     lever: "Revenue + $ Saved — players get more out of contracts AND we kill the Teamworks bill (est. ~$35–50k/yr, see note)",
+    build: [
+      { label: "Stack", detail: "Pro-player module in Mission Control. Replaces Teamworks for our use case." },
+      { label: "Access", detail: "Roles: pro-player ops (Emily) full edit; players get a login to view their deals + communicate." },
+      { label: "Data", detail: "Contracts → Vercel Blob; payments/obligations/deliverables in shared Postgres. Scoring-software (JSON) integration auto-counts events played." },
+      { label: "AI", detail: "Claude extracts structured terms from each uploaded contract; flags upcoming deadlines." }
+    ],
     steps: [
       { done: true, text: "Starting point: Emily's per-player tracker sheet already exists" },
       { done: false, text: "Build it into a sign-in web app (~1 week to v1)" },
@@ -999,6 +1042,19 @@ function openModal(id) {
   document.getElementById('m-progress').style.width = p.progress + '%';
   document.getElementById('m-owner').textContent = p.owner;
   document.getElementById('m-lever').textContent = p.lever;
+
+  const buildEl = document.getElementById('m-build');
+  buildEl.innerHTML = '';
+  if (p.build && p.build.length) {
+    document.getElementById('m-build-wrap').style.display = '';
+    p.build.forEach(b => {
+      const row = document.createElement('div');
+      row.innerHTML = `<span class="font-semibold text-slate-900">${b.label}:</span> ${b.detail}`;
+      buildEl.appendChild(row);
+    });
+  } else {
+    document.getElementById('m-build-wrap').style.display = 'none';
+  }
 
   const stepsEl = document.getElementById('m-steps');
   stepsEl.innerHTML = '';
