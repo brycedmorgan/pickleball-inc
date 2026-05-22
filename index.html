@@ -122,9 +122,9 @@
   <section class="rounded-2xl p-6 mb-8 text-white relative overflow-hidden" style="background: linear-gradient(120deg, #0C2B44, #143a5c);">
     <div class="absolute inset-0 grid-courts"></div>
     <div class="relative">
-      <div class="pill mb-2" style="color: var(--yellow);">The Vision · One Internal Web App</div>
-      <h2 class="text-2xl font-extrabold">PPA Mission Control — one login, role-based access</h2>
-      <p class="mt-2 text-white/75 max-w-3xl text-sm">Most of these projects converge into a single internal web app. Everyone logs in once and sees only what's theirs — built on the same auth (Jason's SSO) and one shared data layer.</p>
+      <div class="pill mb-2" style="color: var(--yellow);">The Vision · Now Building · <a href="https://ziff-two.vercel.app" target="_blank" style="color:var(--sky);">ziff-two.vercel.app ↗</a></div>
+      <h2 class="text-2xl font-extrabold">Ziff — one login, role-based access</h2>
+      <p class="mt-2 text-white/75 max-w-3xl text-sm">Most of these projects converge into a single internal web app — <strong>Ziff</strong>. Everyone logs in once and sees only what's theirs, on shared auth (Jason's SSO) + one data layer. <span style="color:var(--sky);">Live now: Travel + Deck Builder modules.</span></p>
       <div class="mt-4 grid gap-3 text-sm" style="grid-template-columns: repeat(4, minmax(0,1fr));">
         <div class="rounded-xl p-3" style="background: rgba(255,255,255,0.06);"><div class="font-bold text-white">Sales</div><div class="text-white/65 text-xs mt-1">Jacob Cohen + Braden Jones log in and build decks in-app from their recorded calls.</div></div>
         <div class="rounded-xl p-3" style="background: rgba(255,255,255,0.06);"><div class="font-bold text-white">Finance</div><div class="text-white/65 text-xs mt-1">Spend intelligence + Amex view — what's flagged, what's approved.</div></div>
@@ -181,7 +181,7 @@
     <section class="col-shell p-5">
       <div class="flex items-center justify-between mb-4">
         <h2 class="text-lg font-extrabold">Current</h2>
-        <span class="pill text-slate-500">14 in flight · 4 pillars</span>
+        <span class="pill text-slate-500">15 in flight · 4 pillars</span>
       </div>
 
       <!-- ========== PILLAR: PPA TOUR ========== -->
@@ -452,9 +452,29 @@
         <div class="pill mb-3 flex items-center gap-2" style="color: #6D28D9;">
           <span class="inline-block w-2.5 h-2.5 rounded-full" style="background: #6D28D9;"></span>
           <span>Org &amp; Tools</span>
-          <span class="text-slate-400 font-normal normal-case tracking-normal">— hiring · tool sunset</span>
+          <span class="text-slate-400 font-normal normal-case tracking-normal">— the app · hiring · tool sunset</span>
         </div>
         <div class="grid gap-5" style="grid-template-columns: repeat(2, minmax(0,1fr));">
+
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="ziff" style="border-color:#228BE6;">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#6D28D9;">Platform · The App</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Ziff — Internal Web App</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#DBEAFE;color:#1E40AF;">LIVE v0</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">The unified Mission Control app. One login, role-based access — every module above becomes a view inside it. Built on the Miller Bates auth pattern, Pickleball Inc branding.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 30%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Live prototype · Travel + Deck Builder modules shipped</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#EDE9FE;color:#5B21B6;">Platform</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">All Roles</span>
+            </div>
+          </article>
 
           <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="travel-slack-bot">
             <div class="flex items-start justify-between gap-3">
@@ -947,6 +967,39 @@ const PROJECTS = {
       "What metric defines 'fully adopted' — features shipped, contractor spend cut, both?"
     ],
     links: []
+  },
+  "ziff": {
+    category: "Platform · The App",
+    title: "Ziff — Internal Web App",
+    summary: "The unified Mission Control app. One login, role-based access; every module on this board becomes a view inside it. Modeled on the Miller Bates auth pattern, Pickleball Inc branding. Named for the Mosiah-11 precious metal — quietly.",
+    stage: "LIVE v0",
+    stageNote: "30% — live prototype; Travel + Deck Builder modules shipped",
+    progress: 30,
+    owner: "Bryce (build) · Jason (SSO, future)",
+    lever: "Platform — the home for every other module; replaces a stack of SaaS tools",
+    build: [
+      { label: "Stack", detail: "v0 is a static prototype (one index.html, demo logins). Real version: Next.js on Vercel + NextAuth/SSO." },
+      { label: "Access", detail: "Role-gated: sales, travel (Kim), marketing, ambassador, scheduler; Connor (exec) sees all." },
+      { label: "Data", detail: "Per-module shared Postgres + Blob; demo uses localStorage today." },
+      { label: "AI", detail: "Claude via Vercel AI Gateway powers Deck Builder + Travel intake + Finance categorization." }
+    ],
+    steps: [
+      { done: true, text: "Scaffold login + role-based shell (Miller Bates pattern) + Pickleball Inc branding" },
+      { done: true, text: "Travel module — Kim's booking board (approve → book → confirm → notify)" },
+      { done: true, text: "Deck Builder module — transcript + ask → term sheet / deck draft" },
+      { done: false, text: "Real auth — wire Jason's SSO (replace demo logins)" },
+      { done: false, text: "Drop in the base-deck PDF + wire Claude for real generation" },
+      { done: false, text: "Port the Order of Play builder (ppa-oop-builder)" },
+      { done: false, text: "Build out Ambassador CRM, Marketing Report, Tasks, Finance" }
+    ],
+    blockers: [
+      "SSO details from Jason for real logins",
+      "Base-deck PDF from Bryce (Claude Design) for the Deck Builder template"
+    ],
+    links: [
+      { label: "Live app (Ziff v0)", href: "https://ziff-two.vercel.app" },
+      { label: "GitHub repo", href: "https://github.com/Gull-Stack/ziff" }
+    ]
   },
   "vp-marketing": {
     category: "Org · Hiring",
