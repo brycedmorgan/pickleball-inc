@@ -654,6 +654,39 @@
     </div>
   </section>
 
+  <!-- FINANCE: BUILD vs BUY -->
+  <section class="mt-10 rounded-2xl p-6 border" style="background: white; border-color:#E2E8F0;">
+    <div class="pill mb-2" style="color: var(--blue);">Finance · Build vs Buy</div>
+    <h2 class="text-xl font-extrabold">What I'd have built here — vs Upgrade AI</h2>
+    <p class="mt-1 text-sm text-slate-500">Same four jobs. One keeps finance inside our own stack (Ziff); the other is a $50k/yr third-party SaaS finance signed on 6/2.</p>
+    <div class="mt-5 overflow-x-auto">
+      <table class="w-full text-sm" style="border-collapse:collapse; min-width:680px;">
+        <thead>
+          <tr>
+            <th class="py-2 pr-4 text-left text-slate-400 font-semibold" style="width:150px;"></th>
+            <th class="py-2 px-4 text-left font-extrabold rounded-t-lg" style="color:#15803D; background:#F0FDF4;">Claude Finance — built here</th>
+            <th class="py-2 px-4 text-left font-extrabold text-slate-600">Upgrade AI “Specter” — signed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">Cost</td><td class="py-3 px-4" style="background:#F0FDF4;"><strong>~$0 recurring</strong> — Claude tokens on our own infra (Mac Mini / Vercel)</td><td class="py-3 px-4 text-slate-600">$4,165/mo ≈ <strong>$50k/yr</strong>, auto-renews</td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">3-year cost</td><td class="py-3 px-4" style="background:#F0FDF4;">~token spend only</td><td class="py-3 px-4 text-slate-600">≈ <strong>$150k</strong></td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">Where it lives</td><td class="py-3 px-4" style="background:#F0FDF4;">Inside <strong>Ziff</strong> — one login, one data layer, next to Travel + Spend Intelligence</td><td class="py-3 px-4 text-slate-600">Their third-party platform — finance re-siloed off our stack</td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">The AI engine</td><td class="py-3 px-4" style="background:#F0FDF4;"><strong>Claude direct</strong> (Vercel AI Gateway)</td><td class="py-3 px-4 text-slate-600">Wrapper on OpenAI/Anthropic/Gemini/Mistral — i.e. <strong>reselling us Claude</strong></td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">Sage Intacct</td><td class="py-3 px-4" style="background:#F0FDF4;">Direct API integration <strong>we own</strong></td><td class="py-3 px-4 text-slate-600">Native (their plumbing)</td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">Asana</td><td class="py-3 px-4" style="background:#F0FDF4;"><strong>None</strong> — Ziff workflows (Asana is being sunset)</td><td class="py-3 px-4 text-slate-600">Integrates Asana — deepens the tool we're killing</td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">Data &amp; IP</td><td class="py-3 px-4" style="background:#F0FDF4;">Ours — system of record, feeds the rest of the app</td><td class="py-3 px-4 text-slate-600">They own the engine; outputs assigned to us</td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">Time to live</td><td class="py-3 px-4" style="background:#F0FDF4;">Build + maintain — finance was our gap, <strong>never started</strong></td><td class="py-3 px-4 text-slate-600"><strong>Live 7/15</strong>, low lift — they shipped while we sat</td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">Compliance</td><td class="py-3 px-4" style="background:#F0FDF4;">We own controls (no SOC 2 cert of our own yet)</td><td class="py-3 px-4 text-slate-600">SOC 2 Type II (verify the report)</td></tr>
+          <tr class="border-t border-slate-100"><td class="py-3 pr-4 font-semibold text-slate-700">Exit / lock-in</td><td class="py-3 px-4 rounded-b-lg" style="background:#F0FDF4;">No contract — it's our code</td><td class="py-3 px-4 text-slate-600">1-yr term, 30-day non-renewal out</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-5 rounded-xl p-4 text-sm" style="background:#F1F5F9;">
+      <span class="font-bold">Bottom line:</span> building it here wins on cost, ownership, stack-fit, and strategy (kill SaaS, sunset Asana). Buying wins on speed-to-live, an existing SOC 2, and zero maintenance. Upgrade AI only won this lane because finance was the gap we never started — and since Specter runs on Claude anyway, we'd be building on the same engine, just <strong>owning it instead of renting it at $50k/yr</strong>.
+    </div>
+  </section>
+
   <!-- Meeting talking points -->
   <section class="mt-10 rounded-2xl p-6 border" style="background: white; border-color:#E2E8F0;">
     <div class="pill mb-2" style="color: var(--blue);">For Pardoe — Bryce × Connor Daily · 2026-06-08</div>
@@ -671,7 +704,7 @@
 </main>
 
 <footer class="max-w-[1600px] mx-auto px-8 py-8 text-xs text-slate-400">
-  Pickleball Inc · v0.8 · Updated 2026-06-08 — Finance went external (Upgrade AI signed 6/2, ~$50k/yr, Sage + Asana); Finance card reframed as Claude Finance + Sage (what we'd have built) · click any card for detail
+  Pickleball Inc · v0.9 · Updated 2026-06-08 — Finance Build-vs-Buy comparison added (Claude Finance in Ziff vs Upgrade AI's $50k/yr Specter); finance went external 6/2 · click any card for detail
 </footer>
 
 <!-- DETAIL MODAL -->
