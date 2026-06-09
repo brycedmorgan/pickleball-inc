@@ -234,24 +234,24 @@
             </div>
           </article>
 
-          <!-- Finance Spend Intelligence -->
+          <!-- Finance AI — Upgrade AI (signed) vs Claude Finance + Sage -->
           <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="finance-amex">
             <div class="flex items-start justify-between gap-3">
               <div>
                 <div class="pill" style="color:var(--blue);">Finance</div>
-                <h3 class="mt-1 text-lg font-extrabold leading-tight">Finance Spend Intelligence</h3>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Finance AI — Claude + Sage</h3>
               </div>
-              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEE2E2;color:#991B1B;">VENDOR SIGNED</span>
             </div>
-            <p class="mt-3 text-sm text-slate-600">Nightly autonomous pull of Amex transactions → categorized spend list to find waste. Bryce building a plan for Jennifer + Samin to pressure-test first. <strong style="color:#B91C1C;">⚠ Biggest gap — finance hasn't been touched yet (flagged 6/4).</strong></p>
+            <p class="mt-3 text-sm text-slate-600">Finance signed <strong>Upgrade AI</strong> (6/2, Jennifer Lennon) — <strong>$4,165/mo ≈ $50k/yr</strong>, four accounting agents on <strong>Sage Intacct + Asana</strong>. We'd have built the same as <strong>Claude Finance + a direct Sage integration inside Ziff</strong> — no recurring SaaS, no Asana (we're sunsetting it).</p>
             <div class="mt-4">
               <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
-              <div class="stage-bar"><span style="width: 5%;"></span></div>
-              <div class="mt-2 text-xs text-slate-500">⚠ Behind — needs a dedicated pass · read access to Amex · plan to Jennifer + Samin</div>
+              <div class="stage-bar"><span style="width: 100%; background: linear-gradient(90deg,#ef4444,#f59e0b);"></span></div>
+              <div class="mt-2 text-xs text-slate-500">⚠ A new $50k/yr SaaS — counter to the kill-SaaS + sunset-Asana mandate. Finance was our gap; they moved first. Click for the build-vs-buy breakdown.</div>
             </div>
             <div class="mt-4 flex flex-wrap gap-2">
               <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
-              <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">App Module</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#FFE4E6;color:#9F1239;">Build vs Buy</span>
             </div>
           </article>
 
@@ -662,7 +662,7 @@
       <li><span class="font-semibold">NEW — pickleball.com streaming + stats (ALIGNED w/ Loomis 6/8).</span> Game Changer–style: phone at the court → live stream + AI match summary + highlights on the player's profile. Premium acquisition + lead capture. Bryce assessing build-vs-partner; answer to Taylor this week.</li>
       <li><span class="font-semibold">SaaS audit — real money.</span> Loomis flagged the stack: replace/consolidate <strong>Avalara</strong> (tax) + fraud tools first; keep Shopify/Stripe. New card; pull annual spend next.</li>
       <li><span class="font-semibold">PBC → Shopify — gaining steam.</span> Weekly with Loomis + Cohen + Ogden; GA4 shows ~50% of revenue is paid search (~$11M) — protect paid + Shopping-feed URLs.</li>
-      <li><span class="font-semibold">⚠ Finance is still the big miss.</span> Spend Intelligence (Amex) + Flight Finance barely touched. Card consolidation (Loomis) feeds it. Needs a dedicated pass.</li>
+      <li><span class="font-semibold">⚠ Finance went external — we lost the lane.</span> Samin's group signed <strong>Upgrade AI</strong> (6/2, Jennifer Lennon) — ~$50k/yr SaaS, 4 accounting agents on Sage Intacct + <em>Asana</em>. It's the gap we never started. We'd have built Claude Finance + Sage inside Ziff (no SaaS, no Asana). Build-vs-buy call for Connor — click the Finance card.</li>
       <li><span class="font-semibold">Agent Platform (Hermes + OpenClaw → Kin).</span> Background autonomous build; buying a larger Mac Mini to host. Loomis now onboarded to Claude ($100/mo, Brex).</li>
       <li><span class="font-semibold">PPA website push + Bryce OOO.</span> Heavy focus this week; Bryce heading to Hawaii (truly out of office while there).</li>
     </ol>
@@ -671,7 +671,7 @@
 </main>
 
 <footer class="max-w-[1600px] mx-auto px-8 py-8 text-xs text-slate-400">
-  Pickleball Inc · v0.7 · Updated 2026-06-08 (Loomis meeting) — +5 cards: streaming/stats, SaaS audit (Avalara), PBC Claude adoption, card consolidation, agent platform · click any card for detail
+  Pickleball Inc · v0.8 · Updated 2026-06-08 — Finance went external (Upgrade AI signed 6/2, ~$50k/yr, Sage + Asana); Finance card reframed as Claude Finance + Sage (what we'd have built) · click any card for detail
 </footer>
 
 <!-- DETAIL MODAL -->
@@ -789,33 +789,35 @@ const PROJECTS = {
     links: []
   },
   "finance-amex": {
-    category: "PPA Tour · Finance",
-    title: "Finance Spend Intelligence",
-    summary: "Nightly autonomous pull of Amex transactions, auto-categorized into a spend list to surface waste. Bryce is building a plan to send to Jennifer + Samin to pressure-test before wiring it up.",
-    stage: "NEW",
-    stageNote: "5% — ⚠ biggest gap; finance not yet started (flagged 6/4 daily)",
-    progress: 5,
-    owner: "Bryce · plan to Jennifer + Samin (finance)",
-    lever: "$ Saved · find spend waste across the org",
+    category: "PPA Tour · Finance · Build vs Buy",
+    title: "Finance AI — Upgrade AI (signed) vs Claude Finance + Sage",
+    summary: "Finance went external: Pickleball Inc signed Upgrade AI on 6/2 (Jennifer Lennon, Senior Controller). $4,165/mo (~$50k/yr), 1-yr term auto-renewing, live 7/15. Four 'Specter' accounting agents — sponsorship-contract processing, event revenue recognition (earned vs deferred), event expense accruals, and paddle-certification billing/revenue matching — generating Sage-ready, review-only journal entries on Sage Intacct + Asana, SOC 2 Type II. This is the exact finance lane we'd flagged as our biggest gap and never started, so they moved first.",
+    stage: "SUPERSEDED · vendor signed",
+    stageNote: "Decided externally 6/2 — Upgrade AI live 7/15. What we'd have built, below.",
+    progress: 100,
+    owner: "Upgrade AI (vendor) · Jennifer Lennon / Yolande Singh (finance) — Samin's group",
+    lever: "$ Saved? — this ADDS a ~$50k/yr SaaS rather than removing one",
     build: [
-      { label: "Stack", detail: "Finance module in Mission Control. Nightly Vercel Cron job pulls transactions." },
-      { label: "Access", detail: "Role: finance (Samin, Jennifer) + exec (Connor). SSO-gated; finance sees the full ledger, others see summaries." },
-      { label: "Data", detail: "Amex feed (API or Plaid; CSV fallback) → shared Postgres, auto-categorized. Becomes the spend system of record." },
-      { label: "AI", detail: "Claude categorizes each charge + flags anomalies/waste; nightly digest to the finance view." }
+      { label: "What we'd have built", detail: "Claude Finance: Claude via Vercel AI Gateway + a direct Sage Intacct API integration, as a Finance module inside Ziff — same four jobs (contract extraction, rev rec, accruals, cert-billing match) drafting Sage-ready journal entries for human review." },
+      { label: "Cost", detail: "No per-month SaaS. Runs on our own infra (Mac Mini / Vercel) at marginal token cost — vs ~$50k/yr recurring and auto-renewing, forever." },
+      { label: "Stack fit", detail: "Keeps finance data in OUR system of record, next to Travel + Spend Intelligence — one login, one data layer. Upgrade AI re-silos finance in a third-party platform." },
+      { label: "Asana", detail: "Upgrade AI integrates Asana — the exact tool Connor wants to sunset. Our build would use Ziff workflows, not Asana." }
     ],
     steps: [
-      { done: false, text: "Draft the finance-AI plan; send to Jennifer + Samin for problems/feedback" },
-      { done: false, text: "Get read access to Amex transactions" },
-      { done: false, text: "Nightly pull + auto-categorization pipeline" },
-      { done: false, text: "Spend list with anomaly / waste flags" },
-      { done: false, text: "Review cadence with finance" }
+      { done: true, text: "Upgrade AI signed 6/2 (Jennifer Lennon); starts 7/15 at $4,165/mo" },
+      { done: false, text: "Decide: honor the contract (30-day non-renewal out at the 1-yr mark) or build Claude Finance in parallel" },
+      { done: false, text: "If building: stand up Claude + Sage Intacct integration inside Ziff" },
+      { done: false, text: "Run a side-by-side during Upgrade AI's 3-day free audit window" },
+      { done: false, text: "Bring the build-vs-buy + cost case to Connor" }
     ],
     blockers: [
-      "Amex read access — who grants it?",
-      "Open question: is Jennifer the right long-term finance partner? (Bryce evaluating)",
-      "Sensitivity around recent finance departures (Raymond / Oscar) + timing"
+      "Honest read: Upgrade AI is well-scoped — native Sage Intacct, SOC 2, PPA-specific agents — and they shipped while we sat. Buying may have been the pragmatic call for finance.",
+      "But it adds a ~$50k/yr SaaS AND deepens Asana — both against standing mandates (kill SaaS, sunset Asana).",
+      "Lesson: finance was the known gap; we lost the lane by not starting. Move faster on the rest (PBC support, streaming)."
     ],
-    links: []
+    links: [
+      { label: "Upgrade AI (getupgrade.ai)", href: "https://www.getupgrade.ai" }
+    ]
   },
   "travel-slack-bot": {
     category: "Org-Wide · Travel",
