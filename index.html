@@ -382,6 +382,27 @@
               <span class="pill px-2 py-1 rounded-md" style="background:#CFFAFE;color:#155E75;">App Module · Ziff</span>
             </div>
           </article>
+
+          <!-- MLP Undefeated -->
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="mlp-undefeated">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:var(--blue);">Marketing · Fan Engagement</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">MLP Undefeated (game)</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#DBEAFE;color:#1E40AF;">LIVE</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">A pickleball "82-0": draft a serve / return / third-shot drop / dink under the MLP cap, see if your squad goes undefeated, share the card. Real 2026 rosters + headshots + official team logos, MLP blue/orange. Live at <strong>undefeatedmlp.com</strong>. Greenlit by Samin.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 92%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">✅ LIVE on undefeatedmlp.com · next: kill the stale URL, then push to players + influencers</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Traffic · email capture</span>
+            </div>
+          </article>
         </div>
       </div>
 
@@ -747,7 +768,7 @@
 </main>
 
 <footer class="max-w-[1600px] mx-auto px-8 py-8 text-xs text-slate-400">
-  Pickleball Inc · v1.2 · Updated 2026-06-10 — +Jr. PPA Fasthands (junior-tour portal on pickleball.com, spec from Jake Weinbach) · website done soon · documentary gut-check · finance-tracker call · gig rebuild w/ Braxton · Ziff fast-tracked · ambassador automation · Sponsor Outreach Bot · comp proposal · click any card for detail
+  Pickleball Inc · v1.3 · Updated 2026-06-12 — MLP Undefeated LIVE (undefeatedmlp.com, greenlit by Samin) · +Jr. PPA Fasthands · website done soon · finance-tracker call · gig rebuild w/ Braxton · Ziff fast-tracked · ambassador automation · Sponsor Outreach Bot · comp proposal · click any card for detail
 </footer>
 
 <!-- DETAIL MODAL -->
@@ -1487,6 +1508,37 @@ const PROJECTS = {
     ],
     links: [
       { label: "Layout doc — Jr Programming Webpage Layout.docx", href: "file:///Users/bryce/Downloads/Jr%20Programming%20Webpage%20Layout.docx" }
+    ]
+  },
+  "mlp-undefeated": {
+    category: "PPA Tour · Marketing · Fan Engagement",
+    title: "MLP Undefeated — viral roster game",
+    summary: "A pickleball spin on the viral 82-0 game, MLP-branded. Players draft a 4-person squad (2M/2W) as a rally — serve, return, third-shot drop, dink — under the MLP salary cap, then watch if it runs an undefeated season and share a Wordle-style result card. Built on real 2026 MLP rosters with real player headshots (pickleball.com) and official team logos. LIVE at undefeatedmlp.com. Greenlit by Samin (6/10).",
+    stage: "LIVE",
+    stageNote: "Shipped + on undefeatedmlp.com — ready to promote",
+    progress: 92,
+    owner: "Bryce (build) · Samin (greenlit) · Connor (cc)",
+    lever: "Revenue assist — traffic, fan engagement, email capture; sponsorship potential",
+    build: [
+      { label: "Stack", detail: "Single static index.html, no backend; on Vercel (bryce-pickleball team), ~$0 to host. Domain undefeatedmlp.com bought in Vercel." },
+      { label: "Data", detail: "Real 2026 MLP rosters (20 teams, 120 players) with tiered rating estimates; 108 real headshots + 19 official team logos sourced from pickleball.com / majorleaguepickleball.co." },
+      { label: "Mechanic", detail: "Rally-themed draft (each shot ranks candidates by its signature stat) under a salary cap; hidden chemistry bonus for real-life duos; Monte-Carlo title odds; share card + 'beat X% of squads' stat." },
+      { label: "Brand", detail: "MLP navy + orange; PPA/MLP holds the IP, so team logos + marks are used officially." }
+    ],
+    steps: [
+      { done: true, text: "Built + greenlit by Samin (6/10)" },
+      { done: true, text: "Real rosters, headshots, official team logos, MLP branding" },
+      { done: true, text: "Rally draft + shareable result card; LIVE on undefeatedmlp.com" },
+      { done: false, text: "Kill the stale mlp-undefeated.vercel.app (old bmorgan-3864 build)" },
+      { done: false, text: "Push to players + pickleball influencers (Samin's plan)" },
+      { done: false, text: "Optional: refine rating data; daily-challenge mode; sponsor tie-in" }
+    ],
+    blockers: [
+      "Stale URL still serves the old wrong-team build — kill before promoting wide (needs the bmorgan-3864 Vercel login)",
+      "Ratings/prices are estimates — fine for a fan toy, refine if it goes big"
+    ],
+    links: [
+      { label: "Play — undefeatedmlp.com", href: "https://undefeatedmlp.com" }
     ]
   }
 };
