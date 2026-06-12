@@ -419,15 +419,15 @@
             <div class="flex items-start justify-between gap-3">
               <div>
                 <div class="pill" style="color:#15803D;">Commerce · Migration</div>
-                <h3 class="mt-1 text-lg font-extrabold leading-tight">PBC → Shopify Migration</h3>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">PBC → Shopify + commerce expansion</h3>
               </div>
               <span class="pill px-2 py-1 rounded-md" style="background:#FEE2E2;color:#991B1B;">URGENT</span>
             </div>
-            <p class="mt-3 text-sm text-slate-600">Move Pickleball Central to Shopify ourselves (saves the $200k agency quote). Model the storefront on REI; pull Chris Carson's click/purchase analytics into the first demo. Big SEO + YouTube-commerce upside beyond the savings.</p>
+            <p class="mt-3 text-sm text-slate-600">Replatform PBC ($41M/yr) BigCommerce→Shopify ourselves (vs $200k agency), then productize the backend into storefronts. <strong>6/12 Connor: 4 workstreams to scope w/ agreed-prices</strong> — core replatform ($90k, A/B + extra month, no shortcuts) · pickleballpaddles.com ($25k) · PPA + MLP stores ($35k) · MLP team sites productized ($8k + $750/mo + 10%). Click for the full scoped plan.</p>
             <div class="mt-4">
               <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
-              <div class="stage-bar"><span style="width: 22%;"></span></div>
-              <div class="mt-2 text-xs text-slate-500">📈 Gaining steam · standing weekly w/ Loomis + Cohen + Ogden · biz case on real GA4 (~50% of rev = paid search)</div>
+              <div class="stage-bar"><span style="width: 25%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Scoping 4 workstreams + agreed-prices for Connor · protect ~$11M paid-search URLs · weekly w/ Loomis/Cohen/Ogden</div>
             </div>
             <div class="mt-4 flex flex-wrap gap-2">
               <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
@@ -768,7 +768,7 @@
 </main>
 
 <footer class="max-w-[1600px] mx-auto px-8 py-8 text-xs text-slate-400">
-  Pickleball Inc · v1.3 · Updated 2026-06-12 — MLP Undefeated LIVE (undefeatedmlp.com, greenlit by Samin) · +Jr. PPA Fasthands · website done soon · finance-tracker call · gig rebuild w/ Braxton · Ziff fast-tracked · ambassador automation · Sponsor Outreach Bot · comp proposal · click any card for detail
+  Pickleball Inc · v1.4 · Updated 2026-06-12 — PBC Shopify EXPANSION scoped (6/12 Connor: 4 workstreams + agreed-prices) · MLP Undefeated LIVE + analytics · Jr. PPA Fasthands · website done soon · finance call · Ziff fast-tracked · ambassador automation · Sponsor Outreach Bot · comp proposal · click any card for detail
 </footer>
 
 <!-- DETAIL MODAL -->
@@ -1121,28 +1121,33 @@ const PROJECTS = {
     ]
   },
   "pbc-shopify": {
-    category: "Pickleball Central · Commerce",
-    title: "PBC → Shopify Migration",
-    summary: "Migrate Pickleball Central to Shopify ourselves — skips the $200k agency quote. Model the storefront on REI. Beyond the savings: better SEO and YouTube-commerce (sell the paddles mentioned in our videos/documentary), plus more revenue even outside e-comm.",
-    stage: "URGENT · GAINING STEAM",
-    stageNote: "22% — standing weekly with Loomis + Cohen + Ogden; business case drafted on real GA4 data",
-    progress: 22,
-    owner: "Taylor Loomis (PBC) + Bryce · weekly w/ Cohen + Ogden · analytics from Chris Carson",
-    lever: "$ Saved ($200k agency avoided) + Revenue (conversion + SEO + YouTube commerce)",
+    category: "Pickleball Central · Commerce · Replatform",
+    title: "PBC → Shopify replatform + commerce expansion",
+    summary: "Replatform Pickleball Central (BigCommerce → Shopify) ourselves (skips the $200k agency quote), then productize PBC's fulfillment backend into a family of storefronts. PBC does $41M/yr (Taylor Loomis = CEO), so Connor's constraint on the CORE replatform: A/B test new vs old + an extra month + a staged cutover — no shortcuts (it carries ~$11M of paid-search revenue). Four scoped workstreams from the 6/12 Connor conversation, each with a proposed agreed-price for the tracker (Bryce's numbers — Connor to confirm).",
+    stage: "URGENT · SCOPING",
+    stageNote: "Scoping 4 workstreams + agreed-prices for Connor (6/12); the $41M core is the gated, no-shortcuts one",
+    progress: 25,
+    owner: "Bryce (build) · Taylor Loomis (PBC CEO) · weekly w/ Cohen + Ogden · Mac (team-site outreach) · George (Picklr)",
+    lever: "$ Saved (agency avoided) + Revenue (new storefronts + recurring team-site product + sponsorship value)",
+    build: [
+      { label: "0 · Core replatform — proposed $90k", detail: "PBC ($41M/yr) BigCommerce→Shopify: full catalog/customer/order migration, REI-modeled storefront, 1:1 SEO + Shopping-feed redirect map (protect ~$11M paid search), wholesale + Pro Shop/POS, payments-rate negotiation. Connor: A/B test new vs old + an extra month + staged cutover/rollback. Saves ~$110k vs the $200k agency." },
+      { label: "1 · pickleballpaddles.com — proposed $25k", detail: "Curated Top-10 storefront on Shopify (already prototyped) + the daily charity raffle, fulfilled by PBC's backend. New DTC channel; ~$45k cheaper than an agency build." },
+      { label: "2 · PPA Tour + MLP stores — proposed $35k (both)", detail: "Two branded storefronts on PBC fulfillment. PPA store carries ONLY the top-3 paddle partners + Joola net + Lifetime ball + on-demand PPA print — a sponsorship-value lever (another reason partners pay $1M+/yr). MLP store mirrors it." },
+      { label: "3 · MLP team sites + stores — productized: $8k build + $750/mo + 10% fulfillment", detail: "Repeatable per-team site+store on PBC fulfillment; Utah Black Diamonds = the quality bar. 20 MLP teams ≈ $160k build + ~$15k/mo recurring + a fulfillment cut. Mac runs outreach (needs the one-pager); same playbook → Picklr franchisees via George." }
+    ],
     steps: [
-      { done: true, text: "Standing weekly with Taylor Loomis + Cohen + Ogden" },
-      { done: true, text: "Business case drafted on real GA4 data — key finding: ~50% of revenue is paid search (~$11M), organic only ~11%" },
-      { done: false, text: "Protect paid + Shopping-feed URLs (the #1 migration risk, not just SEO)" },
-      { done: false, text: "Get click/purchase analytics from Chris Carson" },
-      { done: false, text: "First Shopify demo styled like REI, wired to the analytics" },
-      { done: false, text: "Catalog + customer + order export from the current platform" },
-      { done: false, text: "SEO redirect map + YouTube product tie-ins" },
-      { done: false, text: "Slow, staged migration → cutover + rollback plan" }
+      { done: true, text: "Standing weekly w/ Loomis + Cohen + Ogden; business case on real GA4 (~50% rev = paid search, ~$11M)" },
+      { done: true, text: "6/12 Connor: 3 expansion workstreams approved to scope + the $41M no-shortcuts constraint" },
+      { done: false, text: "Confirm the four agreed-prices with Connor → lock them on the tracker" },
+      { done: false, text: "Core: redirect/Shopping-feed map + A/B-test plan + extra-month buffer + staged cutover/rollback" },
+      { done: false, text: "pickleballpaddles.com Shopify build (prototype → production on PBC fulfillment)" },
+      { done: false, text: "PPA + MLP storefronts (locked SKU sets; sponsorship-value framing)" },
+      { done: false, text: "Productize team sites: Utah Black Diamonds flagship + one-pager for Mac → MLP teams + Picklr via George" }
     ],
     blockers: [
-      "Revenue-change estimate (Bryce producing today)",
-      "Chris Carson analytics access",
-      "Taylor's bandwidth — net-new vs refocus?"
+      "Connor sign-off on the four agreed-prices (these feed the comp scoreboard)",
+      "Protecting the ~$11M paid-search + Shopping-feed URLs is the #1 replatform risk",
+      "Sequencing core + 3 expansions across PBC bandwidth so the $41M core isn't rushed"
     ],
     links: []
   },
