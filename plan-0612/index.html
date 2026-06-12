@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>The Plan — Bryce × Connor · June 12, 2026</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: dark; }
+  body { font-family: 'Inter', system-ui, sans-serif; background:#070b14; color:#e6ebf4; }
+  .display { font-family:'Sora', sans-serif; }
+  .mono { font-family:'JetBrains Mono', monospace; }
+  .card { background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015)); border:1px solid rgba(255,255,255,.09); border-radius:18px; }
+  .card:hover { border-color:rgba(255,255,255,.18); }
+  .chip { border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); border-radius:999px; }
+  .glow-orange { box-shadow:0 0 80px -20px rgba(249,115,22,.35); }
+  .glow-green { box-shadow:0 0 80px -20px rgba(34,197,94,.3); }
+  .hr { height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent); }
+  .bar { background:rgba(255,255,255,.07); border-radius:999px; overflow:hidden; }
+  .bar > div { height:100%; border-radius:999px; }
+  a.linkout { color:#7dd3fc; text-decoration:none; border-bottom:1px dotted rgba(125,211,252,.5); }
+  a.linkout:hover { color:#bae6fd; }
+  .num { font-variant-numeric: tabular-nums; }
+  html { scroll-behavior:smooth; scroll-padding-top:84px; }
+  .navlink { color:#94a3b8; } .navlink:hover { color:#fff; }
+  @media print { .no-print { display:none; } body { background:#fff; color:#111; } }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ====================== NAV ====================== -->
+<header class="no-print fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-[#070b14]/80 border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-2.5">
+      <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center font-black text-[13px] text-white display">B</div>
+      <span class="font-bold text-sm tracking-tight">Bryce × Connor <span class="text-slate-500 font-medium">· 6.12.26</span></span>
+    </div>
+    <nav class="hidden md:flex items-center gap-5 text-[12.5px] font-semibold">
+      <a href="#scoreboard" class="navlink">Scoreboard</a>
+      <a href="#deal" class="navlink">The Deal</a>
+      <a href="#fantasy" class="navlink">Fantasy</a>
+      <a href="#timeline" class="navlink">Timeline</a>
+      <a href="#ventures" class="navlink">Ventures</a>
+      <a href="#invited" class="navlink">Invited</a>
+      <a href="#lifetime" class="navlink">Life Time</a>
+      <a href="#discuss" class="navlink text-orange-400 hover:text-orange-300">Decisions</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ====================== HERO ====================== -->
+<section class="pt-32 pb-16 px-5 relative overflow-hidden">
+  <div class="absolute -top-40 left-1/3 w-[600px] h-[400px] bg-orange-600/10 blur-[120px] rounded-full"></div>
+  <div class="absolute top-20 right-0 w-[400px] h-[300px] bg-emerald-500/8 blur-[120px] rounded-full"></div>
+  <div class="max-w-6xl mx-auto relative">
+    <div class="chip inline-flex items-center gap-2 px-3.5 py-1.5 text-[12px] font-semibold text-orange-300 mb-6">
+      <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+      MORNING MEETING · THURSDAY, JUNE 12, 2026
+    </div>
+    <h1 class="display text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-tight">
+      One scoreboard.<br/>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-emerald-400">Aligned upside.</span>
+    </h1>
+    <p class="mt-6 text-lg text-slate-400 max-w-2xl leading-relaxed">
+      Three things this morning: <strong class="text-white">where the PPA work stands</strong> (it's all on the tracker),
+      <strong class="text-white">the comp structure that pays me on results</strong>, and
+      <strong class="text-white">what's next after the summer</strong> — the ventures where I'd love your brain, your network, and maybe some skin in the game.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3 text-[13px]">
+      <a href="https://pickleball-inc.vercel.app" target="_blank" class="chip px-4 py-2 font-semibold hover:bg-white/10">🏓 Live tracker → pickleball-inc.vercel.app</a>
+      <a href="https://mlp-undefeated-ivory.vercel.app" target="_blank" class="chip px-4 py-2 font-semibold hover:bg-white/10">🎮 MLP Undefeated (fantasy)</a>
+      <a href="https://usecinch.com" target="_blank" class="chip px-4 py-2 font-semibold hover:bg-white/10">⛳ Cinch → usecinch.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PART 1 / SCOREBOARD ====================== -->
+<section id="scoreboard" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-orange-400 tracking-[0.2em]">PART 1 · PPA TOUR</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">The scoreboard you already watch every morning</h2>
+    <p class="mt-3 text-slate-400 max-w-3xl">Everything below is live on the daily tracker. Two $1M targets, every card pre-approved on our daily call. This page just zooms out.</p>
+
+    <!-- KPI bars -->
+    <div class="grid md:grid-cols-2 gap-5 mt-8">
+      <div class="card p-6 glow-green">
+        <div class="flex items-baseline justify-between">
+          <span class="text-[13px] font-bold text-emerald-400 tracking-wide">COST SAVED</span>
+          <span class="mono text-[12px] text-slate-500">target $1,000,000</span>
+        </div>
+        <div class="mt-3 flex items-end gap-2">
+          <span class="display num text-4xl font-extrabold text-white">$180k</span>
+          <span class="text-slate-500 text-sm mb-1">tracking · 18%</span>
+        </div>
+        <div class="bar h-2.5 mt-4"><div class="bg-gradient-to-r from-emerald-500 to-emerald-300" style="width:18%"></div></div>
+        <p class="mt-4 text-[13px] text-slate-400 leading-relaxed">
+          ~<strong class="text-emerald-300">$590k more identified and in flight</strong>: ambassador function ~$175k · website in-house ~$105k · PBC Shopify ~$200k · Claude Finance vs Specter ~$50k · Teamworks ~$40k · Asana seats ~$20k.
+        </p>
+      </div>
+      <div class="card p-6 glow-orange">
+        <div class="flex items-baseline justify-between">
+          <span class="text-[13px] font-bold text-orange-400 tracking-wide">REVENUE ADDED</span>
+          <span class="mono text-[12px] text-slate-500">target $1,000,000</span>
+        </div>
+        <div class="mt-3 flex items-end gap-2">
+          <span class="display num text-4xl font-extrabold text-white">$80k</span>
+          <span class="text-slate-500 text-sm mb-1">pipeline · 8%</span>
+        </div>
+        <div class="bar h-2.5 mt-4"><div class="bg-gradient-to-r from-orange-500 to-amber-300" style="width:8%"></div></div>
+        <p class="mt-4 text-[13px] text-slate-400 leading-relaxed">
+          Vacations live and selling · Sponsor Outreach Bot scoped (3 build options, your pick) · fantasy sponsorship inventory coming online (below).
+        </p>
+      </div>
+    </div>
+
+    <!-- Shipped wall -->
+    <h3 class="display text-xl font-bold mt-12 mb-4 text-slate-200">Shipped &amp; moving — the short version</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">Pickleball Vacations</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-emerald-300">LIVE</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">vacations.ppatour.com — Club Med Punta Cana, full Stripe registration, confirmations, the works. Built in-house, zero agency.</p>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">New PPA Tour Website</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-amber-300">DONE SOON</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">Content-first rebuild of ppatour.com. In-house ~$45k vs the ~$150k MLP-style agency spend — the savings anchor.</p>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">PBC → Shopify</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-sky-300">GAINING STEAM</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">BigCommerce → Shopify Plus replatform with Loomis. ~$200k of identified savings, weekly standing call.</p>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">Ambassador Automation</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-sky-300">BUILDING</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">Full platform build — I build the whole thing; event-day ops stays on the Kyle Turner contract. ~$175k function savings.</p>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">Ziff — Internal App</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-sky-300">FAST-TRACKED</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">One login for everything internal: Order of Play, Deck Builder, Ambassador CRM, Marketing Report, travel. Kills HubSpot + scattered SaaS.</p>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">Finance — Claude + Sage</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-sky-300">BUILD VS BUY</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">Own it vs rent Specter at ~$50k/yr. Jennifer × Samin call set. Owned agents survive any one person.</p>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">Sponsor Outreach Bot</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-amber-300">YOUR PICK A/B/C</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">Auto-prospects TV/sports advertisers for net-new sponsorship money. Three build options scoped and waiting on you.</p>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">pickleballpaddles.com</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-emerald-300">BUILT + LIVE</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">Top-10-only curated paddle property, Pro Pickleball Labs scoring, PBC buy links, daily charity raffle.</p>
+      </div>
+      <div class="card p-5">
+        <div class="flex items-center justify-between"><span class="font-bold text-[15px]">MLP Undefeated</span><span class="chip px-2 py-0.5 text-[10.5px] font-bold text-emerald-300">LIVE</span></div>
+        <p class="mt-2 text-[13px] text-slate-400 leading-relaxed">Fantasy roster-builder + season sim. All 20 real 2026 teams, 120 players. Samin greenlit; your polish notes shipped.</p>
+      </div>
+    </div>
+    <p class="mt-5 text-[13px] text-slate-500">Also on the board: Jr. PPA Fasthands · Live Streaming/Scoring/Stats (Braxton) · Travel Slack Bot · SaaS Audit · Credit Card Consolidation · Hermes + OpenClaw agent platform → the <em>Kin</em> booking agent.</p>
+  </div>
+</section>
+
+<div class="hr max-w-6xl mx-auto"></div>
+
+<!-- ====================== THE DEAL ====================== -->
+<section id="deal" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-emerald-400 tracking-[0.2em]">THE STRUCTURE</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Pay me on the scoreboard</h2>
+    <p class="mt-3 text-slate-400 max-w-3xl">Effective <strong class="text-white">September 1</strong>. Every number pre-approved by you on the daily. The tracker is the official ledger — nothing counts unless we both signed off on it.</p>
+
+    <div class="grid md:grid-cols-3 gap-5 mt-8">
+      <div class="card p-7 text-center">
+        <p class="text-[12px] font-bold text-slate-400 tracking-widest">BASE</p>
+        <p class="display num text-5xl font-extrabold mt-3 text-white">$125k</p>
+        <p class="mt-3 text-[13px] text-slate-400 leading-relaxed">Covers the fulfillment work — websites, internal tools, fantasy builds, daily ops. Half of today's base.</p>
+      </div>
+      <div class="card p-7 text-center border-emerald-500/30">
+        <p class="text-[12px] font-bold text-emerald-400 tracking-widest">+ 10% OF NEW MONEY EARNED</p>
+        <p class="display num text-5xl font-extrabold mt-3 text-emerald-300">10%</p>
+        <p class="mt-3 text-[13px] text-slate-400 leading-relaxed">New sponsorships, new ad inventory, new commerce — money PPA didn't have before. Tracked card-by-card.</p>
+      </div>
+      <div class="card p-7 text-center border-sky-500/30">
+        <p class="text-[12px] font-bold text-sky-400 tracking-widest">+ 8% OF MONEY SAVED</p>
+        <p class="display num text-5xl font-extrabold mt-3 text-sky-300">8%</p>
+        <p class="mt-3 text-[13px] text-slate-400 leading-relaxed">Verified, recurring cost we kill together — vendors, agencies, headcount a build absorbs, SaaS we cancel.</p>
+      </div>
+    </div>
+
+    <!-- Worked examples -->
+    <h3 class="display text-xl font-bold mt-12 mb-1 text-slate-200">What that looks like with real cards</h3>
+    <p class="text-[13px] text-slate-500 mb-5">Not hypotheticals — these are all on the board today.</p>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card p-5 flex gap-4">
+        <div class="text-2xl">🧾</div>
+        <div>
+          <p class="font-bold text-[15px]">Ambassador function — savings</p>
+          <p class="mt-1.5 text-[13.5px] text-slate-400 leading-relaxed">The platform I'm building absorbs the manual ambassador workload — the role Mac benchmarked at <strong class="text-white">$150k</strong>. If the build makes that hire unnecessary, that's $150k/yr saved → <strong class="text-sky-300">$12k/yr to me</strong>. I only get paid if the software actually does the job.</p>
+        </div>
+      </div>
+      <div class="card p-5 flex gap-4">
+        <div class="text-2xl">📺</div>
+        <div>
+          <p class="font-bold text-[15px]">Fantasy sponsorship — new money</p>
+          <p class="mt-1.5 text-[13.5px] text-slate-400 leading-relaxed">Sell one sponsor onto MLP/PPA fantasy, or run ads that do <strong class="text-white">$2k/mo</strong> → $24k/yr of money that didn't exist → <strong class="text-emerald-300">$2.4k/yr to me</strong>. Small example on purpose — the structure scales the same at $200k.</p>
+        </div>
+      </div>
+      <div class="card p-5 flex gap-4">
+        <div class="text-2xl">🌐</div>
+        <div>
+          <p class="font-bold text-[15px]">Website in-house — savings</p>
+          <p class="mt-1.5 text-[13.5px] text-slate-400 leading-relaxed">~$45k in-house vs the ~$150k agency path MLP took → <strong class="text-white">~$105k saved</strong> → <strong class="text-sky-300">~$8.4k</strong>. Already nearly done.</p>
+        </div>
+      </div>
+      <div class="card p-5 flex gap-4">
+        <div class="text-2xl">🛒</div>
+        <div>
+          <p class="font-bold text-[15px]">PBC Shopify — savings</p>
+          <p class="mt-1.5 text-[13.5px] text-slate-400 leading-relaxed">~<strong class="text-white">$200k</strong> identified in the replatform + SaaS consolidation around it → <strong class="text-sky-300">~$16k</strong>. Loomis is co-signed on the number.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benchmark math -->
+    <div class="card mt-8 p-7 border-amber-500/25">
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-4">
+        <div>
+          <p class="text-[12px] font-bold text-amber-400 tracking-widest">THE BENCHMARK MATH</p>
+          <p class="mt-2 text-[15px] text-slate-300 leading-relaxed max-w-xl">Hit both $1M targets and the structure pays <span class="mono text-white">$125k + $100k + $80k = <strong>$305k</strong></span> — right at today's $300k ($250k + $50k bonus). Same money, <strong class="text-white">earned on results instead of guaranteed</strong>. Miss the targets and you keep the difference.</p>
+        </div>
+        <div class="flex-1 min-w-[260px]">
+          <div class="flex justify-between text-[12px] font-semibold text-slate-400 mb-1.5"><span>Today: guaranteed</span><span class="num">$300k</span></div>
+          <div class="bar h-3"><div class="bg-slate-500" style="width:98%"></div></div>
+          <div class="flex justify-between text-[12px] font-semibold text-slate-400 mt-3 mb-1.5"><span>Proposed: $125k floor + upside</span><span class="num">$125k → $305k+</span></div>
+          <div class="bar h-3 relative"><div class="bg-gradient-to-r from-emerald-500 via-emerald-400 to-amber-300" style="width:41%"></div><div class="absolute inset-y-0 left-[41%] right-0 bg-[repeating-linear-gradient(45deg,rgba(251,191,36,.25)_0_6px,transparent_6px_12px)] rounded-r-full"></div></div>
+          <p class="mt-2 text-[11.5px] text-slate-500">Solid = guaranteed · striped = earned only when the scoreboard moves</p>
+        </div>
+      </div>
+      <p class="mt-5 text-[13px] text-slate-400 leading-relaxed border-t border-white/10 pt-4">
+        The honest framing: <strong class="text-slate-200">my goal isn't to claw back exactly what I was making.</strong> It's to take real risk off your P&amp;L, keep building like an owner, and free up room to grow across the board — here and in the ventures below. One-time bonuses for one-time wins stay on the table, your call each time.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="hr max-w-6xl mx-auto"></div>
+
+<!-- ====================== FANTASY ====================== -->
+<section id="fantasy" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-violet-400 tracking-[0.2em]">REVENUE LANE</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Fantasy: free inventory we control</h2>
+    <div class="grid lg:grid-cols-3 gap-5 mt-8">
+      <div class="card p-6">
+        <p class="chip inline-block px-2.5 py-1 text-[10.5px] font-bold text-emerald-300 mb-3">LIVE NOW</p>
+        <h3 class="font-bold text-lg">MLP Undefeated</h3>
+        <p class="mt-2 text-[13.5px] text-slate-400 leading-relaxed">Roster-builder + season sim — the 82-0.com formula in pickleball clothes. All 20 real 2026 MLP teams, 120 real players, salary cap, Monte-Carlo title odds, shareable results grid. <a class="linkout" href="https://mlp-undefeated-ivory.vercel.app" target="_blank">Play it →</a></p>
+      </div>
+      <div class="card p-6">
+        <p class="chip inline-block px-2.5 py-1 text-[10.5px] font-bold text-amber-300 mb-3">NEXT BUILD</p>
+        <h3 class="font-bold text-lg">PPA Fantasy</h3>
+        <p class="mt-2 text-[13.5px] text-slate-400 leading-relaxed">Same engine pointed at tour events: pick'em brackets, weekly lineups, streaks. Games and fun first — every game is an email capture and a reason to come back between events.</p>
+      </div>
+      <div class="card p-6">
+        <p class="chip inline-block px-2.5 py-1 text-[10.5px] font-bold text-violet-300 mb-3">THE MONEY</p>
+        <h3 class="font-bold text-lg">Sponsor + ad inventory</h3>
+        <p class="mt-2 text-[13.5px] text-slate-400 leading-relaxed">Logo placements on the game ("Undefeated, presented by ___"), branded challenges, ad units. Even modest — $2k/mo — it's new money on inventory that costs us nothing incremental. Builds stay in base; the revenue rides the 10%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr max-w-6xl mx-auto"></div>
+
+<!-- ====================== TIMELINE ====================== -->
+<section id="timeline" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-amber-400 tracking-[0.2em]">THE TRANSITION</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Timeline we should agree on today</h2>
+    <div class="mt-10 relative">
+      <div class="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-orange-500 via-amber-400 to-emerald-400 opacity-40"></div>
+      <div class="space-y-8">
+        <div class="relative pl-10">
+          <div class="absolute left-0 top-1 w-[15px] h-[15px] rounded-full bg-orange-500 ring-4 ring-orange-500/20"></div>
+          <p class="mono text-[12px] font-bold text-orange-300">NOW → END OF AUGUST</p>
+          <h3 class="font-bold text-lg mt-1">Finish the heavy lifts</h3>
+          <p class="mt-1.5 text-[13.5px] text-slate-400 max-w-2xl leading-relaxed">Ship the PPA website · land the PBC Shopify migration · ambassador platform live · finance direction picked (build vs Specter) · sponsor bot running · PPA fantasy v1. Keep the daily, keep the tracker.</p>
+        </div>
+        <div class="relative pl-10">
+          <div class="absolute left-0 top-1 w-[15px] h-[15px] rounded-full bg-amber-400 ring-4 ring-amber-400/20"></div>
+          <p class="mono text-[12px] font-bold text-amber-300">SEPTEMBER 1</p>
+          <h3 class="font-bold text-lg mt-1">New structure kicks in</h3>
+          <p class="mt-1.5 text-[13.5px] text-slate-400 max-w-2xl leading-relaxed">$125k base + 10% / 8% goes live. Tracker becomes the official comp ledger. We reconcile quarterly off the board.</p>
+        </div>
+        <div class="relative pl-10">
+          <div class="absolute left-0 top-1 w-[15px] h-[15px] rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"></div>
+          <p class="mono text-[12px] font-bold text-emerald-300">LATE SUMMER / EARLY FALL</p>
+          <h3 class="font-bold text-lg mt-1">Hire the Utah CMO</h3>
+          <p class="mt-1.5 text-[13.5px] text-slate-400 max-w-2xl leading-relaxed">The VP-of-Marketing card, upgraded: Utah-based, ~$150k, owns Tyler + Caitlin and the day-to-day calendar. I help source, write the JD, and onboard them onto everything I've built — then I move up a level: systems, revenue lanes, special projects.</p>
+        </div>
+        <div class="relative pl-10">
+          <div class="absolute left-0 top-1 w-[15px] h-[15px] rounded-full bg-sky-400 ring-4 ring-sky-400/20"></div>
+          <p class="mono text-[12px] font-bold text-sky-300">FALL ONWARD</p>
+          <h3 class="font-bold text-lg mt-1">Growth mode — PPA + ventures in parallel</h3>
+          <p class="mt-1.5 text-[13.5px] text-slate-400 max-w-2xl leading-relaxed">PPA keeps getting my best systems work on the new structure. The freed-up bandwidth goes into the ventures below — where I want your thinking, and where there's room for more than thinking.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PART 2 DIVIDER ====================== -->
+<section id="ventures" class="px-5 py-20 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-900/10 to-transparent"></div>
+  <div class="max-w-6xl mx-auto relative text-center">
+    <p class="mono text-[12px] font-semibold text-emerald-400 tracking-[0.2em]">PART 2 · THE BIGGER PICTURE</p>
+    <h2 class="display text-3xl md:text-5xl font-extrabold mt-3 tracking-tight">"Too many ideas" isn't a problem<br class="hidden md:block"/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">if they make money.</span></h2>
+    <p class="mt-5 text-slate-400 max-w-2xl mx-auto leading-relaxed">You're already in one of these. The other one you haven't seen yet — and it's further along than you'd guess. I'm not asking you to run anything. I want your judgment, your network, and your help picking which doors to kick.</p>
+  </div>
+</section>
+
+<!-- ====================== LONE PEAK ====================== -->
+<section id="lonepeak" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <div class="card p-8 md:p-10 border-teal-500/25">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <p class="mono text-[12px] font-semibold text-teal-400 tracking-[0.2em]">VENTURE 01 · YOU'RE ALREADY IN</p>
+          <h2 class="display text-3xl font-extrabold mt-2 tracking-tight">Lone Peak Health</h2>
+          <p class="mt-1 text-teal-300/90 font-semibold text-[15px]">"Health shouldn't be expensive."</p>
+        </div>
+        <span class="chip px-3 py-1.5 text-[11px] font-bold text-teal-300">CASH-PAY TELEHEALTH · UTAH LAUNCH</span>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 mt-7">
+        <div class="space-y-4 text-[14px] text-slate-300 leading-relaxed">
+          <p><strong class="text-white">The model:</strong> membership-only ($59/mo individual, $89 couple). Weight loss (GLP-1), TRT, peptides — guided by bloodwork and a licensed NP (Elizabeth). Meds, labs, and supplements pass through <strong class="text-white">at cost, zero markup</strong> — we point patients at the cheapest pharmacy, including Cost Plus.</p>
+          <p><strong class="text-white">Why it wins:</strong> we're the anti-Hims. They make money marking up prescriptions; we make money on membership, so every incentive points at the patient's wallet. Text-first care, AI concierge ("Toni"), portal that doesn't feel like a clinic.</p>
+          <p><strong class="text-white">GTM:</strong> Lehi / Saratoga Springs / Eagle Mountain first — local pharmacy relationships and word of mouth — Utah-wide telehealth next, then state-by-state on a platform that's already national-ready.</p>
+        </div>
+        <div class="card p-6 bg-black/20">
+          <p class="text-[12px] font-bold text-slate-400 tracking-widest mb-4">WHERE IT STANDS / WHAT'S NEXT</p>
+          <ul class="space-y-3 text-[13.5px] text-slate-300">
+            <li class="flex gap-2.5"><span class="text-teal-400">✓</span> Brand + site live (lonepeakhealth.com), rebrand from Tonus done</li>
+            <li class="flex gap-2.5"><span class="text-teal-400">✓</span> Clinical co-owner secured (Elizabeth, NP-C)</li>
+            <li class="flex gap-2.5"><span class="text-amber-400">→</span> Backend build approved: auth → Stripe → live Toni → lab upload + NP review queue</li>
+            <li class="flex gap-2.5"><span class="text-amber-400">→</span> Attorney: MSO/friendly-PC structure + name clearance</li>
+            <li class="flex gap-2.5"><span class="text-amber-400">→</span> Elizabeth: credentialing, malpractice, pharmacy + lab accounts</li>
+          </ul>
+          <p class="mt-5 pt-4 border-t border-white/10 text-[13px] text-slate-400"><strong class="text-teal-300">The bigger picture for today:</strong> this isn't a Utah side clinic — it's a repeatable, owned-platform playbook. Pricing, protocols, and the membership engine all travel. Let's talk sequencing: clinic live → prove unit economics → expand states → same engine, new verticals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CINCH ====================== -->
+<section id="cinch" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-lime-400 tracking-[0.2em]">VENTURE 02 · THE ONE YOU HAVEN'T SEEN</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Cinch — the club operating system</h2>
+    <p class="mt-3 text-slate-400 max-w-3xl leading-relaxed">A white-label membership platform for clubs: <strong class="text-white">payments, member communications, booking, and the full admin side</strong> — check-in scanning, class schedules, tier upgrades, family accounts — with an AI concierge that books and reschedules for members over chat. It's live, it's multi-tenant, and it already runs a real club.</p>
+
+    <!-- proof row -->
+    <div class="grid md:grid-cols-3 gap-4 mt-8">
+      <div class="card p-5">
+        <p class="text-[12px] font-bold text-lime-400 tracking-widest">PROOF · FLAGSHIP</p>
+        <h3 class="font-bold text-lg mt-1.5">Treehouse Athletic Club</h3>
+        <p class="mt-2 text-[13.5px] text-slate-400 leading-relaxed">Full-service athletic club (pool, rock wall, courts, spa, Kids' Club, group fitness) live in private beta. Memberships, family accounts, check-ins, gamified member progress, class schedules — the whole member lifecycle.</p>
+      </div>
+      <div class="card p-5">
+        <p class="text-[12px] font-bold text-lime-400 tracking-widest">PROOF · BREADTH</p>
+        <h3 class="font-bold text-lg mt-1.5">One platform, six verticals</h3>
+        <p class="mt-2 text-[13.5px] text-slate-400 leading-relaxed">Golf tee sheets w/ dynamic pricing · racquet courts · simulator lounges · gyms · studios · climbing. Same engine, per-club branding. Live demos: <a class="linkout" href="https://gym-platform-livid.vercel.app/play/bearcreek" target="_blank">golf</a> · <a class="linkout" href="https://gym-platform-livid.vercel.app/play/swingbay" target="_blank">sim lounge</a> · <a class="linkout" href="https://usecinch.com/walkthrough" target="_blank">guided tour</a>.</p>
+      </div>
+      <div class="card p-5">
+        <p class="text-[12px] font-bold text-lime-400 tracking-widest">PROOF · PIPELINE</p>
+        <h3 class="font-bold text-lg mt-1.5">121-course Utah golf CRM</h3>
+        <p class="mt-2 text-[13.5px] text-slate-400 leading-relaxed">Every golf facility in Utah mapped — booking vendor verified by hand, contacts captured, prioritized. 15-course SLC muni cluster is the wedge; live proposal already in front of Salt Lake County (Riverbend). This is the "golf course out there we could be selling."</p>
+      </div>
+    </div>
+
+    <!-- capability matrix -->
+    <h3 class="display text-xl font-bold mt-12 mb-4 text-slate-200">What's already built (not roadmap — shipped)</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-[13px]">
+      <div class="card p-4"><p class="font-bold text-white mb-1">💳 Payments</p><p class="text-slate-400 leading-relaxed">Stripe-native: recurring tiers, family plans, punch passes, gift cards, rainchecks, credits, pay-at-venue.</p></div>
+      <div class="card p-4"><p class="font-bold text-white mb-1">📅 Booking</p><p class="text-slate-400 leading-relaxed">Tee sheets, courts, sim bays, classes, amenities — with peak pricing + automatic last-minute deals.</p></div>
+      <div class="card p-4"><p class="font-bold text-white mb-1">🤖 AI concierge</p><p class="text-slate-400 leading-relaxed">Members book, move, and cancel by chat. Preview → confirm flow; no phone call to the front desk.</p></div>
+      <div class="card p-4"><p class="font-bold text-white mb-1">🛠️ Admin side</p><p class="text-slate-400 leading-relaxed">Check-in scanning, rosters, schedules, tier management, dashboards, per-tenant pricing rules.</p></div>
+      <div class="card p-4"><p class="font-bold text-white mb-1">📣 Member comms</p><p class="text-slate-400 leading-relaxed">Email/SMS infrastructure, waitlists with auto-notify, booking confirmations and receipts.</p></div>
+      <div class="card p-4"><p class="font-bold text-white mb-1">🎨 White-label</p><p class="text-slate-400 leading-relaxed">Each club gets its own branded portal + domain. Self-serve onboarding wizard provisions a tenant in minutes.</p></div>
+      <div class="card p-4"><p class="font-bold text-white mb-1">🏆 Gamification</p><p class="text-slate-400 leading-relaxed">Levels, streaks, leaderboards from check-in data — retention mechanics built in.</p></div>
+      <div class="card p-4"><p class="font-bold text-white mb-1">📈 Dynamic pricing</p><p class="text-slate-400 leading-relaxed">Yield management on every bookable asset — recovers $400–800/week of dead inventory per course.</p></div>
+    </div>
+
+    <div class="card mt-8 p-6 border-lime-500/25">
+      <p class="text-[14px] text-slate-300 leading-relaxed"><strong class="text-lime-300">The business model:</strong> $0/month + 0.5% per booking, or $149/month flat — against incumbents charging $500–700+ with hidden fees (Mindbody's real all-in is ~$543/mo at $50k volume). For municipal buyers there's a golfer-funded $0-to-the-county track built for procurement. <span class="text-slate-400">Cheap enough to be a no-brainer, sticky enough to compound.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== INVITED PITCH ====================== -->
+<section id="invited" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <div class="card p-8 md:p-10 border-amber-500/30 relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-amber-500/10 blur-[80px] rounded-full"></div>
+      <p class="mono text-[12px] font-semibold text-amber-400 tracking-[0.2em]">TAILORED PITCH 01</p>
+      <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Invited <span class="text-slate-500 font-bold text-2xl">(ClubCorp)</span></h2>
+      <p class="mt-3 text-slate-300 max-w-3xl leading-relaxed">The largest owner-operator of private clubs in North America — <strong class="text-white">~400 golf &amp; country clubs, city clubs, and athletic clubs</strong> under one roof. One enterprise deal = hundreds of properties on the same contract.</p>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-8">
+        <div>
+          <p class="text-[12px] font-bold text-amber-300 tracking-widest mb-3">EVERYTHING AN INVITED CLUB RUNS — WE ALREADY DO</p>
+          <div class="grid grid-cols-2 gap-2.5 text-[13.5px]">
+            <div class="chip px-3.5 py-2.5 font-semibold">⛳ Golf — tee sheets + dynamic pricing</div>
+            <div class="chip px-3.5 py-2.5 font-semibold">🎾 Tennis — court booking + clinics</div>
+            <div class="chip px-3.5 py-2.5 font-semibold">🏊 Pool — lanes, cabanas, swim programs</div>
+            <div class="chip px-3.5 py-2.5 font-semibold">🥒 Pickleball — courts + leagues</div>
+            <div class="chip px-3.5 py-2.5 font-semibold">🎯 Racquetball / squash</div>
+            <div class="chip px-3.5 py-2.5 font-semibold">🍽️ Dining + events (roadmap, fast)</div>
+          </div>
+          <p class="mt-4 text-[13.5px] text-slate-400 leading-relaxed">All of it on <strong class="text-white">one membership record</strong>: one bill, one app, one tier system across every amenity. The cross-amenity engine is exactly what we run at Treehouse today — a country club is the same shape with a tee sheet on top, and the tee sheet is our strongest module.</p>
+        </div>
+        <div>
+          <p class="text-[12px] font-bold text-amber-300 tracking-widest mb-3">THE PITCH IN THREE LINES</p>
+          <ol class="space-y-3.5 text-[14px] text-slate-300 leading-relaxed list-none">
+            <li class="flex gap-3"><span class="display font-extrabold text-amber-400">1</span><span><strong class="text-white">Member management, not new websites.</strong> Payments, dues, tiers, families, communications, and every booking surface — behind their existing brands. White-label is the product.</span></li>
+            <li class="flex gap-3"><span class="display font-extrabold text-amber-400">2</span><span><strong class="text-white">The admin side closes the deal.</strong> Front-desk check-in scanning, class rosters, tier upsells, occupancy dashboards, yield pricing per club — GMs see their whole property in one screen.</span></li>
+            <li class="flex gap-3"><span class="display font-extrabold text-amber-400">3</span><span><strong class="text-white">AI concierge is the wedge nobody else has.</strong> "Move my Saturday tee time and book the kids a pool cabana" — handled in chat, preview → confirm. No incumbent (Northstar, Jonas, Clubessential) can demo this today.</span></li>
+          </ol>
+          <div class="mt-5 p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-[13.5px] text-amber-100/90 leading-relaxed">
+            <strong>Path in:</strong> pilot 2–3 properties (one country club, one city club), 90 days, success = booking volume + member NPS + front-desk hours saved. Then the portfolio conversation. Question for you: who do we know at Invited, and does PPA's relationship map touch them?
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== LIFE TIME PITCH ====================== -->
+<section id="lifetime" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <div class="card p-8 md:p-10 border-red-500/30 relative overflow-hidden">
+      <div class="absolute -top-24 -left-24 w-72 h-72 bg-red-500/10 blur-[80px] rounded-full"></div>
+      <p class="mono text-[12px] font-semibold text-red-400 tracking-[0.2em]">TAILORED PITCH 02 · THE WARM ONE</p>
+      <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Life Time</h2>
+      <p class="mt-3 text-slate-300 max-w-3xl leading-relaxed"><strong class="text-white">~180 athletic country clubs</strong>, millions of members — and the single biggest pickleball operator in the country. This is the one where <strong class="text-red-300">you're the unfair advantage</strong>: PPA already lives inside their buildings.</p>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-8">
+        <div>
+          <p class="text-[12px] font-bold text-red-300 tracking-widest mb-3">WHAT WE'D TAKE OVER</p>
+          <ul class="space-y-3 text-[14px] text-slate-300 leading-relaxed">
+            <li class="flex gap-2.5"><span class="text-red-400 font-bold">→</span><span><strong class="text-white">The member app experience</strong> — booking, schedules, membership, payments in one place that members actually like opening.</span></li>
+            <li class="flex gap-2.5"><span class="text-red-400 font-bold">→</span><span><strong class="text-white">Class + gym schedule booking</strong> — group fitness, lap lanes, courts, sim bays; waitlists that auto-fill, peak pricing where it makes sense.</span></li>
+            <li class="flex gap-2.5"><span class="text-red-400 font-bold">→</span><span><strong class="text-white">Child care booking</strong> — Kids' Club reservations as a first-class bookable amenity (we already run this shape at Treehouse), tied to the family membership.</span></li>
+            <li class="flex gap-2.5"><span class="text-red-400 font-bold">→</span><span><strong class="text-white">Member management end-to-end</strong> — tiers, family accounts, dues, check-in scanning, retention gamification on top of their check-in data.</span></li>
+            <li class="flex gap-2.5"><span class="text-red-400 font-bold">→</span><span><strong class="text-white">Pickleball, obviously</strong> — court reservations, leagues, clinics, open-play management — plus PPA fantasy + content baked into the member app. Nobody else can offer that bundle.</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[12px] font-bold text-red-300 tracking-widest mb-3">WHY THIS IS WINNABLE</p>
+          <div class="space-y-3.5 text-[14px] text-slate-300 leading-relaxed">
+            <p><strong class="text-white">Their stack is the weak point.</strong> Big-box operators run aging member software that members tolerate, not love. We demo a branded portal where a member books a court, a class, and child care in ninety seconds — then asks the AI to reschedule all three.</p>
+            <p><strong class="text-white">Start where the relationship is.</strong> Don't pitch 180 clubs — pitch the pickleball layer first. PPA × Life Time already exists; Cinch powers the court/league/fantasy experience in a handful of flagship clubs, proves engagement, then expands surface area club by club, amenity by amenity.</p>
+            <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-[13.5px] text-red-100/90">
+              <strong>The ask of you:</strong> sequencing and the intro. Who at Life Time owns member experience, and do we lead with pickleball (warm, narrow) or with the Kids' Club/booking pain (broad, expensive)? Your read on that room is worth more than any deck.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hr max-w-6xl mx-auto"></div>
+
+<!-- ====================== DISCUSSION ====================== -->
+<section id="discuss" class="px-5 py-16">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-orange-400 tracking-[0.2em]">BEFORE WE HANG UP</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Five decisions to leave with</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-4">
+      <div class="card p-6 flex gap-4 items-start">
+        <span class="display text-3xl font-extrabold text-orange-400">1</span>
+        <div><p class="font-bold text-[15px]">Comp structure — yes / adjust</p><p class="mt-1 text-[13.5px] text-slate-400 leading-relaxed">$125k + 10% new money + 8% saved, Sept 1, tracker as ledger. What needs to change for this to be a yes?</p></div>
+      </div>
+      <div class="card p-6 flex gap-4 items-start">
+        <span class="display text-3xl font-extrabold text-orange-400">2</span>
+        <div><p class="font-bold text-[15px]">Sponsor bot — pick A / B / C</p><p class="mt-1 text-[13.5px] text-slate-400 leading-relaxed">Three scoped options on the board. This is the fastest path to the first 10%-eligible dollars.</p></div>
+      </div>
+      <div class="card p-6 flex gap-4 items-start">
+        <span class="display text-3xl font-extrabold text-orange-400">3</span>
+        <div><p class="font-bold text-[15px]">Utah CMO — green-light the search</p><p class="mt-1 text-[13.5px] text-slate-400 leading-relaxed">~$150k, owns Tyler + Caitlin. Who drafts the JD, and do we use a recruiter? Tied to the ambassador-staffing question already under review.</p></div>
+      </div>
+      <div class="card p-6 flex gap-4 items-start">
+        <span class="display text-3xl font-extrabold text-orange-400">4</span>
+        <div><p class="font-bold text-[15px]">Lone Peak — sequencing</p><p class="mt-1 text-[13.5px] text-slate-400 leading-relaxed">Backend build is underway. Align on launch order: attorney/clearance → Elizabeth credentialed → first 100 members in Lehi corridor.</p></div>
+      </div>
+      <div class="card p-6 flex gap-4 items-start md:col-span-2">
+        <span class="display text-3xl font-extrabold text-orange-400">5</span>
+        <div><p class="font-bold text-[15px]">Cinch — your role, if any</p><p class="mt-1 text-[13.5px] text-slate-400 leading-relaxed">The platform is built and the Utah golf pipeline is live without you — that's fine. The enterprise plays (Invited, Life Time) are different: they're relationship sales, and that's your superpower. Advisor? Door-opener? Partner on the enterprise lane? Or just a sounding board — I'll take that too. No wrong answer this morning.</p></div>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="display text-xl font-bold text-slate-300">The through-line</p>
+      <p class="mt-3 text-slate-400 max-w-2xl mx-auto leading-relaxed">Every one of these runs on the same engine: <strong class="text-white">build it in-house, own it forever, pay for results.</strong> PPA gets that engine first and cheapest. The rest is upside we can grow together.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="px-5 pb-12">
+  <div class="max-w-6xl mx-auto pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-[12px] text-slate-500">
+    <span>Prepared by Bryce Morgan · June 12, 2026 · private — not for distribution</span>
+    <span class="mono">pickleball-inc.vercel.app · usecinch.com · lonepeakhealth.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
