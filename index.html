@@ -737,6 +737,25 @@
               <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Connor aligned</span>
             </div>
           </article>
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="canva-enterprise">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#7C3AED;">Tools · Brand</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Canva Enterprise — org-wide design system</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Stand up <strong>Canva Enterprise</strong> across Pickleball Inc so every property — PPA, MLP, PBC, Picklr, DUPR, pickleball.com — produces on-brand creative at scale. Locked <strong>brand kits + templates per property</strong>, team workspaces, and approval/brand controls so the one-designer-per-product model scales and non-designers self-serve on-brand assets. Backbone for the CMO stickiness mandate + Samin's content org; offsets freelance/agency design spend.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 15%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Scope seats + cost → brand kits/templates per property → workspaces + brand controls → roll out</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#EDE9FE;color:#5B21B6;">Org Unlock</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Brand system</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1632,6 +1651,29 @@ const PROJECTS = {
       "Kate's capacity + comp for taking ownership"
     ],
     links: []
+  },
+  "canva-enterprise": {
+    category: "Org · Tools · Brand & Design",
+    title: "Canva Enterprise — org-wide brand & design system",
+    summary: "Stand up Canva Enterprise across Pickleball Inc so every property (PPA, MLP, PBC, Picklr, DUPR, pickleball.com) can produce on-brand creative at scale. Locked brand kits + templates per property, shared team workspaces, and approval/brand controls — so the one-designer-per-product model scales and non-designers self-serve on-brand assets instead of bottlenecking on design. Backbone for the CMO cross-property stickiness mandate and Samin's content org; should also offset freelance/agency design spend.",
+    stage: "NEW · Scoping",
+    stageNote: "Scope seats + cost → brand kits/templates per property → workspaces + brand controls → roll out + train",
+    progress: 15,
+    owner: "Bryce (scopes/rolls out) · Samin + product designers · Connor approves spend",
+    lever: "Org Unlock — scaled, on-brand creation across every property",
+    steps: [
+      { done: false, text: "Scope seat count + properties + Canva Enterprise pricing" },
+      { done: false, text: "Build brand kits + locked templates per property (PPA, MLP, PBC, Picklr, DUPR, PT.com)" },
+      { done: false, text: "Set up team workspaces + approval/brand-control workflows" },
+      { done: false, text: "Train designers + content team; enable non-designer self-serve" },
+      { done: false, text: "Roll out org-wide; retire ad-hoc/agency design where it makes sense" }
+    ],
+    blockers: [
+      "Seat count + Canva Enterprise cost (Connor sign-off on spend)",
+      "How it sits alongside existing Adobe + per-product designers",
+      "Who owns/administers the brand kits across properties"
+    ],
+    links: []
   }
 };
 
@@ -1751,6 +1793,7 @@ const PRICING = {
   "ptcom-ai":{amount:0,lever:"org",state:"proposed",note:"Jason's trial"},
   "cmo-scope":{amount:0,lever:"org",state:"proposed",note:"hire by Sept 1"},
   "ops-automation":{amount:50000,lever:"saved",state:"proposed",note:"avoid the Michaela backfill hire"},
+  "canva-enterprise":{amount:0,lever:"org",state:"proposed",note:"scope seats + cost"},
   "ppa-ranking":{amount:0,lever:"backlog",state:"proposed"},
   "order-of-play":{amount:0,lever:"backlog",state:"proposed"},
   "divi-cleanup":{amount:0,lever:"backlog",state:"proposed"}
