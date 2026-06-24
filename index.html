@@ -427,7 +427,7 @@
             <div class="mt-4">
               <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
               <div class="stage-bar"><span style="width: 25%;"></span></div>
-              <div class="mt-2 text-xs text-slate-500">Scoping 4 workstreams + agreed-prices for Connor · protect ~$11M paid-search URLs · weekly w/ Loomis/Cohen/Ogden</div>
+              <div class="mt-2 text-xs text-slate-500">FRI migration deep-dive w/ Taylor + Chris (timeline · ownership · design · PBC bandwidth · risks) · protect ~$11M paid-search URLs · then lock agreed-prices w/ Connor</div>
             </div>
             <div class="mt-4 flex flex-wrap gap-2">
               <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
@@ -1182,11 +1182,11 @@ const PROJECTS = {
   "pbc-shopify": {
     category: "Pickleball Central · Commerce · Replatform",
     title: "PBC → Shopify replatform + commerce expansion",
-    summary: "Replatform Pickleball Central (BigCommerce → Shopify) ourselves (skips the $200k agency quote), then productize PBC's fulfillment backend into a family of storefronts. PBC does $41M/yr (Taylor Loomis = CEO), so Connor's constraint on the CORE replatform: A/B test new vs old + an extra month + a staged cutover — no shortcuts (it carries ~$11M of paid-search revenue). Four scoped workstreams from the 6/12 Connor conversation, each with a proposed agreed-price for the tracker (Bryce's numbers — Connor to confirm).",
+    summary: "Replatform Pickleball Central (BigCommerce → Shopify) ourselves (skips the $200k agency quote), then productize PBC's fulfillment backend into a family of storefronts. PBC does $41M/yr (Taylor Loomis = CEO), so Connor's constraint on the CORE replatform: A/B test new vs old + an extra month + a staged cutover — no shortcuts (it carries ~$11M of paid-search revenue). Four scoped workstreams from the 6/12 Connor conversation, each with a proposed agreed-price for the tracker (Bryce's numbers — Connor to confirm). FRIDAY DEEP-DIVE (Bryce × Taylor Loomis × Chris Carson) to lock the real migration plan — approach, timeline, who-owns-what, design, and PBC staff bandwidth — before we pull the trigger; Bryce recording + coming prepped (Taylor: 'don't want us being naive or overlooking things').",
     stage: "URGENT · SCOPING",
-    stageNote: "Scoping 4 workstreams + agreed-prices for Connor (6/12); the $41M core is the gated, no-shortcuts one",
-    progress: 25,
-    owner: "Bryce (build) · Taylor Loomis (PBC CEO) · weekly w/ Cohen + Ogden · Mac (team-site outreach) · George (Picklr)",
+    stageNote: "Fri deep-dive w/ Taylor + Chris on the migration plan (timeline · ownership · design · PBC bandwidth · risk register) — then lock agreed-prices w/ Connor",
+    progress: 30,
+    owner: "Bryce (build) · Taylor Loomis (PBC CEO) · Chris Carson (PBC) · weekly w/ Cohen + Ogden · Mac (team-site outreach) · George (Picklr)",
     lever: "$ Saved (agency avoided) + Revenue (new storefronts + recurring team-site product + sponsorship value)",
     build: [
       { label: "0 · Core replatform — proposed $90k", detail: "PBC ($41M/yr) BigCommerce→Shopify: full catalog/customer/order migration, REI-modeled storefront, 1:1 SEO + Shopping-feed redirect map (protect ~$11M paid search), wholesale + Pro Shop/POS, payments-rate negotiation. Connor: A/B test new vs old + an extra month + staged cutover/rollback. Saves ~$110k vs the $200k agency." },
@@ -1197,16 +1197,24 @@ const PROJECTS = {
     steps: [
       { done: true, text: "Standing weekly w/ Loomis + Cohen + Ogden; business case on real GA4 (~50% rev = paid search, ~$11M)" },
       { done: true, text: "6/12 Connor: 3 expansion workstreams approved to scope + the $41M no-shortcuts constraint" },
+      { done: false, text: "FRI deep-dive w/ Taylor + Chris: lock approach, timeline, ownership, design, PBC bandwidth (Bryce recording + prepped)" },
+      { done: false, text: "Discovery/audit: BigCommerce export (catalog, variants, customers, orders, reviews, gift cards) + integration & URL inventory" },
       { done: false, text: "Confirm the four agreed-prices with Connor → lock them on the tracker" },
-      { done: false, text: "Core: redirect/Shopping-feed map + A/B-test plan + extra-month buffer + staged cutover/rollback" },
-      { done: false, text: "pickleballpaddles.com Shopify build (prototype → production on PBC fulfillment)" },
-      { done: false, text: "PPA + MLP storefronts (locked SKU sets; sponsorship-value framing)" },
-      { done: false, text: "Productize team sites: Utah Black Diamonds flagship + one-pager for Mac → MLP teams + Picklr via George" }
+      { done: false, text: "301 redirect + Google Shopping-feed map (protect ~$11M paid search) + rebuild GA4/conversion tracking" },
+      { done: false, text: "Stand up Shopify Plus: storefront build/design, ERP/inventory + fulfillment sync, payments/tax, B2B/wholesale + Pro Shop/POS" },
+      { done: false, text: "Migrate order history + reviews + gift cards/store credit; forced customer password-reset flow + comms" },
+      { done: false, text: "QA + A/B new vs old + staged cutover with rollback (Connor's gate; extra-month buffer)" },
+      { done: false, text: "Expansions in sequence: pickleballpaddles.com → PPA + MLP stores → productized team sites (Mac / Picklr via George)" }
     ],
     blockers: [
       "Connor sign-off on the four agreed-prices (these feed the comp scoreboard)",
-      "Protecting the ~$11M paid-search + Shopping-feed URLs is the #1 replatform risk",
-      "Sequencing core + 3 expansions across PBC bandwidth so the $41M core isn't rushed"
+      "SEO/paid-search cliff: every BigCommerce URL needs a 301 + Shopping-feed parity (~$11M at risk) — #1 risk",
+      "Customer passwords DON'T migrate BigCommerce→Shopify — forced reset + comms plan",
+      "ERP/inventory + fulfillment sync = biggest integration risk (the backbone for the multi-store model)",
+      "Shopify Plus tier needed (variant limits, B2B/wholesale, expansion stores, checkout customization)",
+      "Don't-forget migrations: order history, reviews, gift cards, store credit",
+      "PBC staff bandwidth: catalog/SKU cleanup, content QA, CS through cutover, admin training",
+      "Sequencing core + 3 expansions so the $41M core isn't rushed"
     ],
     links: []
   },
