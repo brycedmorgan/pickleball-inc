@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>PBC → Shopify Migration — Full Scope & Confidence Plan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: dark; }
+  body { font-family: 'Inter', system-ui, sans-serif; background:#070b14; color:#e6ebf4; }
+  .display { font-family:'Sora', sans-serif; }
+  .mono { font-family:'JetBrains Mono', monospace; }
+  .card { background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.015)); border:1px solid rgba(255,255,255,.09); border-radius:18px; }
+  .card:hover { border-color:rgba(255,255,255,.16); }
+  .chip { border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); border-radius:999px; }
+  .glow-orange { box-shadow:0 0 80px -20px rgba(249,115,22,.35); }
+  .glow-green { box-shadow:0 0 80px -20px rgba(34,197,94,.3); }
+  .glow-cyan { box-shadow:0 0 80px -20px rgba(6,182,212,.3); }
+  .hr { height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent); }
+  .bar { background:rgba(255,255,255,.07); border-radius:999px; overflow:hidden; }
+  .bar > div { height:100%; border-radius:999px; }
+  a.linkout { color:#7dd3fc; text-decoration:none; border-bottom:1px dotted rgba(125,211,252,.5); }
+  a.linkout:hover { color:#bae6fd; }
+  .num { font-variant-numeric: tabular-nums; }
+  html { scroll-behavior:smooth; scroll-padding-top:84px; }
+  .navlink { color:#94a3b8; } .navlink:hover { color:#fff; }
+  .tag-money { background:rgba(248,113,113,.12); border:1px solid rgba(248,113,113,.3); color:#fca5a5; }
+  .tag-ok { background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.3); color:#86efac; }
+  table.reg { border-collapse:separate; border-spacing:0; width:100%; }
+  table.reg th, table.reg td { text-align:left; padding:14px 16px; vertical-align:top; border-bottom:1px solid rgba(255,255,255,.08); font-size:13.5px; }
+  table.reg th { font-size:11px; text-transform:uppercase; letter-spacing:.12em; color:#94a3b8; font-weight:700; }
+  table.reg tr:last-child td { border-bottom:none; }
+  @media print { .no-print { display:none; } body { background:#fff; color:#111; } }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ====================== NAV ====================== -->
+<header class="no-print fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-[#070b14]/80 border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-2.5">
+      <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center font-black text-[13px] text-white display">P</div>
+      <span class="font-bold text-sm tracking-tight">PBC → Shopify <span class="text-slate-500 font-medium">· Migration Plan</span></span>
+    </div>
+    <nav class="hidden md:flex items-center gap-5 text-[12.5px] font-semibold">
+      <a href="#heard" class="navlink">We Heard You</a>
+      <a href="#decisions" class="navlink">Decisions</a>
+      <a href="#timing" class="navlink">Timing</a>
+      <a href="#data" class="navlink">Data &amp; Money</a>
+      <a href="#critical" class="navlink">Critical Path</a>
+      <a href="#help" class="navlink">In-house vs Help</a>
+      <a href="#people" class="navlink">People</a>
+      <a href="#timeline" class="navlink text-emerald-400 hover:text-emerald-300">Timeline</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ====================== HERO ====================== -->
+<section class="pt-32 pb-14 px-5 relative overflow-hidden">
+  <div class="absolute -top-40 left-1/3 w-[600px] h-[420px] bg-emerald-600/10 blur-[120px] rounded-full"></div>
+  <div class="absolute top-20 right-0 w-[400px] h-[300px] bg-cyan-500/8 blur-[120px] rounded-full"></div>
+  <div class="max-w-6xl mx-auto relative">
+    <div class="chip inline-flex items-center gap-2 px-3.5 py-1.5 text-[12px] font-semibold text-emerald-300 mb-6">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      DEEP-DIVE RECAP · 6/26 · TAYLOR LOOMIS × CHRIS × BRYCE (CC CONNOR)
+    </div>
+    <h1 class="display text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-tight">
+      We're not building a website.<br/>
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-300 to-sky-400">We're moving a $21M business — safely.</span>
+    </h1>
+    <p class="mt-6 text-lg text-slate-400 max-w-3xl leading-relaxed">
+      The storefront is the fast part. Migrating a live <strong class="text-white">~$21M, 80-location</strong> business without breaking
+      customer money, SEO equity, or Q4 is the real work. This is a <strong class="text-white">financial-data &amp; operations migration wearing a website costume</strong> —
+      and we treat it exactly that way: <strong class="text-white">migrate AND reconcile to the penny.</strong>
+    </p>
+    <div class="mt-8 grid sm:grid-cols-3 gap-4 max-w-3xl">
+      <div class="card p-4"><div class="mono text-[11px] text-emerald-400 tracking-widest">CUTOVER</div><div class="display text-2xl font-extrabold mt-1">Jan 1–15 '27</div><div class="text-[12px] text-slate-400 mt-1">After peak — never into Q4</div></div>
+      <div class="card p-4"><div class="mono text-[11px] text-cyan-400 tracking-widest">PRIORITY #1</div><div class="display text-2xl font-extrabold mt-1">Data to the penny</div><div class="text-[12px] text-slate-400 mt-1">Finance signs off pre-go-live</div></div>
+      <div class="card p-4"><div class="mono text-[11px] text-amber-400 tracking-widest">VS. AGENCY</div><div class="display text-2xl font-extrabold mt-1">~$150K saved</div><div class="text-[12px] text-slate-400 mt-1">In-house build, scoped QA insurance</div></div>
+    </div>
+    <div class="mt-7 flex flex-wrap gap-3 text-[13px] no-print">
+      <a href="https://pickleball-inc.vercel.app" target="_blank" class="chip px-4 py-2 font-semibold hover:bg-white/10">🏓 Back to live tracker</a>
+      <a href="#timeline" class="chip px-4 py-2 font-semibold hover:bg-white/10">📅 Jump to timeline</a>
+      <button onclick="window.print()" class="chip px-4 py-2 font-semibold hover:bg-white/10">🖨️ Print / PDF</button>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== BOTTOM LINE ====================== -->
+<section class="px-5 pb-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="card glow-green p-6 md:p-7 border-emerald-500/20">
+      <div class="flex items-start gap-4">
+        <div class="text-2xl">✅</div>
+        <div>
+          <div class="mono text-[12px] font-semibold text-emerald-400 tracking-[0.2em]">THE BOTTOM LINE</div>
+          <p class="mt-2 text-[15px] md:text-base text-slate-200 leading-relaxed">
+            <strong class="text-white">We can absolutely do this.</strong> Respect the data and respect the calendar, and it goes smoothly.
+            Treat it as "just build a site" and we put customer balances, SEO equity, and Q4 at risk — so we don't.
+            Every concern you raised on the call is on this page with a <strong class="text-white">how-we-handle-it</strong> and a
+            <strong class="text-white">how-we-prove-it</strong> next to it. Nothing gets hand-waved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== WE HEARD YOU ====================== -->
+<section id="heard" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-cyan-400 tracking-[0.2em]">PART 1 · WE HEARD YOU</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Your concerns, mirrored back — and answered</h2>
+    <p class="mt-3 text-slate-400 max-w-3xl">Straight from the 6/26 call. If we got anything wrong or missed one, it goes on the weekly map and gets answered next round.</p>
+
+    <div class="grid md:grid-cols-2 gap-5 mt-8">
+      <div class="card p-5">
+        <div class="text-[13px] text-slate-400 italic">"The data integrity portion… gift cards, store credit, all the customer data, order info — for years — has to be ported over correctly and QA'd. That's the part that scares me the most." <span class="text-slate-500">— Taylor</span></div>
+        <div class="hr my-4"></div>
+        <div class="text-sm text-slate-200"><strong class="text-emerald-400">Our answer →</strong> It's <strong>Priority #1</strong>, treated as a financial reconciliation, not an import. Every money object is migrated <em>and</em> tied out to the penny with Finance sign-off before go-live. <a href="#data" class="linkout">See the register ↓</a></div>
+      </div>
+      <div class="card p-5">
+        <div class="text-[13px] text-slate-400 italic">"80 Pro Shop locations on their own Square POS… all tied into one Square back end. How easy or hard is it to port all that?" <span class="text-slate-500">— Taylor</span></div>
+        <div class="hr my-4"></div>
+        <div class="text-sm text-slate-200"><strong class="text-emerald-400">Our answer →</strong> One Square back end → Shopify POS: products, sales history, inventory. Hardware audit + staff training + phased rollout with a <strong>per-store Square fallback</strong> ready. <a href="#critical" class="linkout">POS plan ↓</a></div>
+      </div>
+      <div class="card p-5">
+        <div class="text-[13px] text-slate-400 italic">"Traditionally it's 6–8 months and $150k. Can you do all of it, or X% and we hire a third party for QA at $15–20k?" <span class="text-slate-500">— Taylor</span></div>
+        <div class="hr my-4"></div>
+        <div class="text-sm text-slate-200"><strong class="text-emerald-400">Our answer →</strong> In-house leads the build (that's the ~$150k saved). A scoped <strong>~$15–20k</strong> specialist de-risks the one-way doors — reconciliation, payments/tax, POS, live cutover. <a href="#help" class="linkout">Full recommendation ↓</a></div>
+      </div>
+      <div class="card p-5">
+        <div class="text-[13px] text-slate-400 italic">"I get scared doing anything going into holiday and Black Friday with the volume… I'd rather do it at the start of the new year." <span class="text-slate-500">— Taylor</span></div>
+        <div class="hr my-4"></div>
+        <div class="text-sm text-slate-200"><strong class="text-emerald-400">Our answer →</strong> Locked. Full cutover <strong>~Jan 1–15, 2027</strong>, never into Q4. BigCommerce runs through March '27, so the calendar is a buffer, not a squeeze. <a href="#timing" class="linkout">Timing call ↓</a></div>
+      </div>
+      <div class="card p-5">
+        <div class="text-[13px] text-slate-400 italic">"When we hear 'custom' we get scared — our BigCommerce experience is you're limited, and it takes a lot of dev work." <span class="text-slate-500">— Taylor / Chris</span></div>
+        <div class="hr my-4"></div>
+        <div class="text-sm text-slate-200"><strong class="text-emerald-400">Our answer →</strong> Shopify custom ≠ BigCommerce custom. It's composable / drag-and-drop in their ecosystem (Liquid) + AI. We build off our 10 favorite reference sites (REI sent). Different animal.</div>
+      </div>
+      <div class="card p-5">
+        <div class="text-[13px] text-slate-400 italic">"Would you bet we don't see a drop-off from an SEO standpoint?" <span class="text-slate-500">— Taylor</span></div>
+        <div class="hr my-4"></div>
+        <div class="text-sm text-slate-200"><strong class="text-emerald-400">Our answer →</strong> Expect a typical <strong>1–2 month Google settling dip, then higher.</strong> Clean 1:1 redirect map protects ~$1.98M organic + ~$9.9M paid. Every migration we've run has lifted SEO, not lost it. <a href="#critical" class="linkout">SEO plan ↓</a></div>
+      </div>
+      <div class="card p-5">
+        <div class="text-[13px] text-slate-400 italic">"We need a dev/sandbox version the team can play in… and I want to track a 'day in the life' so nothing falls through the cracks." <span class="text-slate-500">— Chris</span></div>
+        <div class="hr my-4"></div>
+        <div class="text-sm text-slate-200"><strong class="text-emerald-400">Our answer →</strong> Sandbox store for Chris, Traver &amp; CS is in the plan. Bryce shadows a 1–2 hr "day in the life" with the team to catch edge cases <em>and</em> find AI automation wins (the product-submission form). <a href="#people" class="linkout">People ↓</a></div>
+      </div>
+      <div class="card p-5">
+        <div class="text-[13px] text-slate-400 italic">"What's it going to take from Traver? From Chris? I want us buttoned up before we take it to the whole team." <span class="text-slate-500">— Taylor</span></div>
+        <div class="hr my-4"></div>
+        <div class="text-sm text-slate-200"><strong class="text-emerald-400">Our answer →</strong> Per-person asks are spelled out below, and we lock this plan with you two first — backed by a <strong>clickable Shopify demo</strong> — before the team rollout. <a href="#people" class="linkout">Who does what ↓</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-5"><div class="hr"></div></div>
+
+<!-- ====================== DECISIONS LOCKED ====================== -->
+<section id="decisions" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-emerald-400 tracking-[0.2em]">PART 2 · DECISIONS LOCKED 6/26</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">What we agreed on the call</h2>
+    <div class="grid md:grid-cols-2 gap-5 mt-8">
+      <div class="card p-5"><div class="text-emerald-400 font-bold text-sm">① Full band-aid rip-off</div><p class="mt-2 text-sm text-slate-300">One go-live: Shopify POS + D2C retail (.com) + B2B/wholesale all at once. No phased half-states to manage.</p></div>
+      <div class="card p-5"><div class="text-emerald-400 font-bold text-sm">② ~Jan 1–15, 2027 cutover</div><p class="mt-2 text-sm text-slate-300">After peak. BigCommerce locked through March '27 = clean buffer, no rushed exit. Build Jul–Dec; January = dry run + go-live.</p></div>
+      <div class="card p-5"><div class="text-emerald-400 font-bold text-sm">③ Shopify Plus, 100% custom</div><p class="mt-2 text-sm text-slate-300">Native composable build (not a template, not BigCommerce-style "endless dev"). Built off our 10 best reference sites.</p></div>
+      <div class="card p-5"><div class="text-emerald-400 font-bold text-sm">④ Priorities: data first, CX second</div><p class="mt-2 text-sm text-slate-300">#1 = data integrity + QA to the penny. #2 = UI / CX / conversion-rate optimization, which lives and breathes over the 6-month build.</p></div>
+      <div class="card p-5"><div class="text-emerald-400 font-bold text-sm">⑤ Lock the free runway now</div><p class="mt-2 text-sm text-slate-300">Push Shopify to extend the 6-month-free promo (expires end of June) to ~Jan 1 so we build free and never double-pay until we transact. Decide within ~30 days.</p></div>
+      <div class="card p-5"><div class="text-emerald-400 font-bold text-sm">⑥ Bryce leads, Connor signs off</div><p class="mt-2 text-sm text-slate-300">Bryce hands-on on the build; Connor is CC'd + aware. His sign-off is the only gate left to pull the trigger.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-5"><div class="hr"></div></div>
+
+<!-- ====================== TIMING DECISION ====================== -->
+<section id="timing" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-amber-400 tracking-[0.2em]">PART 3 · THE TIMING CALL</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">"Faster &amp; sooner" vs. safe — the correct decision</h2>
+    <p class="mt-3 text-slate-400 max-w-3xl">Both instincts are right. We honor both by realizing <strong class="text-white">"fast vs. slow" is the wrong axis</strong> — the hard line is: never one-shot the core onto ~$21M of customer money + SEO in Q4. Inside that line, we go as fast as possible by <strong class="text-white">decoupling speed from the cutover.</strong></p>
+
+    <div class="grid md:grid-cols-3 gap-5 mt-8">
+      <div class="card glow-cyan p-5">
+        <div class="display text-xl font-extrabold">1 · Start now</div>
+        <p class="mt-2 text-sm text-slate-300"><span class="text-cyan-300 font-semibold">"Sooner" = the start date.</span> Lock the Shopify free promo before end of June, build immediately on a free instance, push to extend the runway to ~Jan 1. Win that and the ~$100k double-pay objection mostly disappears.</p>
+      </div>
+      <div class="card glow-green p-5">
+        <div class="display text-xl font-extrabold">2 · Ship expansion stores now</div>
+        <p class="mt-2 text-sm text-slate-300">pickleballpaddles.com + PPA/MLP stores are <strong>separate instances, zero redirect risk</strong> to the $41M core. They bank the conversion/revenue lift early AND become the live proof + dress rehearsal for the core.</p>
+      </div>
+      <div class="card glow-orange p-5">
+        <div class="display text-xl font-extrabold">3 · Core cutover stays January</div>
+        <p class="mt-2 text-sm text-slate-300">Build so thoroughly we're day-one-ready by early December and just waiting on the safe window (as early as Jan 2 if dry runs pass). Speed <em>here</em> is false economy.</p>
+      </div>
+    </div>
+
+    <div class="card p-6 mt-6 border-amber-500/20">
+      <div class="mono text-[12px] font-semibold text-amber-400 tracking-[0.2em]">NET CALL</div>
+      <p class="mt-2 text-[15px] text-slate-200 leading-relaxed">Yes — go faster, by <strong class="text-white">starting now</strong> and <strong class="text-white">shipping the expansion stores now</strong>, <strong class="text-white">not</strong> by dragging the core cutover into Q4. Bryce gets sooner-revenue + earlier readiness; Taylor keeps the Q4 guardrail. A botched Q4 cutover is $175k+ direct + permanent SEO loss + customer-balance chaos at peak — the overlap cost is cheap insurance against that, and likely $0 if the promo extends.</p>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-5"><div class="hr"></div></div>
+
+<!-- ====================== DATA & MONEY REGISTER ====================== -->
+<section id="data" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-rose-400 tracking-[0.2em]">PART 4 · PRIORITY #1 — DATA &amp; MONEY</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Migrate <span class="text-rose-300">AND</span> reconcile to the penny</h2>
+    <p class="mt-3 text-slate-400 max-w-3xl">Every object gets a documented migration path <strong class="text-white">and</strong> a pre/post reconciliation (record counts + dollar totals). Rows tagged <span class="tag-money mono text-[10px] px-2 py-0.5 rounded-full">💲 LIABILITY</span> are real customer money — a balance-sheet item the COO owns. <strong class="text-white">Nothing launches until the numbers tie out and Finance signs off.</strong></p>
+
+    <div class="card mt-8 overflow-x-auto">
+      <table class="reg">
+        <thead><tr><th>Object</th><th>What's at stake (the gotcha)</th><th>How we handle it</th><th>How we prove it</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Gift cards</strong> <span class="tag-money mono text-[9px] px-1.5 py-0.5 rounded-full">💲</span></td><td>Outstanding balances + codes are money legally owed. Shopify's import is finicky.</td><td>Export from BigCommerce → import with a verified tool, codes preserved.</td><td>Total liability $ reconciled to the penny, pre vs. post.</td></tr>
+          <tr><td><strong>Store credit</strong> <span class="tag-money mono text-[9px] px-1.5 py-0.5 rounded-full">💲</span></td><td>Balance-sheet liability; no clean native 1:1 in Shopify.</td><td>Migrate via a store-credit app, balance by balance.</td><td>Per-customer balance match + total $ tie-out.</td></tr>
+          <tr><td><strong>Loyalty points (Yotpo)</strong> <span class="tag-money mono text-[9px] px-1.5 py-0.5 rounded-full">💲</span></td><td>Deferred liability; points don't carry automatically.</td><td><strong>Keep Yotpo initially</strong> — integrate the app into Shopify, transfer the program, re-issue balances, drop the loyalty-page widgets.</td><td>Point balances + redeem→credit→checkout flow tested end-to-end.</td></tr>
+          <tr><td><strong>Customers &amp; accounts</strong></td><td><strong>Passwords CANNOT migrate</strong> (hashed) → forced reset + support spike.</td><td>Migrate profiles/addresses/marketing-consent; plan the reset comms + CS staffing.</td><td>Record count match; consent status verified; comms queued.</td></tr>
+          <tr><td><strong>Order history</strong></td><td>Years of orders for CS, returns, warranty, LTV, finance.</td><td>Proper full migration (not a cheap importer that truncates).</td><td>Order count + GMV totals match the source by period.</td></tr>
+          <tr><td><strong>Product catalog</strong></td><td>SKUs, variants, bundles/kits, metafields, images, copy, SEO fields; variant limits.</td><td>Mapped migration on <strong>Shopify Plus</strong> (variant headroom), custom-field map.</td><td>SKU/variant counts match; spot-QA across categories.</td></tr>
+          <tr><td><strong>Inventory (80 locations)</strong></td><td>Per-location stock at the moment of cutover; mismatch = oversells day one.</td><td>Freeze + final-sync inventory inside the cutover window.</td><td>Per-location quantity snapshot reconciled at go-live.</td></tr>
+          <tr><td><strong>B2B / dealer pricing</strong></td><td>Customer groups, price lists, net terms — no clean 1:1 (Pickleball Wholesale).</td><td>Re-model in <strong>Shopify B2B (Plus)</strong> — likely the single biggest revenue lever.</td><td>Each group's pricing + terms validated against current.</td></tr>
+          <tr><td><strong>Reviews &amp; ratings</strong></td><td>Carry SEO + conversion value; easy to leave behind.</td><td>Export and re-import via the reviews app.</td><td>Review counts per product match; widgets render.</td></tr>
+          <tr><td><strong>Subscriptions / auto-ship</strong></td><td>Payment tokens rarely migrate cleanly.</td><td>Re-enroll flow + comms if tokens can't move.</td><td>Active-subscriber count reconciled; renewals firing.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-4 text-[13px] text-slate-400">🔒 <strong class="text-slate-200">Reconciliation gate:</strong> pre/post record counts AND dollar totals for orders, customers, gift-card liability, store credit, and loyalty points — <strong class="text-slate-200">Finance signs off before go-live.</strong> No sign-off, no launch.</div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-5"><div class="hr"></div></div>
+
+<!-- ====================== CRITICAL PATH ====================== -->
+<section id="critical" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-cyan-400 tracking-[0.2em]">PART 5 · ALSO ON THE CRITICAL PATH</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Not just data — these can't slip either</h2>
+    <div class="grid md:grid-cols-2 gap-5 mt-8">
+      <div class="card p-5">
+        <div class="font-bold text-sm text-white">🔗 SEO / 301 redirects</div>
+        <p class="mt-2 text-sm text-slate-300">Every product + category URL changes. <strong>~$1.98M organic + ~$9.9M paid</strong> ride on these URLs (paid ≈ 50% of revenue → protecting Shopping-feed/paid URLs is the #1 SEO risk). Clean 1:1 map → retain 95–97%; botched → $175k+ + permanent loss. Expect a 1–2 mo settling dip, then higher. Change nothing else during the move; GSC monitored daily for 30 days.</p>
+      </div>
+      <div class="card p-5">
+        <div class="font-bold text-sm text-white">💳 Payments &amp; tax</div>
+        <p class="mt-2 text-sm text-slate-300">Switch to <strong>Shopify Payments</strong> (negotiate the rate); rebuild fraud rules; <strong>Avalara stays</strong> for tax (per-state calc, returns, nexus) — Traver can drive the integration; reconcile payouts back to the books.</p>
+      </div>
+      <div class="card p-5">
+        <div class="font-bold text-sm text-white">🧩 Integrations</div>
+        <p class="mt-2 text-sm text-slate-300">Accounting/ERP, shipping/3PL, Klaviyo, on-site search, reviews, loyalty — each rebuilt <strong>and</strong> tested in staging before they touch live orders.</p>
+      </div>
+      <div class="card p-5">
+        <div class="font-bold text-sm text-white">🏪 80-location POS</div>
+        <p class="mt-2 text-sm text-slate-300">All 80 Pro Shops run Square hardware on <strong>one Square back end</strong> → port to Shopify POS (products, sales history, inventory). Hardware audit + config + staff training + phased rollout, with a <strong>per-store Square fallback</strong> on standby. <span class="text-slate-400">(Open Q Bryce is answering exactly: full rip-off vs. brief Square bridge — current lean: full rip-off.)</span></p>
+      </div>
+      <div class="card p-5 md:col-span-2">
+        <div class="font-bold text-sm text-white">🧪 QA &amp; cutover</div>
+        <p class="mt-2 text-sm text-slate-300">Full staging <strong>dress rehearsal</strong> → a <strong>go/no-go gate</strong> → DNS + POS cutover in a low-traffic window → deploy redirects → submit sitemap. Then <strong>hypercare</strong>: GSC daily 30 days, same-day 404 fixes, ~30-day change freeze, Square fallback ready. A <strong>dev/sandbox store</strong> for Chris, Traver &amp; CS is part of the plan from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-5"><div class="hr"></div></div>
+
+<!-- ====================== IN-HOUSE VS HELP ====================== -->
+<section id="help" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-emerald-400 tracking-[0.2em]">PART 6 · IN-HOUSE VS. OUTSIDE HELP</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Taylor's question, answered directly</h2>
+    <div class="grid md:grid-cols-2 gap-5 mt-8">
+      <div class="card p-5 glow-green">
+        <div class="font-bold text-sm text-emerald-300">✅ What AI / Bryce genuinely de-risks → lead in-house</div>
+        <p class="mt-2 text-sm text-slate-300">The build: theme, custom code, the 301 redirect map + data-migration scripting, and ongoing management. This is the real saver vs. the <strong>6–8 months / ~$150k</strong> quote and the ~$200k agency path.</p>
+      </div>
+      <div class="card p-5 glow-orange">
+        <div class="font-bold text-sm text-amber-300">⚠️ What AI does NOT de-risk → bring targeted help</div>
+        <p class="mt-2 text-sm text-slate-300">Financial-liability reconciliation, payment + tax setup, the 80-store POS rollout, and a one-shot live cutover on ~$21M of volume.</p>
+      </div>
+    </div>
+    <div class="card p-6 mt-5 border-emerald-500/20">
+      <div class="mono text-[12px] font-semibold text-emerald-400 tracking-[0.2em]">RECOMMENDATION</div>
+      <p class="mt-2 text-[15px] text-slate-200 leading-relaxed"><strong class="text-white">In-house leads; specialists de-risk the one-way doors.</strong> Bring outside help for three things only: <strong>(1) bandwidth</strong> to run a fixed-date live cutover while BAU continues, <strong>(2) pattern memory</strong> — someone who's done this exact BigCommerce→Shopify migration and carries the gotcha list, and <strong>(3) accountability + rollback</strong> when real customer money is live. Shopify offers <strong>no</strong> migration service (points to 3rd-party partners). A scoped QA/migration specialist at <strong>~$15–20k</strong> is cheap insurance on customer balances — not a knock on the in-house plan.</p>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-5"><div class="hr"></div></div>
+
+<!-- ====================== PEOPLE ====================== -->
+<section id="people" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-cyan-400 tracking-[0.2em]">PART 7 · PEOPLE &amp; BANDWIDTH</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">What it takes from each of us</h2>
+    <p class="mt-3 text-slate-400 max-w-3xl">So we walk into the team meeting with answers, not questions.</p>
+    <div class="grid md:grid-cols-2 gap-5 mt-8">
+      <div class="card p-5"><div class="font-bold text-sm text-white">Traver</div><p class="mt-2 text-sm text-slate-300">Most familiar with the site, technical, stretched thin. Keep him early as the <strong>thorough "advocate for the other side"</strong> — he surfaces what no one else does. Assists Avalara + access. We manage his load deliberately.</p></div>
+      <div class="card p-5"><div class="font-bold text-sm text-white">Chris</div><p class="mt-2 text-sm text-slate-300">Traditional web/back-end + 301 experience; gave Bryce the store login. Partners on redirects + integrations + the sandbox.</p></div>
+      <div class="card p-5"><div class="font-bold text-sm text-white">Ashley / Patrick / Jimmy</div><p class="mt-2 text-sm text-slate-300">Day-to-day operators (products / copy / back-end). <strong>Bryce shadows a 1–2 hr "day in the life"</strong> to catch edge cases and spot automation wins.</p></div>
+      <div class="card p-5"><div class="font-bold text-sm text-white">Bryce</div><p class="mt-2 text-sm text-slate-300">Owns the build, redirect map, data scripting, integrations, and the weekly map. Admin (view-only) on both Pickleball Central + Pickleball Wholesale.</p></div>
+      <div class="card p-5 md:col-span-2 glow-cyan"><div class="font-bold text-sm text-cyan-300">🤖 Bonus win already on the table (Chris's idea)</div><p class="mt-2 text-sm text-slate-300">A <strong>product-submission form</strong> — brand uploads details + photos → <strong>auto-builds the Shopify product page</strong>; Ashley &amp; Patrick just refine. Saves gobs of time. An ongoing-ops win <em>beyond</em> the migration: everyone's job gets easier, not just different.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-5"><div class="hr"></div></div>
+
+<!-- ====================== TIMELINE ====================== -->
+<section id="timeline" class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-emerald-400 tracking-[0.2em]">PART 8 · THE PLAN</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Build Jul–Dec 2026 → dry-run + go-live January</h2>
+    <div class="mt-8 space-y-4">
+      <div class="card p-5 flex gap-4"><div class="mono text-emerald-400 font-bold text-sm w-28 shrink-0">PHASE 0<br/><span class="text-slate-500 font-normal">Now</span></div><div><div class="font-semibold text-sm">Discovery &amp; baseline</div><p class="mt-1 text-sm text-slate-300">Full URL crawl = redirect source of truth; catalog + app/integration audit; real GA4/GSC baseline; provision Shopify Plus on the free runway; toggle through the Pickleball Wholesale back end + log anything that gives pause.</p></div></div>
+      <div class="card p-5 flex gap-4"><div class="mono text-emerald-400 font-bold text-sm w-28 shrink-0">PHASE 1<br/><span class="text-slate-500 font-normal">Jul–Oct</span></div><div><div class="font-semibold text-sm">Build</div><p class="mt-1 text-sm text-slate-300">Custom theme off the 10 reference sites; migrate products/variants/customers/orders/blog/reviews; build the 1:1 301 map; stand up Shopify B2B; rebuild integrations (Klaviyo, Yotpo, search, ERP, Avalara, shipping, Shopify Payments); configure 80-store POS.</p></div></div>
+      <div class="card p-5 flex gap-4"><div class="mono text-emerald-400 font-bold text-sm w-28 shrink-0">PHASE 2<br/><span class="text-slate-500 font-normal">Nov–Dec</span></div><div><div class="font-semibold text-sm">QA &amp; reconciliation</div><p class="mt-1 text-sm text-slate-300">Staging crawl + redirect validation; data reconciliation to the penny w/ Finance sign-off; test checkout/tax/payments; POS staff training; sandbox open to the team; <strong>clickable demo</strong> of the full Shopify experience for the team rollout.</p></div></div>
+      <div class="card p-5 flex gap-4 glow-orange"><div class="mono text-amber-400 font-bold text-sm w-28 shrink-0">PHASE 3<br/><span class="text-slate-500 font-normal">Early–mid Jan</span></div><div><div class="font-semibold text-sm">Dry run + cutover</div><p class="mt-1 text-sm text-slate-300">Full dress rehearsal → <strong>go/no-go gate</strong> → DNS + POS cutover in a low-traffic window → deploy redirects → submit sitemap. Then <strong>hypercare</strong>: GSC daily 30 days, same-day 404 fixes, ~30-day change freeze, per-store Square fallback on standby.</p></div></div>
+      <div class="card p-5 flex gap-4"><div class="mono text-cyan-400 font-bold text-sm w-28 shrink-0">PHASE 4<br/><span class="text-slate-500 font-normal">Post-stabilization</span></div><div><div class="font-semibold text-sm">Growth</div><p class="mt-1 text-sm text-slate-300">Shop Pay, YouTube/IG/TikTok shopping + TikTok Shop, subscriptions, email/CRO, B2B scale, and the product-submission automation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-5"><div class="hr"></div></div>
+
+<!-- ====================== PROCESS / NEXT ====================== -->
+<section class="px-5 py-14">
+  <div class="max-w-6xl mx-auto">
+    <p class="mono text-[12px] font-semibold text-emerald-400 tracking-[0.2em]">PART 9 · HOW WE STAY CONFIDENT</p>
+    <h2 class="display text-3xl md:text-4xl font-extrabold mt-2 tracking-tight">Cadence &amp; immediate next steps</h2>
+    <div class="grid md:grid-cols-2 gap-5 mt-8">
+      <div class="card p-5">
+        <div class="font-bold text-sm text-white">Cadence</div>
+        <ul class="mt-2 text-sm text-slate-300 space-y-1.5 list-disc pl-5">
+          <li><strong>Weekly project map</strong> shared with Taylor + Chris (+ Connor). You're stakeholders — drop concerns/wishlist items right in and they get folded into scope, not lost.</li>
+          <li>Bryce runs it through a daily loop so this page + the tracker stay current.</li>
+          <li><strong>Gate before the team rollout:</strong> lock this plan with you two first, backed by a clickable Shopify demo, then present the roadmap to everyone.</li>
+        </ul>
+      </div>
+      <div class="card p-5">
+        <div class="font-bold text-sm text-white">Bryce owns next</div>
+        <ul class="mt-2 text-sm text-slate-300 space-y-1.5 list-disc pl-5">
+          <li>Push Shopify on the free-promo extension (before end of June).</li>
+          <li>Finish access (Wholesale confirmed; any remaining reports from Chris).</li>
+          <li>Toggle through both BigCommerce back ends + log anything that gives pause.</li>
+          <li>Crawl + draft the 1:1 redirect map.</li>
+          <li>Keep this page as the single source of truth + send the stakeholder update.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 text-center">
+      <div class="display text-2xl font-extrabold">Connor's sign-off is the only gate left.</div>
+      <p class="mt-2 text-slate-400">This is the version that lets him say yes fast — and lets us start now.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="px-5 py-10 border-t border-white/10 text-center">
+  <p class="text-[12.5px] text-slate-500">Pickleball Central · Confidential · Shopify Migration — Full Scope &amp; Confidence Plan · Recap of the 6/26 deep-dive (Taylor Loomis × Chris × Bryce, CC Connor) + 6/23 pre-read · <a href="https://pickleball-inc.vercel.app" class="linkout">back to live tracker</a></p>
+</footer>
+
+</body>
+</html>
