@@ -807,7 +807,7 @@
             <div class="mt-4">
               <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
               <div class="stage-bar"><span style="width: 12%;"></span></div>
-              <div class="mt-2 text-xs text-slate-500">Bryce + Sadie load each facility's dimensions → auto-design + 3D banner placement in Ziff</div>
+              <div class="mt-2 text-xs text-slate-500">Load dimensions → generate banners by talking to Claude (Claude Design) → 3D placement → export to Canva/PDF/PPTX</div>
             </div>
             <div class="mt-4 flex flex-wrap gap-2">
               <span class="pill px-2 py-1 rounded-md" style="background:#EDE9FE;color:#5B21B6;">Org Unlock</span>
@@ -1783,16 +1783,17 @@ const PROJECTS = {
   "facility-repository": {
     category: "Org & Tools · Facilities / Ziff",
     title: "Facility asset repository in Ziff (banners + 3D)",
-    summary: "A repository inside Ziff of every facility's specs — banners, location, sizing, plan, and stadium-court sign-up — built + kept current with Sadie. Once the dimensions are loaded, banner updates get trivially easy: Ziff auto-designs the banners and produces a rough 3D rendering of where each logo/banner lives at the venue. Bryce is putting serious time in with Sadie to get every facility updated.",
+    summary: "A repository inside Ziff of every facility's specs — banners, location, sizing, plan, and stadium-court sign-up — built + kept current with Sadie. Once the dimensions are loaded, banner updates get trivially easy: you describe what you want and Ziff generates the banner (Claude Design style — talk-to-Claude → the artwork) and produces a rough 3D rendering of where each logo/banner lives at the venue. Exports straight to Canva, PDF, PPTX, or standalone HTML — so it hands off cleanly to Sadie's Canva (ties to the Canva Enterprise card). Bryce is putting serious time in with Sadie to get every facility updated.",
     stage: "NEW · Scoping",
-    stageNote: "Bryce + Sadie load each facility's dimensions → auto-design + 3D banner placement",
+    stageNote: "Load facility dimensions → generate banners by talking to Claude → 3D placement → export to Canva/PDF/PPTX",
     progress: 12,
     owner: "Bryce + Sadie",
     lever: "Org Unlock — self-serve, always-current facility + banner assets",
     steps: [
       { done: false, text: "With Sadie, capture each facility's specs: banners, location, sizing, plan, stadium-court sign-up" },
       { done: false, text: "Stand up the facility repository module in Ziff" },
-      { done: false, text: "Auto-design banners from the stored dimensions" },
+      { done: false, text: "Generate banners by talking to Claude (Claude Design) from the stored dimensions" },
+      { done: false, text: "Export to Canva / PDF / PPTX / standalone HTML (clean handoff to Sadie's Canva)" },
       { done: false, text: "Rough 3D rendering of logo/banner placement per venue" }
     ],
     blockers: [
