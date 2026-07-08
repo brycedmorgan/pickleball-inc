@@ -527,6 +527,26 @@
             </div>
           </article>
 
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="paddle-lab">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#C2410C;">Content · Commerce</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Paddle Lab on pickleball.com (V1)</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Build <strong>pickleball.com/paddle-lab</strong> — the "use pro data to find the perfect paddle" hub (modeled on JustPaddles' Paddle Lab, but powered by <strong>Pro Pickleball Labs' tour-level testing + John Kew's database</strong>). Landing (hero + search + featured carousels) → individual paddle pages (full PPL data + acronym explainers + <strong>shop button to Pickleball Central</strong>) → a "How We Test" page (PPA + MLP partnership, John Kew DB, editorial review). Launch 30–100 paddles. The engine that makes pickleball.com the cited "which paddle" answer in LLMs <em>and</em> funnels buyers to PBC.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 10%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">V1 spec set → PPL + John Kew data feed → build landing + paddle pages + How-We-Test → 30–100 paddle launch</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#EDE9FE;color:#5B21B6;">AEO · LLM authority</span>
+            </div>
+          </article>
+
           <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="pbcom-streaming">
             <div class="flex items-start justify-between gap-3">
               <div>
@@ -1801,6 +1821,33 @@ const PROJECTS = {
       "3D rendering approach — how rough vs. real to start"
     ],
     links: []
+  },
+  "paddle-lab": {
+    category: "Pickleball.com · Content / Commerce",
+    title: "Paddle Lab on pickleball.com (V1)",
+    summary: "Build the Paddle Lab at pickleball.com/paddle-lab — an authoritative 'use pro data to find the perfect paddle' hub, modeled on JustPaddles' Paddle Lab but powered by Pro Pickleball Labs' tour-level testing data + John Kew's paddle database. It's the concrete build behind 'own the which-paddle answer': the content engine that makes pickleball.com the cited source in LLM answers, and it funnels every paddle page to a Pickleball Central shop button. Cross-property — pickleball.com (Jason's dev), PPL data (Jason Aspes), PBC (commerce).",
+    stage: "NEW · Spec'd (V1)",
+    stageNote: "V1 spec set (JustPaddles model) → PPL + John Kew data feed → build the 3 page types → 30–100 paddle launch",
+    progress: 10,
+    owner: "Bryce (build) · Jason / pickleball.com dev · PPL data (Jason Aspes) · PBC (shop links)",
+    lever: "Revenue — gear sales to PBC + the AEO engine that owns the 'which paddle' answer in AI",
+    steps: [
+      { done: true, text: "V1 spec set (landing, paddle pages, How-We-Test; modeled on JustPaddles)" },
+      { done: false, text: "Get the data: PPL testing tables + John Kew paddle database (Jason Aspes)" },
+      { done: false, text: "Landing /paddle-lab: hero ('Use Professional Data to Find the Perfect Paddle') + search + featured carousels (Browse All / Best Beginner / Best All-Around / New Reviews / Trending)" },
+      { done: false, text: "Individual paddle pages /paddle-lab/[paddle]: full PPL data w/ acronym explainers + shop button → Pickleball Central" },
+      { done: false, text: "How-We-Test page: PPA + MLP partnership, John Kew DB, editorial review process, testing categories" },
+      { done: false, text: "Schema / AEO markup so LLMs cite it; launch a 30–100 paddle library" }
+    ],
+    blockers: [
+      "Data feed format + cadence from PPL + John Kew (who delivers, how it stays updated)",
+      "Editorial / review-process owner (content team)",
+      "Shop-link attribution back to PBC (affiliate vs direct)",
+      "pickleball.com dev bandwidth (Jason)"
+    ],
+    links: [
+      { label: "JustPaddles Paddle Lab (reference)", href: "https://www.justpaddles.com/paddle-lab-data/" }
+    ]
   }
 };
 
@@ -1924,6 +1971,7 @@ const PRICING = {
   "cary-chamber":{amount:0,lever:"org",state:"agreed",note:"community/brand — delivered this week"},
   "kate-sutter-ai":{amount:0,lever:"saved",state:"proposed",note:"scope role → automate vs backfill"},
   "facility-repository":{amount:0,lever:"org",state:"proposed",note:"auto-design + 3D banner placement"},
+  "paddle-lab":{amount:0,lever:"revenue",state:"proposed",note:"gear sales to PBC + AEO authority"},
   "ppa-ranking":{amount:0,lever:"backlog",state:"proposed"},
   "order-of-play":{amount:0,lever:"backlog",state:"proposed"},
   "divi-cleanup":{amount:0,lever:"backlog",state:"proposed"}
