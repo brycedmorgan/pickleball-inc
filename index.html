@@ -834,6 +834,25 @@
               <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Owner: Bryce + Sadie</span>
             </div>
           </article>
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="hr-hub">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#0F766E;">Tools · HR</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Ziff HR Hub (Kate)</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#DBEAFE;color:#1E40AF;">LIVE · KATE TESTING</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Kate's Contractors module in Ziff, expanded into a real <strong>HR hub</strong>: <strong>Onboarding</strong> (new starts sync from Google Calendar → each lands with a ready checklist) + <strong>ongoing HR tasks</strong> + the existing 1099 ops (intake / media / bookings). Live for Kate to try; gathering her wishlist. Computer/asset tracking deliberately stays out. Calendar + Docs sync stubbed → wires in with her Google account.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 40%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Live demo → Kate logs in + sends her wishlist → wire real Calendar/Docs sync → build to her list</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#EDE9FE;color:#5B21B6;">Org Unlock</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Owner: Bryce + Kate</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1848,6 +1867,32 @@ const PROJECTS = {
     links: [
       { label: "JustPaddles Paddle Lab (reference)", href: "https://www.justpaddles.com/paddle-lab-data/" }
     ]
+  },
+  "hr-hub": {
+    category: "Org & Tools · HR / Ziff",
+    title: "Ziff HR Hub (Kate)",
+    summary: "Kate's Contractors module in Ziff, expanded into a real HR hub. New Onboarding tab (the default): new starts sync from Google Calendar and each lands with a ready checklist Kate checks off. New HR Tasks tab: ongoing HR to-dos + an 'on your radar' calendar feed + a linked onboarding Google Doc. Keeps the existing 1099 ops (intake / media / bookings). Live for Kate to try out; collecting her wishlist to build to. Computer/asset tracking deliberately stays OUT (per Bryce). Part of the 'use AI to absorb HR roles' play.",
+    stage: "LIVE (demo) · Kate testing",
+    stageNote: "Live demo → Kate logs in + sends her wishlist → wire real Google Calendar/Docs sync → build to her list",
+    progress: 40,
+    owner: "Bryce (build) · Kate (HR)",
+    lever: "Org Unlock — an HR hub that absorbs onboarding + ongoing HR ops",
+    steps: [
+      { done: true, text: "Contractors module already live (intake, media team, event bookings)" },
+      { done: true, text: "Added Onboarding (Google Calendar start-date checklists) + HR Tasks tabs" },
+      { done: true, text: "Deployed for Kate to try (ziff-two.vercel.app · kate@ppatour.com)" },
+      { done: false, text: "Kate logs in + sends her wishlist (what she wants it to do)" },
+      { done: false, text: "Wire real Google Calendar + Docs sync (needs her Google account + the React build)" },
+      { done: false, text: "Build to her list" }
+    ],
+    blockers: [
+      "Deployment protection must be off so Kate can log in",
+      "Real Calendar/Docs sync needs Google auth (the React build)",
+      "Keep computer/asset tracking OUT (Bryce's boundary)"
+    ],
+    links: [
+      { label: "Ziff (log in as kate@ppatour.com)", href: "https://ziff-two.vercel.app" }
+    ]
   }
 };
 
@@ -1972,6 +2017,7 @@ const PRICING = {
   "kate-sutter-ai":{amount:0,lever:"saved",state:"proposed",note:"scope role → automate vs backfill"},
   "facility-repository":{amount:0,lever:"org",state:"proposed",note:"auto-design + 3D banner placement"},
   "paddle-lab":{amount:0,lever:"revenue",state:"proposed",note:"gear sales to PBC + AEO authority"},
+  "hr-hub":{amount:0,lever:"org",state:"proposed",note:"HR hub in Ziff (Kate)"},
   "ppa-ranking":{amount:0,lever:"backlog",state:"proposed"},
   "order-of-play":{amount:0,lever:"backlog",state:"proposed"},
   "divi-cleanup":{amount:0,lever:"backlog",state:"proposed"}
