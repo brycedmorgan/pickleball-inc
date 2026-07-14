@@ -818,6 +818,25 @@
               <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Connor aligned</span>
             </div>
           </article>
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="ai-tool-policy">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:#0F766E;">Org · AI Enablement</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Company AI Tool Policy</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Connor's exec-meeting mandate: a company-wide <strong>AI/efficiency process</strong> so everyone's not running wild. Onus is on each individual to learn AI (it makes you more valuable) — but we are <strong>NOT</strong> buying a $200 Claude plan for everyone to toy with. <strong>Tiered plans (~$25/$100/$200)</strong> earned by demonstrated use (Tyler Dodds ~doubles productivity → worth $200), a request/approval flow, and killing the <strong>"just expense it on Divvy"</strong> subscription sprawl.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 15%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Draft the one-page policy → Connor sign-off → announce company-wide · audit current AI subs on Divvy</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Connor mandate</span>
+            </div>
+          </article>
           <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="canva-enterprise">
             <div class="flex items-start justify-between gap-3">
               <div>
@@ -1858,6 +1877,29 @@ const PROJECTS = {
     ],
     links: []
   },
+  "ai-tool-policy": {
+    category: "Org · AI Enablement",
+    title: "Company AI Tool Policy",
+    summary: "Connor's exec-meeting mandate: build the company-wide AI/efficiency process and clarify it to everyone. Principles: the onus is on each individual to learn AI — it makes you more valuable; we are NOT paying for a $200 Claude plan for everyone to toy with; we DO pay for proven power users on tiered plans (~$25 / $100 / $200 — e.g. Tyler Dodds roughly doubles his productivity, easily worth $200/mo); and the 'just expense it on Divvy' misconception gets cleaned up — AI subscriptions go through a request/approval flow, not ad-hoc expensing.",
+    stage: "NEW · Drafting",
+    stageNote: "Draft the one-page policy → Connor sign-off → announce company-wide · audit current AI subs on Divvy",
+    progress: 15,
+    owner: "Bryce (writes + runs the process) · Connor approves",
+    lever: "$ Saved — kills subscription sprawl; spend concentrates on power users",
+    steps: [
+      { done: true, text: "Connor mandated the process at the exec meeting — 'wants the plan'" },
+      { done: false, text: "Audit current AI subscriptions being expensed on Divvy (who pays for what today)" },
+      { done: false, text: "Write the one-page policy: tiers, how you earn an upgrade, request/approval flow" },
+      { done: false, text: "Define the usage bar per tier ($25 default · $100 regular use · $200 power user)" },
+      { done: false, text: "Connor sign-off → announce company-wide with training pointers" },
+      { done: false, text: "Quarterly usage review — upgrade/downgrade tiers on demonstrated use" }
+    ],
+    blockers: [
+      "Divvy visibility — need the current AI-subscription spend list from finance",
+      "Decide who arbitrates tier requests (Bryce vs. managers)"
+    ],
+    links: []
+  },
   "canva-enterprise": {
     category: "Org · Tools · Brand & Design",
     title: "Canva Enterprise — org-wide brand & design system",
@@ -2196,6 +2238,7 @@ const PRICING = {
   "ptcom-ai":{amount:0,lever:"org",state:"proposed",note:"Jason's trial"},
   "cmo-scope":{amount:0,lever:"org",state:"proposed",note:"hire by Sept 1"},
   "ops-automation":{amount:50000,lever:"saved",state:"proposed",note:"avoid the Michaela backfill hire"},
+  "ai-tool-policy":{amount:0,lever:"saved",state:"proposed",note:"kills Divvy AI-sub sprawl; size after the spend audit"},
   "canva-enterprise":{amount:0,lever:"org",state:"proposed",note:"scope seats + cost"},
   "cary-chamber":{amount:0,lever:"org",state:"agreed",note:"community/brand — delivered this week"},
   "kate-sutter-ai":{amount:0,lever:"saved",state:"proposed",note:"scope role → automate vs backfill"},
