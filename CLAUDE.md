@@ -30,6 +30,28 @@ Finance preview), Growth, HR hub (Kate), Contractors.
 
 # Session Log
 
+## 2026-07-14 (pt. 2) — Ziff is now JACKALOPE (Connor: "Prove it")
+
+- Bryce floated "Jackalope" for the internal app; Connor loved it but doubted
+  one app could serve everyone → Bryce pitched role-based access → "Prove it."
+- **Proved it, same day:** app rebranded Jackalope (login glyph + Bungee Shade
+  wordmark, tagline "One login. You get your stuff, Dylan gets his — admins
+  see it all"), **Dylan added** (dylan@ppatour.com, role ops → lands on Order
+  of Play, also sees Travel), non-exec homes show a **locked-modules strip**
+  (other teams' tools listed but inaccessible) — the visible proof of the
+  one-app model. Connor's exec login sees all 11 modules.
+- **New canonical URL: jackalopehq.vercel.app** (claimed via Vercel domain on
+  project `the-kitchen` — that's the real Vercel project behind the repo;
+  the old ziff-two.vercel.app project no longer exists, so any old links are
+  dead). Verified live. Login: connor@ppatour.com / pickleball.
+- Tracker card renamed Jackalope + all URLs updated (commit in
+  pickleball-inc). Ziff repo commit `dfbd427`.
+- ALSO this session: **Australian Pickleball Cup sponsorship deck rebuilt**
+  (the old 17-slide one was unacceptable — TBDs, typos, wrong event name, no
+  tiers/ask). New 12-slide dark deck on PPA Australia brand: Desktop
+  "…Sponsorship — v2.pptx/.pdf/.html" + artifact. Placeholders: contact
+  name/email, AUS broadcast partner. LibreOffice installed for deck QA.
+
 ## 2026-07-14 — Card sweep + Dylan/Parker emails (from the GullStack Claude instance)
 
 - Applied the /goal sweep: **Finance card** flipped VENDOR SIGNED → **BUILDING
