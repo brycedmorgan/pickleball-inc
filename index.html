@@ -683,15 +683,15 @@
             <div class="flex items-start justify-between gap-3">
               <div>
                 <div class="pill" style="color:#6D28D9;">Tools · $ Saved</div>
-                <h3 class="mt-1 text-lg font-extrabold leading-tight">Sunset HubSpot <span class="text-slate-400 font-normal">(Asana later)</span></h3>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Sunset HubSpot + Asana</h3>
               </div>
               <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
             </div>
-            <p class="mt-3 text-sm text-slate-600">Build our own dashboard to replace the HubSpot work (Dragen) and kill the subscription — likely lets that role go too. Asana is parked for now, not touching it yet.</p>
+            <p class="mt-3 text-sm text-slate-600">Connor wants both replaced with internal apps. Build our own to replace the HubSpot work (Dragen) AND <strong>Asana</strong> — Ziff already has a Tasks module as the in-house Asana replacement; build it out and kill both subscriptions. Part of the broader push to swap third-party SaaS for owned tools in Ziff.</p>
             <div class="mt-4">
               <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
               <div class="stage-bar"><span style="width: 0%;"></span></div>
-              <div class="mt-2 text-xs text-slate-500">HubSpot active · Asana deferred · need spend audit</div>
+              <div class="mt-2 text-xs text-slate-500">Connor: replace both · Ziff Tasks = the Asana replacement → build out + kill subs · HubSpot dashboard (Dragen) · spend audit</div>
             </div>
             <div class="mt-4 flex flex-wrap gap-2">
               <span class="pill px-2 py-1 rounded-md" style="background:#FEF9C3;color:#854D0E;">$ Saved Lever</span>
@@ -1497,10 +1497,10 @@ const PROJECTS = {
   },
   "tool-sunset": {
     category: "Tools · $ Saved",
-    title: "Sunset HubSpot (Asana later)",
-    summary: "Build our own dashboard to replace the HubSpot work (currently Dragen's) and kill the subscription — which likely lets that role go too. Asana is intentionally parked for now; not touching it yet (5/21 decision).",
-    stage: "NEW",
-    stageNote: "0% — HubSpot active, Asana deferred (scoped 5/21)",
+    title: "Sunset HubSpot + Asana",
+    summary: "Connor wants both replaced with internal apps. Build our own dashboard to replace the HubSpot work (currently Dragen's) and kill that subscription (likely lets the role go too), AND replace Asana — Ziff already has a Tasks module as the in-house Asana replacement, so build it out and cancel the Asana bill. Part of the broader push to swap third-party SaaS for owned tools in Ziff (ties to the SaaS audit).",
+    stage: "NEW · Connor added Asana",
+    stageNote: "Connor: replace both · Ziff Tasks = the Asana replacement → build out + cancel · HubSpot dashboard (Dragen) + spend audit",
     progress: 0,
     owner: "Bryce",
     lever: "$ Saved · HubSpot subscription + likely the associated role",
@@ -1509,7 +1509,7 @@ const PROJECTS = {
       { done: false, text: "Build the replacement dashboard" },
       { done: false, text: "Migrate the live workflow off HubSpot" },
       { done: false, text: "Cancel HubSpot subscription" },
-      { done: false, text: "(Later) revisit Asana — parked for now" }
+      { done: false, text: "Build out the Ziff Tasks module into the real Asana replacement → migrate off Asana → cancel it" }
     ],
     blockers: [
       "Are any HubSpot fields driving live customer comms today?",
@@ -2139,7 +2139,7 @@ const PRICING = {
   "ziff":{amount:50000,lever:"org",state:"proposed",note:"platform — org unlock"},
   "travel-slack-bot":{amount:12000,lever:"saved",state:"proposed"},
   "vp-marketing":{amount:0,lever:"org",state:"proposed",note:"folding into CMO scope"},
-  "tool-sunset":{amount:25000,lever:"saved",state:"proposed",note:"HubSpot/yr"},
+  "tool-sunset":{amount:25000,lever:"saved",state:"proposed",note:"HubSpot + Asana/yr"},
   "card-consolidation":{amount:10000,lever:"saved",state:"proposed"},
   "agent-platform":{amount:15000,lever:"org",state:"proposed"},
   "saas-audit":{amount:20000,lever:"saved",state:"proposed",note:"Avalara/fraud TBD"},
