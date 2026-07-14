@@ -30,6 +30,16 @@ Finance preview), Growth, HR hub (Kate), Contractors.
 
 # Session Log
 
+## 2026-07-14 (pt. 3) — Board renamed to "Bryce Projects"
+
+- Renamed the tracker everywhere (commit `cd57857`): page title, header pill
+  ("PPA Tour · Pickleball Inc · AI Initiatives"), and h1 now "Bryce Projects"
+  (yellow/sky two-tone). Pushed → live at pickleball-inc.vercel.app.
+- Same rename shipped in Jackalope (ziff `7c38eb1`): module label, tracker h1,
+  Feed project tag — ids stay `tracker` so stored entries/localStorage keep working.
+- Notion page renamed to "Bryce Projects" too (same page/URL). Memory updated —
+  future sessions log there under the new name.
+
 ## 2026-07-14 (pt. 2) — Ziff is now JACKALOPE (Connor: "Prove it")
 
 - Bryce floated "Jackalope" for the internal app; Connor loved it but doubted
