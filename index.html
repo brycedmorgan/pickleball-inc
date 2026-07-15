@@ -444,6 +444,27 @@
               <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Traffic · email capture</span>
             </div>
           </article>
+
+          <!-- Firefight ad platform -->
+          <article class="card bg-white rounded-2xl p-5 border border-slate-200" data-project="firefight">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="pill" style="color:var(--blue);">Pickleball Inc · Media · Sponsorships</div>
+                <h3 class="mt-1 text-lg font-extrabold leading-tight">Firefight — pickleball ad platform</h3>
+              </div>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E2E8F0;color:#334155;">NEW</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-600">Turn the whole ecosystem into sellable, measurable ad inventory. Three layers: (1) our own native ad server replacing AdButler across pickleball.com / PT.com / newsletters, (2) a Braden-run managed program for endemic brands — "give us your pickleball budget, 80/20" — with real ROI reporting + biweekly throttle calls, (3) self-serve geo-targeted promotion for tournament directors (Taylor's deck). From Connor/Bryce/Braden meeting 7/14.</p>
+            <div class="mt-4">
+              <div class="flex justify-between text-xs text-slate-500 mb-1"><span>New</span><span>Nearly</span><span>Review</span><span>Implemented</span></div>
+              <div class="stage-bar"><span style="width: 3%;"></span></div>
+              <div class="mt-2 text-xs text-slate-500">Recorded + analyzed 7/14 · get Taylor's deck, scope the MVP (ad server + reporting) · click for the full breakdown</div>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="pill px-2 py-1 rounded-md" style="background:#DCFCE7;color:#166534;">Revenue Lever</span>
+              <span class="pill px-2 py-1 rounded-md" style="background:#E0E7FF;color:#3730A3;">Braden runs it · name TBD</span>
+            </div>
+          </article>
         </div>
       </div>
 
@@ -1761,6 +1782,41 @@ const PROJECTS = {
     ],
     links: []
   },
+  "firefight": {
+    category: "Pickleball Inc · Media · Sponsorships",
+    title: "Firefight — pickleball ad platform (name TBD)",
+    summary: "The ecosystem-as-ad-network play from the 7/14 Connor/Bryce/Braden meeting. We own the largest audience in pickleball (pickleball.com, pickleballtournaments.com with 6,500+ tournaments, PPA/MLP newsletters, geo-targetable tournament-player emails) but sell it like 2005 sponsorship: '$100k gets you this menu of stuff.' Firefight turns that into a measurable media platform with three layers — (1) our own native ad server replacing AdButler everywhere, (2) a managed program where endemic brands hand us their pickleball budget ('80% with us, 20% elsewhere') and Braden runs it like their agency with real ROI dashboards, (3) Taylor's self-serve module where tournament directors load budget and geo-target players. It reframes every sponsorship sale ('$50k blackout title vs $100k in Firefight') and gives Pickleball Central leverage ('spend through Firefight or come off the shelf').",
+    stage: "NEW · Analysis done",
+    stageNote: "3% — meeting recorded + analyzed; next is Taylor's deck + MVP scope",
+    progress: 3,
+    owner: "Braden (runs the program) · Taylor (self-serve module) · Bryce (build + platform) · Connor (sponsor)",
+    lever: "Revenue — endemic brand media budgets + measurable sponsorships + tournament-director spend",
+    build: [
+      { label: "Phase 1 — Own the pipes (internal)", detail: "Rip out AdButler + third-party ad tech; native ad server for banner/display slots on pickleball.com, PT.com, store sites, plus newsletter inventory (PPA, MLP). Immediate win even with zero external clients: faster sites, no spam units, we control every placement. This is the foundation everything else sells." },
+      { label: "Phase 2 — Managed program (the money)", detail: "Endemic brands (Diadem, Joola, Gearbox, Holbrook, Gamma, ProXR, Wilson, Nike...) load a budget; we allocate ~80% across owned inventory + ~20% Meta/Google run through our accounts. Braden = their agency: biweekly calls, throttling around launches ('your paddle drops April, Joola's drops March — double spend those months'), upsell path $100k→$120k. Scope guardrails from the meeting: paid display, programmatic, email/retargeting only. NO social posting, NO SEO, NO websites — refer those out." },
+      { label: "Phase 3 — Self-serve (Taylor's deck)", detail: "Tournament directors + small brands load money like Google Ads: pick geo + audience, budget slider reverse-engineers impressions from our CPMs, auto-placement into newsletters/banners/emails to players in that region. Long tail of the 6,500 tournaments none of us can service manually." },
+      { label: "Reporting spine (make-or-break)", detail: "Real-time client dashboard: impressions, CTR, CPM, cost-per-conversion. UTM discipline on every link; pixels + thank-you-page tracking for e-com; push/pull to client CRMs. The whole pitch vs traditional sponsorship is 'you can SEE it working' — if reporting is weak the program sours relationships instead of deepening them (Braden's explicit worry)." },
+      { label: "Fee model (open)", detail: "Options: agency fee on managed spend (10–15% industry standard), margin baked into owned-inventory CPMs, flat platform fee for self-serve — or near-zero fee and treat it as the moat that pulls every endemic dollar through us. Connor leaned 'get everyone through us'; needs a decision before first pitch." },
+      { label: "Why it wins", detail: "Same moat logic as the tournament software: we're the only path to the pickleball player. An outside agency can only buy them Meta + Google; we bundle that PLUS inventory nobody else can sell. Every advertiser onboarded = contacts, budgets, and data compounding the moat." }
+    ],
+    steps: [
+      { done: true, text: "Meeting recorded + transcribed; analysis on the board (7/14)" },
+      { done: false, text: "Get Taylor's deck; merge his self-serve spec with the managed-program vision" },
+      { done: false, text: "Inventory audit: every ad slot, newsletter, email segment we own + real traffic/CPM numbers" },
+      { done: false, text: "Scope Phase 1 MVP: native ad server + reporting dashboard (AdButler replacement)" },
+      { done: false, text: "Decide fee model + name with Connor/Braden" },
+      { done: false, text: "Pilot with 2–3 friendly paddle brands at real budgets; prove the ROI dashboard" },
+      { done: false, text: "Fold into sales motion: Firefight dollars as the alternative in every sponsorship pitch" }
+    ],
+    blockers: [
+      "Taylor's deck not yet in hand — self-serve spec lives there",
+      "Fee/upcharge model undecided (agency fee vs pure funnel-through)",
+      "Conversion visibility outside e-com — need UTM/pixel standards before promising ROI",
+      "Ad-ops capacity: sell it, implement it, AND deliver results (Braden's domino-effect risk)",
+      "Pro-shop / retail integration rules unclear (what we can do per shop)"
+    ],
+    links: []
+  },
   "jr-fasthands": {
     category: "Pickleball.com · Junior Tour",
     title: "Jr. PPA Fasthands — junior-tour portal",
@@ -2218,6 +2274,7 @@ const PRICING = {
   "ticketing":{amount:0,lever:"saved",state:"proposed",note:"~9% of ticketing avoided — potentially the biggest saved line; scope volume w/ Connor"},
   "mlp-undefeated":{amount:8000,lever:"revenue",state:"proposed",note:"fan engagement / traffic"},
   "sponsor-bot":{amount:0,lever:"revenue",state:"proposed",note:"performance: 10% of new sponsor $"},
+  "firefight":{amount:0,lever:"revenue",state:"proposed",note:"fee model TBD — agency % vs inventory margin"},
   "ambassador":{amount:40000,lever:"saved",state:"proposed"},
   "pro-player-app":{amount:40000,lever:"saved",state:"proposed",note:"Teamworks replacement"},
   "finance-amex":{amount:0,lever:"saved",state:"proposed",note:"superseded by Upgrade AI"},
