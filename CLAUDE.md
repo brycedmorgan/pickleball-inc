@@ -30,6 +30,26 @@ Finance preview), Growth, HR hub (Kate), Contractors.
 
 # Session Log
 
+## 2026-07-14 (pt. 4) — NEW PROJECT: Firefight ad platform (from Connor/Bryce/Braden meeting)
+
+- Bryce recorded the meeting; transcript analyzed → new tracker card `firefight`
+  under the PPA Tour pillar (commit `caef377`, pushed/live).
+- The idea, three layers: (1) native ad server replacing AdButler across
+  pickleball.com / PT.com / newsletters; (2) Braden-run managed program —
+  endemic brands hand over their pickleball budget ("80% with us, 20% Meta/
+  Google run through us"), biweekly throttle calls, real ROI dashboards;
+  (3) Taylor's self-serve module for tournament directors (geo-target players,
+  budget → impressions from our CPMs).
+- Scope guardrails agreed in the meeting: paid display, programmatic,
+  email/retargeting only — NO social posting, NO SEO, NO client websites.
+- Reframes sponsorship sales ("$50k blackout title vs $100k in Firefight") and
+  gives Pickleball Central leverage (Gamma: spend through Firefight or delist).
+- Open: Taylor's deck (get it from Connor), fee model (agency % vs inventory
+  margin vs pure funnel-through), name ("Firefight" is placeholder), UTM/pixel
+  attribution standards, ad-ops capacity (Braden's sour-relationship risk).
+- Next: inventory audit (every slot/newsletter/segment + real CPMs), then
+  Phase 1 MVP scope = ad server + reporting dashboard.
+
 ## 2026-07-14 (pt. 3) — Board renamed to "Bryce Projects"
 
 - Renamed the tracker everywhere (commit `cd57857`): page title, header pill
