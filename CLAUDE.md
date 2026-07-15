@@ -1,10 +1,15 @@
-# PPA Tour AI Tracker (Pickleball Inc)
+# PPA Tour AI Tracker (Pickleball Inc) — ⚰️ RETIRED 2026-07-14
 
-This repo is the **PPA Tour / Pickleball Inc AI-initiative tracker** — a single-file
-static app (`index.html`, Tailwind CDN + vanilla JS) deployed at
-**pickleball-inc.vercel.app** on git push (repo `brycedmorgan/pickleball-inc`).
-Bryce = President & CMO of PPA Tour; Connor Pardoe = CEO. This board is how
-Connor tracks every AI/software initiative.
+**This board is dead.** pickleball-inc.vercel.app now redirects (302 via
+`vercel.json`) to **jackalopehq.vercel.app** — the tracker lives on as the
+"Bryce Projects" module in the Jackalope app (`~/Documents/ziff`, `tracker.js`).
+**Make all tracker updates THERE, not here.** This repo stays as the archive
+(`index.html` untouched; restore by deleting `vercel.json`).
+
+Old description: single-file static app (`index.html`, Tailwind CDN + vanilla
+JS), repo `brycedmorgan/pickleball-inc`. Bryce = President & CMO of PPA Tour;
+Connor Pardoe = CEO. This board was how Connor tracked every AI/software
+initiative.
 
 ## How the tracker is structured
 
@@ -29,6 +34,17 @@ into — single index.html, role-gated modules (login = work email, demo passwor
 Finance preview), Growth, HR hub (Kate), Contractors.
 
 # Session Log
+
+## 2026-07-14 (pt. 5) — BOARD RETIRED → redirects to Jackalope
+
+- Bryce's call: this page is dying; everything moves to the Jackalope app.
+- Added `vercel.json` catch-all 302 → jackalopehq.vercel.app (covers /plan-0612
+  too — the comp-numbers briefing is no longer reachable, which is a plus).
+- Firefight card ported to Jackalope's tracker (ziff `fcee818`) — Jackalope now
+  has all 40 projects incl. economics ($3.11M proposed) and dilution flag.
+- index.html untouched (archive); un-kill by deleting vercel.json.
+- Future tracker edits go to `~/Documents/ziff/tracker.js` (PROJECTS + PRICING
+  + TRACKER_META), not this repo.
 
 ## 2026-07-14 (pt. 4) — NEW PROJECT: Firefight ad platform (from Connor/Bryce/Braden meeting)
 
